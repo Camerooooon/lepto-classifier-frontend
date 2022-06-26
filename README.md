@@ -1,9 +1,11 @@
 Lepto Classifier Frontend Project
 ---
 **The goal**
+
 The goal of the frontend project is to provide an easy method for doctors around the world to utilize UC Davis data to diagnose leptospirosis. 
 
 **What will it look like?**
+
 The result will be a simple and easy to use front-end webpage that anyone in the world can use to easily input required patient data and blood work in order to be run by the algorithm. 
 
 **What does it need to do?**
