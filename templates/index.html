@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Home</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+</head>
+<body>
+	<form action="/submit_data" method="POST">
+		<label for="Follow up email">Follow Up Email</label>
+		<br>
+		<input type="email" name="Doctor Contact">
+		<br>
+		<label for="Dog Name">Dog Name</label>
+		<br>
+		<input name="Dog Name" type="text">
+		<br>
+		<label for="Dog Sex">Dog Sex</label>
+		<br>
+		<input checked="checked" name="sex" type="radio" value="male"> Male
+		<br>
+		<input name="sex" type="radio" value="female"> Female
+		<br>
+		<label for="Anion Gap">Anion Gap (mmol/L)</label>
+		<br>
+		<input name="Anion Gap" type="number" step="0.1">
+		<br>
+
+		<p>By submitting you agree that the data that is being submited may be collected and used to improve the machine learning model.</p>
+		<p>In order to improve the service you may be contacted via the follow up email provided</p>
+		<p><strong>Please ensure that all data is inputed correctly before submitting</strong></p>
+		<input type="submit" value="Submit">
+	</form>
+</body>
