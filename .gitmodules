@@ -1,0 +1,3 @@
+[submodule "lepto-classifier"]
+	path = lepto-classifier
+	url = git@github.com:sf-deng/lepto-classifier.git
