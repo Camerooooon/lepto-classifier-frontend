@@ -13,7 +13,12 @@ def index():
 @app.route("/submit_data", methods=['POST'])
 def submit_data():
     request_data = request.form
-    print(request_data);
     df = pd.DataFrame(request_data.to_dict(flat=False), index=[0])
-    print(df);
-    return Response("Ok!", status=200)
+    df = df.apply(pd.to_numeric, errors='ignore')
+    lepto_classifier = LeptoClassifier()
+    try:
+        prediction = lepto_classifier.predict_raw(df, use_mat=True);
+        print("Prediction = " + str(prediction[0]));
+    except (ValueError, KeyError) as err:
+        return Response('{status: "error", message: "'+ str(err) + '"}', status=400)
+    return Response('{status: "ok", result: "' + str(prediction[0]) + '"}', status=200)
