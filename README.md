@@ -1,5 +1,8 @@
 Lepto Classifier Frontend Project
 ---
+**How to test**
+Currently the frontend webpage for this project isn't fully implemented yet. In order to achieve a working prediction you must submit your data following the example_post file. To submit the data to the algorithm through this project type `curl -X POST localhost:5000/submit_data -d @example_post` while the project is running.
+
 **The goal**
 
 The goal of the frontend project is to provide an easy method for doctors around the world to utilize UC Davis data to diagnose leptospirosis. 
