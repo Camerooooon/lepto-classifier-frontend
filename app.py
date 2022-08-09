@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, Response
+from flask import Flask, render_template, request, Response, send_file
 from leptoclassifier.lepto_classifier import LeptoClassifier
 import numpy as np
 import pandas as pd
@@ -9,6 +9,14 @@ app = Flask(__name__)
 def index():
     # Return the index.html file
     return render_template('index.html')
+
+@app.route("/index.css")
+def css():
+    return send_file('templates/index.css', mimetype='text/css')
+
+@app.route("/vet_pic.png")
+def vet_pic():
+    return send_file('templates/vet_pic.png', mimetype='image/png')
 
 @app.route("/submit_data", methods=['POST'])
 def submit_data():
