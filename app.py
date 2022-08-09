@@ -10,6 +10,22 @@ def index():
     # Return the index.html file
     return render_template('index.html')
 
+@app.route('/result')
+def result():
+    return render_template('result.html')
+
+@app.route('/help')
+def help():
+    return render_template('help.html')
+
+@app.route('/lepto')
+def lepto():
+    return render_template('lepto.html')
+
+@app.route('/contact')
+def contact():
+    return render_template('contact.html')
+
 @app.route("/index.css")
 def css():
     return send_file('templates/index.css', mimetype='text/css')
