@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Montserrat:ital,wght@0,500;1,400;1,900&family=PT+Serif&display=swap');
+
+/*remove all the gaps*/
+*{
+    padding: 0; 
+    margin: 0; 
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* puts it in the center*/
+.container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.header { 
+    width: 100%;
+    margin: 0;
+}
+.header ul{
+    list-style: none;
+    position: absolute;
+    background-color: #002855;
+    width: 100%;
+    height: 8rem;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+.header ul a{
+    font-size: 1.5rem; 
+    letter-spacing: .2rem;
+    text-decoration: none;
+    color: white; 
+    text-transform: uppercase;
+    padding: 40px;
+    display: block;
+    font-weight: 900;
+}
+/* add some hover affect to show the details */
+.bar {
+    background-color: #FFBF00;
+    position: absolute;
+    width: 100%;
+    height: 1.5rem;
+    top: 8rem;
+    /* fix this transition*/
+    transition: .3s ease transform;
+}
+/*
+.bar:hover {
+    transform: scale(5);
+    z-index: -1;
+}
+*/
+/* hard coded will have to change it using flex property */
+.body {
+    top: 16rem;
+    display: flex;
+    border: 3px solid black;
+    flex-direction: row;
+    position: absolute;
+    align-items: center;
+    width: 100%; 
+    height: auto;
+}
+.disclaimer {
+    width: 100%;
+    height: 7rem;
+    display: flex;
+    margin-top: -26rem;
+    background-color: lightgray;
+    justify-content: center;
+}
+p.hidden { 
+    display: block;
+    font-size: 2rem;
+    color: #002855;
+}
+form {
+    align-items: center;
+    width: 100%;
+    display: flex;
+}
+label { 
+    color: #002855;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+p {
+    color: #002855;
+    font-weight: 900;
+}
+div.col1, div.col2{ 
+    border: 3px solid blue;
+    width: 50%;
+    margin: 50px;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 20rem;
+}
+
+.footer { 
+    /* fix this brute force */
+    top: 55rem;
+    width: 100%;
+    height: 18rem;
+    position: relative;
+    background-color: #002855;
+    display: flex;
+    flex-direction: row;
+}
+img { 
+    margin-left: 7rem;
+}
+.vm_img { 
+    width: 40%;
+    align-items: center;
+    display: flex;
+    justify-content: right;
+}
+.content { 
+    margin-top: 2rem;
+    width: 60%;
+}
+hr {
+    display: block;
+    background-color: #FFBF00;
+    position: absolute;
+    width: 51rem;
+    height: 4px;
+}
+.title { 
+    font-size: 4rem;
+    font-weight: 900;
+    color: #FFBF00;
+    padding: 5px;
+}
+.vet_txt { 
+    font-size: 4.2rem;
+    font-weight: 900;
+    color: white;
+    padding: 5px;
+}
+p.right {
+    color: white;
+    padding-top: 1rem;
+}
