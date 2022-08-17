@@ -14,24 +14,21 @@
     <div class="container">
 		<div class="header">
 				<ul>
-					<li><a style="color:#FFBF00; margin-right: 8rem; font-size: 4rem; font-weight: bold;" href="index.html">UC DAVIS</a></li>
-					<li><a href="lepto.html">Lepto-classifier</a></li>
-					<li><a href="result.html">Result</a></li>
-					<li><a href="help.html">Help</a></li>
-					<li><a href="contact.html">Contact</a></li>
+					<li class="ucd"><a href="home">UC DAVIS</a></li>
+					<li><a href="lepto">Lepto-classifier</a></li>
+ 					<li><a href="result">Result</a></li>
+ 					<li><a href="help">Help</a></li>
+ 					<li><a href="contact">Contact</a></li>
 				</ul>
 			<div class="bar"></div>
 		</div>
 
 		<div class="disclaimer">
-			<p class="hidden">If you want faster access to the data, please use ourr Lepto-classifier</p>
-			<!--
-			<button></button>
-			-->
+			<p class="hidden">If you want faster access to the data, please use our Lepto-classifier</p>
+			<a href="lepto"><button>Lepto-classifier</button></a>
 		</div>
 		
 		<div class="body">
-			<!-- will have three chunks of the form portions -->
 		<form action="/submit_data" method="POST">
 			<div class="col1">
 				<label for="Patient Number">Patient Number</label>
@@ -93,83 +90,93 @@
 				<br><br>
 			</div>
 			<div class="col2">
-				<label for="Patient Number">Patient Number</label>
-				<input type="number" name="Patient Number" placeholder="index number">
+				<label for="ALT">ALT</label>
+				<input type="number" name="ALT" placeholder="IU/L">
 				<br><br>
-				<label for="Weight">Weight</label>
-				<input name="Weight" type="number" placeholder="kg">
+				<label for="AST">AST</label>
+				<input name="AST" type="number" placeholder="IU/L">
 				<br><br>
-				<label for="Breed Group">Breed Group</label>
-				<input type="text" name="Breed Group" accept="Toy, Herding, Hound, Mix, Non-Sporting, Sporting, Terrier, Working, Foundation Stock Service">
+				<label for="ALP">ALP</label>
+				<input type="text" name="ALP" placeholder="IU/L">
 				<br><br>
-				<label>Sex</label><br>
-				<input type="checkbox" name="sex" value="0">
-				<label for="male"> Male</label><br>
-				<input type="checkbox" name="sex" value="1">
-				<label for="female"> Female</label><br>
-				<br>
-				<label for="MAT">MAT</label>
-				<input type="number" name="mat" placeholder="0, 100, 200, 400, ...">
+				<label for="GGT">GGT</label>
+				<input type="text" name="GGT" placeholder="IU/L">
 				<br><br>
-				<label for="anion gap">Anion Gap</label>
-				<input type="number" name="anion gap" placeholder="mmol/L">
+				<label for="Cholesterol">Cholesterol</label>
+				<input type="text" name="Cholesterol" placeholder="mg/dL">
 				<br><br>
-				<label for="sodium">Sodium</label>
-				<input type="number" name="sodium" placeholder="mmol/L">
+				<label for="Bilirubin">Bilirubin</label>
+				<input type="text" name="Bilirubin" placeholder="mg/dL">
 				<br><br>
-				<label for="Potassium">Potassium</label>
-				<input type="number" name="Potassium" placeholder="mmol/L">
+				<label for="Urine Specific Gravity">Urine Specific Gravity</label>
+				<input type="text" name="Urine Specific Gravity" placeholder="number to 3 sig digits">
 				<br><br>
-				<label for="Chloride">Chloride</label>
-				<input type="number" name="Chloride" placeholder="mmol/L">
+				<label>Urine Protein</label><br>
+				<input type="checkbox" name="up" value="0">
+				<label for="0"> 0</label><span class="tab"></span>
+				<input type="checkbox" name="up" value="1">
+				<label for="1"> 1</label><span class="tab"></span>
+				<input type="checkbox" name="up" value="2">
+				<label for="2"> 2</label><span class="tab"></span>
+				<input type="checkbox" name="up" value="3">
+				<label for="3"> 3</label><span class="tab"></span>
+				<input type="checkbox" name="up" value="4">
+				<label for="4"> 4</label>
 				<br><br>
-				<label for="bicarb">Bicarb</label>
-				<input type="number" name="bicarb" placeholder="mmol/L">
+				<label>Urine Glucose</label><br>
+				<input type="checkbox" name="up" value="0">
+				<label for="0"> 0</label><span class="tab"></span>
+				<input type="checkbox" name="up" value="1">
+				<label for="1"> 1</label><span class="tab"></span>
+				<input type="checkbox" name="up" value="2">
+				<label for="2"> 2</label><span class="tab"></span>
+				<input type="checkbox" name="up" value="3">
+				<label for="3"> 3</label><span class="tab"></span>
+				<input type="checkbox" name="up" value="4">
+				<label for="4"> 4</label>
 				<br><br>
-				<label for="Phosphorous">Phosphorous</label>
-				<input type="number" name="Phosphorous" placeholder="mg/dL">
+				<label for="Hct">Hct</label>
+				<input type="number" name="Hct" placeholder="%">
 				<br><br>
-				<label for="Calcium">Calcium</label>
-				<input type="number" name="Calcium" placeholder="mg/dL">
+				<label for="Hgb">Hgb</label>
+				<input type="number" name="Hgb" placeholder="g/dL">
 				<br><br>
-				<label for="BUN">BUN</label>
-				<input type="number" name="BUN" placeholder="mg/dL">
+				<label for="MCV">MCV</label>
+				<input type="number" name="MCV" placeholder="fL">
 				<br><br>
-				<label for="Creatinine">Creatinine</label>
-				<input type="number" name="Creatinine" placeholder="mg/dL">
+				<label for="WBC">WBC</label>
+				<input type="number" name="WBC" placeholder="/mcL">
 				<br><br>
-				<label for="Glucose">Glucose</label>
-				<input type="number" name="Glucose" placeholder="mg/dL">
+				<label for="Bands">Bands</label>
+				<input type="number" name="Bands" placeholder="/mcL">
 				<br><br>
-				<label for="Total Protein">Total Protein</label>
-				<input type="number" name="Total Protein" placeholder="g/dL">
+				<label for="Neut">Neut</label>
+				<input type="number" name="Neut" placeholder="/mcL">
 				<br><br>
-				<label for="Albumin">Albumin</label>
-				<input type="number" name="Albumin" placeholder="g/dL">
+				<label for="Lymph">Lymph</label>
+				<input type="number" name="Lymph" placeholder="/mcL">
 				<br><br>
-				<label for="Globulin">Globulin</label>
-				<input type="number" name="Globulin" placeholder="g/dL">
+				<label for="Mono">Mono</label>
+				<input type="number" name="Mono" placeholder="/mcL">
 				<br><br>
+				<label for="Eosin">Eosin</label>
+				<input type="number" name="Eosin" placeholder="/mcL">
+				<br><br>
+				<label for="Plt">Plt</label>
+				<input type="number" name="Plt" placeholder="/mcL">
+				<br><br>
+				<input class="sbtn" type="submit" value="Submit">
 			</div>
-			<!--
-			<label for="Dog Sex">Dog Sex</label>
-			<br>
-			<input checked="checked" name="sex" type="radio" value="male"> Male
-			<br>
-			<input name="sex" type="radio" value="female"> Female
-			<br><br>
-			<label for="Anion Gap">Anion Gap (mmol/L)</label>
-			<br>
-			<input name="Anion Gap" type="number" step="0.1">
-			<br><br>
-			<p>By submitting you agree that the data that is being submited may be collected and used to improve the machine learning model.</p>
-			<p>In order to improve the service you may be contacted via the follow up email provided</p>
-			<p><strong>Please ensure that all data is inputed correctly before submitting</strong></p>
-			<input type="submit" value="Submit">
-			-->
-		</form>
-		
+
+			</form>
 		</div>
+		<!-- thi swill be the disclaimer text part -->
+		<div class="box">
+			<p>By submitting you agree that the data that is being submited may be collected and used to improve the machine learning model.
+			In order to improve the service, you may be contacted via contact page.</p>
+			<p class="important"><span style="background-color: #FFBF00;">Please ensure that all data is inputed correctly before submitting!</span></p>
+		</div>
+		
 
 		<div class="footer">
 			<div class="vm_img">

@@ -4,6 +4,55 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="../css/index.css">
+	<link rel="stylesheet" href="index.css">
+	<link rel="stylesheet" href="result.css">
 	<title>Home page</title>
 </head>
+
+<!-- this will contain all the content inside the container box, this portion is manual entry -->
+<body>
+	<!-- this will be under the whole container -->
+    <div class="container">
+		<div class="header">
+				<ul>
+					<li class="ucd"><a href="home">UC DAVIS</a></li>					
+					<li><a href="lepto">Lepto-classifier</a></li>
+ 					<li><a href="result">Result</a></li>
+ 					<li><a href="help">Help</a></li>
+ 					<li><a href="contact">Contact</a></li>
+				</ul>
+			<div class="bar"></div>
+		</div>
+
+		<div class="top">
+			<p class="important">Here is your result!</p>
+		</div>
+
+		<div class="box"></div>
+
+		<div class="bottom">
+			<p style="padding-top: 2rem; padding-bottom:.5rem; font-size: 2rem;">Click below to download the pdf</p>
+			<!-- need a router to the pdf where the result will be stored -->
+			<!-- download the result pdf --> 
+			<a href="./file/result" download="result.pdf" style="background-color: #002855;
+			color: white; font-size: 1.2rem; width: 6rem; height:2rem; border-radius: 8px; padding-left: .8rem; padding-top: .2rem; padding-bottom: .2rem;">Results</a>
+			<p style="padding-top: 5rem; font-size: 2rem;">If you believe the <span style="background-color: #FFBF00;">results are invalid</span>, please make an inquery under help.</p>
+		</div>
+
+		<div class="footer">
+			<div class="vm_img">
+				<img src="vet_pic.png"/>
+			</div>
+			<div class="content">
+				<div class="title">UC DAVIS</div>	
+				<hr>
+				<div class="vet_txt">VETERINARY MEDICINE</div>
+				<p class="right">Copyright © 2022 UC DAVIS VETERINARY MEDICINE. All rights resereved</p>
+			</div>
+		</div>
+
+
+	</div>
+
+</body>
+

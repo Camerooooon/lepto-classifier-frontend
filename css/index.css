@@ -1,0 +1,476 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Montserrat:ital,wght@0,500;1,400;1,900&family=PT+Serif&display=swap');
+
+@media only screen and (max-device-width: 414px) and (min-device-width: 360px) {
+    *{
+        padding: 0; 
+        margin: 0; 
+        box-sizing: border-box;
+    }
+    html {
+        font-size: 15px;
+        font-family: 'Montserrat', sans-serif;
+    }
+    a {
+        text-decoration: none;
+    }
+    /* puts it in the center*/
+    .container {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        margin: 0;
+        width: 100%;
+    }
+    /*
+    .header { 
+        width: 100%;
+        border: 3px solid green; 
+    }*/
+    .header ul{
+        list-style: none;
+        position: absolute;
+        background-color: #002855;
+        height: 7rem;
+        top: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .header ul a{
+        font-size: .8rem; 
+        letter-spacing: .1em;
+        text-decoration: none;
+        color: white; 
+        text-transform: uppercase;
+        padding: 9px;
+        display: block;
+        font-weight: 900;
+        width: 100%;
+    }
+    .header .ucd a{
+        color:#FFBF00;
+        font-size: 1.4rem; 
+        padding-left: 1rem;
+        font-weight: bold;
+    }
+    /* add some hover affect to show the details */
+    .bar {
+        background-color: #FFBF00;
+        position: absolute;
+        /* fix this */
+        width: 100%;
+        height: 1.2rem;
+        top: 7rem;
+    }
+    /*rename it later*/
+    .body {
+        top: 16rem;
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        align-items: center;
+        width: 100%; 
+        height: auto;
+    }
+    /*
+    .disclaimer {
+        width: 100%;
+        height: 7.5rem;
+        top: 9rem;
+        display: flex;
+        background-color: lightgray;
+        justify-content: center;
+        position: relative;
+        flex-direction: row;
+    }*/
+    p.hidden { 
+        font-size: 1rem;
+        color: #002855;
+        margin-top: -19.5rem;
+        padding-left: 1rem;
+    }
+    form {
+        align-items: center;
+        width: 100%;
+        display: flex;
+    }
+    label { 
+        color: #002855;
+        font-weight: 700;
+        font-size: 1rem;
+    }
+    input { 
+        background-color: lightgray;
+        border: 1px solid lightgray;
+        z-index: -1;
+        border-radius: 2px;
+        font-size: 1rem;
+        padding: 0.4px;
+    }
+    p {
+        color: #002855;
+        font-weight: 900;
+    }
+    div.col1{ 
+        width: 50%;
+        margin: 10px;
+        margin-bottom: 0;
+        padding-left: 10px;
+        padding-top: 0;
+        padding-bottom: 5rem;
+    }
+    div.col2{ 
+        width: 50%;
+        margin: 10px;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-right: 10px;
+    }
+    .footer { 
+        /* fix this brute force */
+        top: 107rem;
+        width: 100%;
+        height: 13rem;
+        position: absolute;
+        background-color: #002855;
+        display: flex;
+        flex-direction: row;
+    }
+    img { 
+        margin-left: 1rem;
+        margin-bottom: 2rem;
+        width: 100%;    
+    }
+    .vm_img { 
+        width: 30%;
+        align-items: center;
+        display: flex;
+        justify-content: right;
+        margin-left: 1rem;
+    }
+    .content { 
+        margin-top: 2rem;
+        width: 70%;
+    }
+    hr {
+        display: block;
+        background-color: #FFBF00;
+        position: absolute;
+        width: 13rem;
+        height: 2px;
+    }
+    .title { 
+        font-size: 2rem;
+        font-weight: 900;
+        color: #FFBF00;
+        padding: 5px;
+    }
+    .vet_txt { 
+        font-size: 1.8rem;
+        font-weight: 900;
+        color: white;
+        padding: 5px;
+    }
+    p.right {
+        color: white;
+        padding-top: .6rem;
+        font-size: .5rem;
+        padding-right: 10px;
+    }
+    input.sbtn { 
+        background-color: #002855;
+        color: white; 
+        font-size: .8rem; 
+        width: 4rem; 
+        height: 1.5rem; 
+        border-radius: 8px;
+    }
+    .box { 
+        width: 100%;
+        height: 13rem;
+        top: 92rem;
+        position: absolute;
+        align-items: center;
+        padding-top: 40px;
+        padding-left: 10px;
+        padding-right: 5px;
+        font-size: 1rem;
+    }
+    .important { 
+        font-size: 1rem;
+        padding-top: 1rem;
+    }
+    button {
+        background-color: #002855;
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: block;
+        font-size: .6rem;
+        border-radius: 8px;
+        padding: 10px;
+        padding-top: 5px;
+        margin-top: -10px;
+        height: 20px;
+        position: absolute;
+        z-index: 1;
+        margin-left: 78%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*supports laptop and bigger screens */
+@media (min-width:1281px) {
+    *{
+        padding: 0; 
+        margin: 0; 
+        box-sizing: border-box;
+    }
+    html {
+        font-size: 15px;
+        font-family: 'Montserrat', sans-serif;
+    }
+    a {
+        text-decoration: none;
+    }
+    /* puts it in the center*/
+    .container {
+        min-height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .header { 
+        width: 100%;
+        margin: 0;
+    }
+    .header ul{
+        list-style: none;
+        position: absolute;
+        background-color: #002855;
+        width: 100%;
+        height: 8rem;
+        top: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+    }
+    .header ul a{
+        font-size: 1.5rem; 
+        letter-spacing: .2rem;
+        text-decoration: none;
+        color: white; 
+        text-transform: uppercase;
+        padding: 40px;
+        display: block;
+        font-weight: 900;
+    }
+    /* add some hover affect to show the details */
+    .bar {
+        background-color: #FFBF00;
+        position: absolute;
+        width: 100%;
+        height: 1.5rem;
+        top: 8rem;
+        /* fix this transition*/
+        transition: .3s ease transform;
+    }
+    .tab {
+        display: inline-block;
+        margin-left: 25px;
+    }
+    .header .ucd a{
+        color:#FFBF00;
+        margin-right: 8rem; 
+        font-size: 4.5rem; 
+        font-weight: bold;
+    }
+    /* hard coded will have to change it using flex property */
+    .body {
+        top: 16rem;
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        align-items: center;
+        width: 100%; 
+        height: auto;
+    }
+    .disclaimer {
+        width: 100%;
+        height: 7.7rem;
+        display: flex;
+        margin-bottom: 41rem;
+        background-color: lightgray;
+        justify-content: center;
+        position: absolute;
+        flex-direction: row;
+    }
+    p.hidden { 
+        display: inline-block;
+        font-size: 2rem;
+        color: #002855;
+        padding-top: 2rem;
+    }
+    form {
+        align-items: center;
+        width: 100%;
+        display: flex;
+    }
+    label { 
+        color: #002855;
+        font-weight: 700;
+        font-size: 1.3rem;
+    }
+    p {
+        color: #002855;
+        font-weight: 900;
+    }
+    div.col1{ 
+        width: 50%;
+        margin: 50px;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-left: 18rem;
+    }
+    div.col2{ 
+        width: 50%;
+        margin: 50px;
+        margin-top: 5rem;
+        margin-bottom: 0;
+        padding-left: 5rem;
+    }
+    .footer { 
+        /* fix this brute force */
+        top: 75rem;
+        width: 100%;
+        height: 18rem;
+        position: relative;
+        background-color: #002855;
+        display: flex;
+        flex-direction: row;
+    }
+    img { 
+        margin-left: 7rem;
+    }
+    .vm_img { 
+        width: 30%;
+        align-items: center;
+        display: flex;
+        justify-content: right;
+        margin-left: 5rem;
+    }
+    .content { 
+        margin-top: 2rem;
+        width: 70%;
+    }
+    hr {
+        display: block;
+        background-color: #FFBF00;
+        position: absolute;
+        width: 51rem;
+        height: 4px;
+    }
+    .title { 
+        font-size: 4rem;
+        font-weight: 900;
+        color: #FFBF00;
+        padding: 5px;
+    }
+    .vet_txt { 
+        font-size: 4.2rem;
+        font-weight: 900;
+        color: white;
+        padding: 5px;
+    }
+    p.right {
+        color: white;
+        padding-top: 1rem;
+    }
+    .box { 
+        width: 80%;
+        height: 13rem;
+        top: 80rem;
+        position: absolute;
+        align-items: center;
+        padding-top: 60px;
+        padding-left: 6rem;
+        font-size: 1.4rem;
+    }
+    .important { 
+        font-size: 2rem;
+        padding-top: 2rem;
+    }
+    button {
+        background-color: #002855;
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: block;
+        font-size: 18px;
+        border-radius: 8px;
+        padding: 20px;
+        padding-top: 4px;
+        margin-top: 5rem;
+        margin-bottom: 4rem;
+        height: 2rem;
+        position: absolute;
+        z-index: 1;
+    }
+    input.sbtn { 
+        background-color: #002855;
+        color: white; 
+        font-size: 1.2rem; 
+        width: 5rem; 
+        height:2rem; 
+        border-radius: 8px;
+    }
+    input { 
+        background-color: lightgray;
+        z-index: -1;
+        border-radius: 2px;
+        border: 1px solid lightgray;
+    }
+}
+
