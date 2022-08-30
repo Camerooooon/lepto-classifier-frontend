@@ -1,61 +1,167 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Montserrat:ital,wght@0,500;1,400;1,900&family=PT+Serif&display=swap');
 
-.top { 
-    width: 80%;
-    height: 15rem;
-    margin-top: -13rem;
+
+@media only screen and (max-device-width: 1281px) and (min-device-width: 360px) {
+    .top { 
+        width: 100%;
+        height: 200px;
+        margin-top: -27rem;
+        padding-left: 20px;
+        align-items: center;
+    }
+    .container {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        margin: 0;
+        width: 100%;
+    }
+    .entry {
+        height: 50rem;
+        width: 80%;
+        display: flex;
+        position: absolute;
+        margin-top: 19rem;
+        padding-top: 30px;
+    }
+    p { 
+        font-size: 1.2rem;
+        width: 100%;
+        font-weight: 900;
+        display: flex;
+        flex-direction: row;
+        margin-top: 10px;
+        padding-right: 10px;
+    }
+    form {
+        align-items: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        font-size: 1.2rem;
+    }
+    input { 
+        background-color: lightgray;
+        display: inline block;
+        width: 100%;
+        border-radius: 8px;
+        height: 2rem;
+        z-index: 1;
+        text-align: left;
+        font-size: 1.2rem;
+        padding: 0.4em;
+    }
+    input.style {
+        margin-top: 2rem; 
+        background-color: #002855;
+		color: white; 
+        font-size: .8rem; 
+        width: 5rem; 
+        height:2rem; 
+        padding-left: 1.3rem; 
+        padding-bottom: .2rem; 
+        padding-top: .2rem;
+		border-radius: 8px; 
+        margin-left: 82%;
+    }
+    label {
+        width: 100%;
+        font-size: 1.2rem;
+        padding-bottom: .4em;
+    }
+    .expanded { 
+        height: 16rem; 
+        padding-bottom:200px;
+        font-size: 1.2rem;
+    }
+    .footer { 
+        /* fix this brute force */
+        top: 64rem;
+    }
+    hr { 
+        width: 13rem;
+    }
+    p.right {
+        color: white;
+        padding-top: 1rem;
+        font-size: 1rem;
+    }
 }
-.entry {
-    height: 50rem;
-    width: 80%;
-    display: flex;
-    position: absolute;
-    margin-top: 21rem;
-}
-p { 
-    font-size: 2rem;
-    font-weight: 900;
-}
-form {
-    align-items: center;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    font-size: 2rem;
-}
-input { 
-    background-color: lightgray;
-    display: inline block;
-    width: 100%;
-    border-radius: 8px;
-    height: 2rem;
-    z-index: 1;
-    text-align: left;
-    font-size: 1.2rem;
-    padding: 0.4em;
-}
-label {
-    width: 100%;
-    font-size: 1.6rem;
-    padding-bottom: .4em;
-}
-.expanded { 
-    height: 16rem; 
-    padding-bottom:200px;
-    font-size: 1.2rem;
-}
-.footer { 
-    /* fix this brute force */
-    top: 53rem;
-    width: 100%;
-    height: 18rem;
-    position: relative;
-    background-color: #002855;
-    display: flex;
-    flex-direction: row;
-}
-p.right {
-    color: white;
-    padding-top: 1rem;
-    font-size: 1rem;
+
+@media only screen and (min-device-width: 1281px) {
+    .top { 
+        width: 80%;
+        height: 15rem;
+        margin-top: -13rem;
+    }
+    .entry {
+        height: 50rem;
+        width: 80%;
+        display: flex;
+        position: absolute;
+        margin-top: 21rem;
+    }
+    p { 
+        font-size: 2rem;
+        font-weight: 900;
+        margin-top: 2rem;
+    }
+    form {
+        align-items: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        font-size: 2rem;
+    }
+    input { 
+        background-color: lightgray;
+        display: inline block;
+        width: 100%;
+        border-radius: 8px;
+        height: 2rem;
+        z-index: 1;
+        text-align: left;
+        font-size: 1.2rem;
+        padding: 0.4em;
+    }
+    label {
+        width: 100%;
+        font-size: 1.6rem;
+        padding-bottom: .4em;
+    }
+    .expanded { 
+        height: 16rem; 
+        padding-bottom:200px;
+        font-size: 1.2rem;
+    }
+    .footer { 
+        /* fix this brute force */
+        top: 53rem;
+        width: 100%;
+        height: 18rem;
+        position: relative;
+        background-color: #002855;
+        display: flex;
+        flex-direction: row;
+    }
+    p.right {
+        color: white;
+        padding-top: 1rem;
+        font-size: 1rem;
+    }
+    input.style {
+        margin-top: 4rem; 
+        background-color: #002855;
+		color: white; 
+        font-size: 1.2rem; 
+        width: 6rem; 
+        height:2rem; 
+        padding-left: 1rem; 
+        padding-bottom: .2rem; 
+        padding-top: .2rem;
+		border-radius: 8px; 
+        margin-left: 95%;
+    }
 }

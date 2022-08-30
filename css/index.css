@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Montserrat:ital,wght@0,500;1,400;1,900&family=PT+Serif&display=swap');
 
-@media only screen and (max-device-width: 414px) and (min-device-width: 360px) {
+/* not accounting for iphone se */
+@media only screen and (max-device-width: 1281px) and (min-device-width: 360px) {
     *{
         padding: 0; 
         margin: 0; 
@@ -41,7 +42,7 @@
         width: 100%;
     }
     .header ul a{
-        font-size: .8rem; 
+        font-size: .7rem; 
         letter-spacing: .1em;
         text-decoration: none;
         color: white; 
@@ -57,7 +58,6 @@
         padding-left: 1rem;
         font-weight: bold;
     }
-    /* add some hover affect to show the details */
     .bar {
         background-color: #FFBF00;
         position: absolute;
@@ -76,17 +76,6 @@
         width: 100%; 
         height: auto;
     }
-    /*
-    .disclaimer {
-        width: 100%;
-        height: 7.5rem;
-        top: 9rem;
-        display: flex;
-        background-color: lightgray;
-        justify-content: center;
-        position: relative;
-        flex-direction: row;
-    }*/
     p.hidden { 
         font-size: 1rem;
         color: #002855;
@@ -109,7 +98,7 @@
         z-index: -1;
         border-radius: 2px;
         font-size: 1rem;
-        padding: 0.4px;
+       /* padding: 0.4px;*/
     }
     p {
         color: #002855;
@@ -195,7 +184,7 @@
         top: 92rem;
         position: absolute;
         align-items: center;
-        padding-top: 40px;
+        padding-top: 30px;
         padding-left: 10px;
         padding-right: 5px;
         font-size: 1rem;
@@ -219,45 +208,12 @@
         height: 20px;
         position: absolute;
         z-index: 1;
-        margin-left: 78%;
+        margin-left: 88%;
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*supports laptop and bigger screens */
-@media (min-width:1281px) {
+@media only screen and (min-device-width: 1281px) { 
+/* desktop scale */
     *{
         padding: 0; 
         margin: 0; 
@@ -305,6 +261,8 @@
         padding: 40px;
         display: block;
         font-weight: 900;
+        /*force it to adjust to the size*/
+        position: relative;
     }
     /* add some hover affect to show the details */
     .bar {
@@ -340,10 +298,10 @@
         width: 100%;
         height: 7.7rem;
         display: flex;
-        margin-bottom: 41rem;
+        margin-bottom: 22rem;
         background-color: lightgray;
         justify-content: center;
-        position: absolute;
+        position: relative;
         flex-direction: row;
     }
     p.hidden { 
@@ -382,7 +340,7 @@
     }
     .footer { 
         /* fix this brute force */
-        top: 75rem;
+        top: 63rem;
         width: 100%;
         height: 18rem;
         position: relative;
@@ -473,4 +431,3 @@
         border: 1px solid lightgray;
     }
 }
-
