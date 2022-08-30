@@ -31,11 +31,8 @@
 		<div class="body">
 		<form action="/submit_data" method="POST">
 			<div class="col1">
-				<label for="Patient Number">Patient Number</label>
-				<input type="number" name="Patient Number" placeholder="index number">
-				<br><br>
 				<label for="Weight">Weight</label>
-				<input name="Weight" type="number" placeholder="kg">
+				<input name="Weight" type="number" placeholder="kg" step=".01">
 				<br><br>
 				<label for="Breed Group">Breed Group</label>
 				<input type="text" name="Breed Group" accept="Toy, Herding, Hound, Mix, Non-Sporting, Sporting, Terrier, Working, Foundation Stock Service">
@@ -49,72 +46,72 @@
 				</fieldset>
 				<br>
 				<label for="MAT">MAT</label>
-				<input type="number" name="MAT" placeholder="0, 100, 200, 400, ...">
+				<input type="number" name="MAT" placeholder="0, 100, 200, 400, ..." step="100">
 				<br><br>
 				<label for="anion gap">Anion Gap</label>
-				<input type="number" name="Anion Gap" placeholder="mmol/L">
+				<input type="number" name="Anion Gap" placeholder="mmol/L" step=".01">
 				<br><br>
 				<label for="sodium">Sodium</label>
-				<input type="number" name="Sodium" placeholder="mmol/L">
+				<input type="number" name="Sodium" placeholder="mmol/L" step=".01">
 				<br><br>
 				<label for="Potassium">Potassium</label>
-				<input type="number" name="Potassium" placeholder="mmol/L">
+				<input type="number" name="Potassium" placeholder="mmol/L" step=".01">
 				<br><br>
 				<label for="Chloride">Chloride</label>
-				<input type="number" name="Chloride" placeholder="mmol/L">
+				<input type="number" name="Chloride" placeholder="mmol/L" step=".01">
 				<br><br>
 				<label for="Bicarb">Bicarb</label>
-				<input type="number" name="Bicarb" placeholder="mmol/L">
+				<input type="number" name="Bicarb" placeholder="mmol/L" step=".01">
 				<br><br>
 				<label for="Phosphorous">Phosphorous</label>
-				<input type="number" name="Phosphorus" placeholder="mg/dL">
+				<input type="number" name="Phosphorus" placeholder="mg/dL" step=".01">
 				<br><br>
 				<label for="Calcium">Calcium</label>
-				<input type="number" name="Calcium" placeholder="mg/dL">
+				<input type="number" name="Calcium" placeholder="mg/dL" step=".01">
 				<br><br>
 				<label for="BUN">BUN</label>
-				<input type="number" name="BUN" placeholder="mg/dL">
+				<input type="number" name="BUN" placeholder="mg/dL" step=".01">
 				<br><br>
 				<label for="Creatinine">Creatinine</label>
-				<input type="number" name="Creatinine" placeholder="mg/dL">
+				<input type="number" name="Creatinine" placeholder="mg/dL" step=".01">
 				<br><br>
 				<label for="Glucose">Glucose</label>
-				<input type="number" name="Glucose" placeholder="mg/dL">
+				<input type="number" name="Glucose" placeholder="mg/dL" step=".01">
 				<br><br>
 				<label for="Total Protein">Total Protein</label>
-				<input type="number" name="Total Protein" placeholder="g/dL">
+				<input type="number" name="Total Protein" placeholder="g/dL" step=".01">
 				<br><br>
 				<label for="Albumin">Albumin</label>
-				<input type="number" name="Albumin" placeholder="g/dL">
+				<input type="number" name="Albumin" placeholder="g/dL" step=".01">
 				<br><br>
 				<label for="Globulin">Globulin</label>
-				<input type="number" name="Globulin" placeholder="g/dL">
+				<input type="number" name="Globulin" placeholder="g/dL" step=".01">
 				<br><br>
 			</div>
 			<div class="col2">
 				<label for="ALT">ALT</label>
-				<input type="number" name="ALT" placeholder="IU/L">
+				<input type="number" name="ALT" placeholder="IU/L" step=".01">
 				<br><br>
 				<label for="AST">AST</label>
-				<input name="AST" type="number" placeholder="IU/L">
+				<input name="AST" type="number" placeholder="IU/L" step=".01">
 				<br><br>
 				<label for="ALP">ALP</label>
-				<input type="text" name="ALP" placeholder="IU/L">
+				<input type="text" name="ALP" placeholder="IU/L" step=".01">
 				<br><br>
 				<label for="GGT">GGT</label>
-				<input type="text" name="GGT" placeholder="IU/L">
+				<input type="text" name="GGT" placeholder="IU/L" step=".01">
 				<br><br>
 				<label for="Cholesterol">Cholesterol</label>
-				<input type="text" name="Cholesterol" placeholder="mg/dL">
+				<input type="text" name="Cholesterol" placeholder="mg/dL" step=".01">
 				<br><br>
 				<label for="Bilirubin">Bilirubin</label>
-				<input type="text" name="Bilirubin" placeholder="mg/dL">
+				<input type="text" name="Bilirubin" placeholder="mg/dL" step=".01">
 				<br><br>
 				<label for="Urine Specific Gravity">Urine Specific Gravity</label>
-				<input type="text" name="Urine Specific Gravity" placeholder="number to 3 sig digits">
+				<input type="text" name="Urine Specific Gravity" placeholder="number to 3 sig digits" step=".01">
 				<br><br>
 				<label>Urine Protein</label><br>
-				<input type="number" name="Urine Protein">
+				<input type="number" name="Urine Protein" step="1">
 				<!-- <input type="checkbox" name="up" value="0">
 				<label for="0"> 0</label><span class="tab"></span>
 				<input type="checkbox" name="up" value="1">
@@ -128,7 +125,7 @@
 				-->
 				<br><br>
 				<label>Urine Glucose</label><br>
-				<input type="number" name="Urine Glucose">
+				<input type="number" name="Urine Glucose" step="1">
 				<!--
 				<input type="checkbox" name="up" value="0">
 				<label for="0"> 0</label><span class="tab"></span>
@@ -143,34 +140,34 @@
 				-->
 				<br><br>
 				<label for="Hct">Hct</label>
-				<input type="number" name="Hct" placeholder="%">
+				<input type="number" name="Hct" placeholder="%" step=".01">
 				<br><br>
 				<label for="Hgb">Hgb</label>
-				<input type="number" name="Hgb" placeholder="g/dL">
+				<input type="number" name="Hgb" placeholder="g/dL" step=".01">
 				<br><br>
 				<label for="MCV">MCV</label>
-				<input type="number" name="MCV" placeholder="fL">
+				<input type="number" name="MCV" placeholder="fL" step=".01">
 				<br><br>
 				<label for="WBC">WBC</label>
-				<input type="number" name="WBC" placeholder="/mcL">
+				<input type="number" name="WBC" placeholder="/mcL" step=".01">
 				<br><br>
 				<label for="Bands">Bands</label>
-				<input type="number" name="Bands" placeholder="/mcL">
+				<input type="number" name="Bands" placeholder="/mcL" step=".01">
 				<br><br>
 				<label for="Neut">Neut</label>
-				<input type="number" name="Neut" placeholder="/mcL">
+				<input type="number" name="Neut" placeholder="/mcL" step=".01">
 				<br><br>
 				<label for="Lymph">Lymph</label>
-				<input type="number" name="Lymph" placeholder="/mcL">
+				<input type="number" name="Lymph" placeholder="/mcL" step=".01">
 				<br><br>
 				<label for="Mono">Mono</label>
-				<input type="number" name="Mono" placeholder="/mcL">
+				<input type="number" name="Mono" placeholder="/mcL" step=".01">
 				<br><br>
 				<label for="Eosin">Eosin</label>
-				<input type="number" name="Eosin" placeholder="/mcL">
+				<input type="number" name="Eosin" placeholder="/mcL" step=".01">
 				<br><br>
 				<label for="Plt">Plt</label>
-				<input type="number" name="Plt" placeholder="/mcL">
+				<input type="number" name="Plt" placeholder="/mcL" step=".01">
 				<br><br>
 				<input class="sbtn" type="submit" value="Submit">
 			</div>
