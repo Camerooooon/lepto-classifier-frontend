@@ -1,6 +1,7 @@
 from fpdf import FPDF
+from result import Result
 
-def gen_pdf(data, result):
+def gen_pdf(data, result: Result):
     #this will convert json into txt, thus we use txt file to convert it into pdf format
     pdf = FPDF('P', 'mm', (100, 150))
     
@@ -18,7 +19,7 @@ def gen_pdf(data, result):
     pdf.cell(100, 10, txt = "Here is the result of the Lepto-Classifier: ",ln = 1, align = 'C')
     
     pdf.set_font("Times", 'BI', size = 30)
-    pdf.cell(200, 100, txt = "result: " + result, ln = 1, align='C')
+    pdf.cell(200, 100, txt = "result: " + str(result), ln = 1, align='C')
     pdf.set_font("Times", size = 15)
     # add another cell
     
@@ -36,9 +37,9 @@ def gen_pdf(data, result):
     
     # additional link 
     #pdf image fix/position needs to be fixed
-    pdf.image('vm2.png', 110, 250, 100)
+    #TODO: add image to repo pdf.image('vm2.png', 110, 250, 100)
     #pdf.image('vm.png', 100, 150, 100)
-    pdf.output("result.pdf") 
+    return pdf.output(dest = "S").encode('latin-1')
     
     #will change the formatting of the fpdf
     
