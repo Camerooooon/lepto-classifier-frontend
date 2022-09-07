@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, send_file
+from result import Result, from_result_num
 from flask.wrappers import Response
 from leptoclassifier.lepto_classifier import LeptoClassifier
 import pandas as pd
@@ -69,4 +70,5 @@ def submit_data():
         print("Prediction = " + str(prediction[0]));
     except (ValueError, KeyError) as err:
         return Response('{"status": "error", "message": "'+ str(err) + '"}', status=400)
+    result = from_result_num(prediction[0])
     return Response('{"status": "ok", "result": "' + str(prediction[0]) + '"}', status=200)
