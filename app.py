@@ -72,7 +72,6 @@ def submit_data():
     except (ValueError, KeyError) as err:
         return Response('{"status": "error", "message": "'+ str(err) + '"}', status=400)
     result: Result = prediction[0]
-    response = make_response(gen_pdf("", result))
+    response = make_response(gen_pdf(df, result))
     response.headers.set("Content-Type", "application/pdf")
     return response;
-    #return Response('{"status": "ok", "result": "' + str(prediction[0]) + '"}', status=200)
