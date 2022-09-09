@@ -16,6 +16,10 @@ def index():
 def css():
      return send_file('css/index.css', mimetype='text/css')
 
+@app.route("/index.js")
+def js():
+     return send_file('js/index.js', mimetype='text/javascript')
+
 @app.route("/lepto.css")
 def style():
      return send_file('css/lepto.css', mimetype='text/css')
