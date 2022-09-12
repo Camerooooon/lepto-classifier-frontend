@@ -1,6 +1,7 @@
 from fpdf import FPDF
 from result import Result
 
+#this is to test 
 def gen_pdf(data, result: Result):
     #this will convert json into txt, thus we use txt file to convert it into pdf format
     pdf = FPDF('P', 'mm', (100, 150))
