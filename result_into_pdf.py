@@ -49,4 +49,4 @@ def gen_pdf(data, result: Result):
     # display the result 
     
     # credential by uc davis 
-    # all rights given to UC DAVIS VM.. 
+

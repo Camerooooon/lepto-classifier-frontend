@@ -1,9 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Montserrat:ital,wght@0,500;1,400;1,900&family=PT+Serif&display=swap');
 
 
-@media only screen and (max-device-width: 1281px) and (min-device-width: 360px) {
+@media only screen and (max-device-width: 768px) and (min-device-width: 360px) {
     h1 { 
         font-size: 2rem;
+        color: #002855;
+    }
+    h3 {
+        font-size: .5rem;
+        z-index: 1;
         color: #002855;
     }
     .box { 
@@ -13,11 +18,12 @@
     }
     #contact .container {
         min-height: 100vh;
-        width: 100%;
+        width: 80%;
         display: flex;
         align-items: center;
         justify-content: center;
         margin-top: 10rem;
+        margin-left: 10%;
     }
     #contact .contact {
         flex-direction: column;
@@ -83,6 +89,46 @@
     }
 }
 
+@media only screen and (max-device-width: 1281px) and (min-device-width: 768px) {
+    .footer { 
+        /* fix this brute force */
+        width: 100%;
+        height: 18rem;
+        position: relative;
+        background-color: #002855;
+        display: flex;
+        flex-direction: row;
+        margin-top: 10%;
+        position: absolute;
+    }
+    #contact .contact-item {
+        width: 80%;
+        padding: 20px;
+        text-align: center;
+        border-radius: 10px;
+        padding: 40px;
+        margin: 30px;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0px 0px 18px 0 #0000002c;
+        transition: .3s ease box-shadow;
+        display: flex;
+        flex-direction: column;
+    }
+    #contact .container {
+        min-height: 100vh;
+        width: 60%;
+        display: flex;
+        align-items: center;
+        margin-top: 10rem;
+        margin-left: -5%;
+    }
+    h3 {
+        font-size: .8rem;
+        color: #002855;
+        z-index: 1;
+    }
+}
 
 @media only screen and (min-device-width: 1281px) {
 
@@ -111,6 +157,7 @@
         width: 800px;
         margin-left: 8rem;
         margin-bottom: 5rem;
+        z-index: -1;
     }
     #contact .contact-item {
         width: 80%;
@@ -145,6 +192,9 @@
         line-height: 2rem;
         font-weight: 500;
     }
+    #contact .contact-info h3 {
+        z-index: 1;
+    }
     #contact .contact-item:hover{
         box-shadow: 0px 0px 5px 0 #0000002c;
     }
@@ -172,5 +222,10 @@
     }
     img {
         margin-left: 0;
+    }
+    h3 {
+        font-size: 1rem;
+        color: #002855;
+        z-index: 1;
     }
 }

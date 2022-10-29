@@ -2,12 +2,13 @@
 
 /* phone version media query */
 /* does not support iphone se */
-@media only screen and (max-device-width: 1281px) and (min-device-width: 360px) {
+@media only screen and (max-device-width: 768px) and (min-device-width: 360px) {
     .top { 
         width: 100%;
         height: 200px;
-        margin-top: -25rem;
+        margin-top: -24rem;
         align-items: center;
+        padding-bottom: 20px;
     }
     .container {
         min-height: 100vh;
@@ -19,11 +20,12 @@
         width: 100%;
     }
     p { 
-        font-size: .9rem;
+        font-size: 1rem;
         font-weight: 700;
         width: 100%;
-        padding-left: 10px;
-        padding-right: 10px;
+        padding-left: 15px;
+        padding-bottom: 20px;
+        padding-right: 15px;
     }
     .space { 
         display: inline-block;
@@ -37,21 +39,182 @@
         background-color: lightgray;
     }
     button { 
-        position: absolute;
-        margin-top: 400px;
-        margin-left: -90px;
-        margin-right: 20px;
+        margin-top: 38%;
+        margin-left: -100px;
         height: 2rem;
+        font-size: 0.8rem;
+        padding-top: 8px;
    }
-    .footer { 
-        /* fix this brute force */
-        top: 63rem;
-    }
     p.right {
         color: white;
         padding-top: 1rem;
         font-size: .4rem;
         margin-left: 0;
+    }
+    p.detail {
+        display: none;
+    }
+    .file {
+        display: flex;
+        justify-content: center;
+        margin-top: 25%;
+        position: absolute;
+        width: 100%;
+        flex-direction: column;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    label { 
+        font-size: .8rem;
+    }
+    input.btn {
+        background-color: #002855;
+        margin-left: 10px;
+        color: white;
+        width: 70px;
+        font-size: .8rem; 
+        height: 1.6rem; 
+        padding-left: .2rem; 
+        padding-bottom: .2rem; 
+        padding-top: .2rem;
+		border-radius: 8px; 
+        margin-left: 10px;
+    }
+    input {
+        height: 1.5rem;
+        margin-left: 10px;
+    }
+    .footer { 
+        margin-top: -225%;
+        width: 100%;
+        height: 13rem;
+        position: absolute;
+        background-color: #002855;
+    }
+    form { 
+        margin-top: 20px;
+    }
+    p.important {
+        margin-bottom: 10px;
+    }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1280px) {
+/* push everything down*/
+
+    .top { 
+        width: 100%;
+        height: 10rem;
+        font-size: 1.4rem;
+        margin-top: -70%;
+        padding-left: 10px;
+        padding-right: 10px;
+        align-items: center;
+        position: absolute;
+    }
+    .footer { 
+        /* fix this brute force */
+        width: 100%;
+        height: 18rem;
+        position: relative;
+        background-color: #002855;
+        display: flex;
+        flex-direction: row;
+        margin-top: -110%;
+        position: absolute;
+    }
+    .content {
+        margin-top: 3.5rem;
+        margin-left: 1rem;
+    }
+    hr {
+        display: block;
+        background-color: #FFBF00;
+        position: absolute;
+        width: 31rem;
+        height: 2px;
+    }
+    .title { 
+        font-size: 2.5rem;
+        font-weight: 900;
+        color: #FFBF00;
+        padding: 5px;
+    }
+    .vet_txt { 
+        font-size: 2.5rem;
+        font-weight: 900;
+        color: white;
+        padding: 5px;
+    }
+    p.right {
+        color: white;
+        font-size: .6rem;
+        padding-top: 1rem;
+    }
+    .file {
+        display: flex;
+        justify-content: center;
+        margin-top: -7%;
+        position: absolute;
+        width: 100%;
+        flex-direction: column;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    form { 
+        padding-left: 12%;
+        padding-bottom: 30px;
+        z-index: 1;
+    }
+    .btn { 
+        background-color: #002855;
+        color: white;
+    }
+    input.btn {
+        background-color: #002855;
+        color: white;
+        width: 70px;
+        font-size: .8rem; 
+        height: 1.6rem; 
+        padding-left: .2rem; 
+        padding-bottom: .2rem; 
+        padding-top: .2rem;
+		border-radius: 8px; 
+        margin-left: 10px;
+    }
+    input { 
+        background-color: none;
+        margin-left: 20px;
+        width: 50%;
+        height: 1.6rem;
+        padding-left: 0;
+    }
+    p.important { 
+        font-size: 1.2rem;
+        font-weight: 700;
+        width: 90%;
+        padding-left: 10px;
+        padding-right: 10px;
+        position: absolute;
+    }
+    p.space { 
+        margin-top: 7rem;
+    }
+    button { 
+        position: absolute;
+        margin-top: 17%;
+        margin-left: -120px;
+        width: 10%;
+        height: auto;
+        padding-bottom: .2rem;
+        font-size: 0.7rem;
+    }
+    p.detail {
+        display: block;
+        font-size: 1.2rem;
+        position: absolute;
+        width: 80%;
+        margin-top: 150px;
     }
 }
 
@@ -60,8 +223,9 @@
     .top { 
         width: 100%;
         height: 17rem;
-        margin-top: -8rem;
+        margin-top: -20%;
         align-items: center;
+        position: absolute;
     }
     p { 
         font-size: 1.5rem;
@@ -109,8 +273,48 @@
     }
     button { 
         position: absolute;
-        margin-top: 46rem;
-        margin-left: 33rem;
+        margin-top: 1%;
+        margin-left: 43rem;
         height: 2rem;
+    }
+    form { 
+        padding-left: 12%;
+        padding-bottom: 10px;
+        z-index: 1;
+    }
+    .file {
+        display: flex;
+        justify-content: left;
+        margin-top: -14%;
+        width: 100%;
+        flex-direction: column;
+    }
+    .footer { 
+        margin-top: -35%;
+    }
+    .btn { 
+        background-color: #002855;
+    }
+    input { 
+        background-color: none;
+        margin-left: 20px;
+        width: 25%;
+        height: 1.6rem;
+        padding-left: .3em;
+    }
+    input.btn {
+        background-color: #002855;
+        color: white;
+        width: 70px;
+        font-size: .8rem; 
+        height: 1.6rem; 
+        padding-left: .2rem; 
+        padding-bottom: .2rem; 
+        padding-top: .2rem;
+		border-radius: 8px; 
+        margin-left: 10px;
+    }
+    p.detail { 
+        display: none;
     }
 }

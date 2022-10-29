@@ -31,10 +31,24 @@
 		</div>
 
 		<!-- this is where we will implement pdf parser -->
-		<div class="box">
-			<p style="font-size: 2rem; width: 100%; margin-left: 0;">We will link this with the pdf parser, linking in progress!</p>
+		<div class="file">
+			<form action="/action_page.php">
+				<label for="myfile">Select a file:</label>
+				<input type="file" id="myfile" name="myfile"><br><br>
+				<input class="btn" type="submit">
+			</form>
+
+			<!-- email info -->
+			<form action="/submit_data" method="POST">
+				<label for="email">Enter your email: </label>
+				<input type="text" id="email" name="email"><br><br>
+				<input class="btn" type="submit">
+			</form>
 		</div>
+
 		<a style="font-size: 1.2rem;" href="result"><button>View Results</button></a>
+
+		<p class="detail">The file will be sent to pdf parser and it will share the result.</p>
 
 		<div class="footer">
 			<div class="vm_img">
