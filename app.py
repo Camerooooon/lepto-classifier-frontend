@@ -82,7 +82,10 @@ def submit_data():
     result: Result = prediction[0]
 
     dog = db.DogEntry(result, request_data);
-    db.put_dog_entry(con, cur, dog);
+    
+    if (result != -1):
+        print("Valid");
+        db.put_dog_entry(con, cur, dog);
 
     response = make_response(gen_pdf(df, result))
     response.headers.set("Content-Type", "application/pdf")
