@@ -2,8 +2,12 @@ from flask import Flask, render_template, request, send_file, make_response
 from result import Result
 from result_into_pdf import gen_pdf
 from flask.wrappers import Response
+import database as db
 from leptoclassifier.lepto_classifier import LeptoClassifier
 import pandas as pd
+
+con = db.con_database();
+cur = con.cursor();
 
 app = Flask(__name__)
 
@@ -76,6 +80,10 @@ def submit_data():
     except (ValueError, KeyError) as err:
         return Response('{"status": "error", "message": "'+ str(err) + '"}', status=400)
     result: Result = prediction[0]
+
+    dog = db.DogEntry(result, request_data);
+    db.put_dog_entry(con, cur, dog);
+
     response = make_response(gen_pdf(df, result))
     response.headers.set("Content-Type", "application/pdf")
     return response;
