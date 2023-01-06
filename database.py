@@ -60,4 +60,6 @@ def put_dog_entry(con, cur, dog_entry: DogEntry):
     con.commit();
 
 def get_dog_by_names(con, cur, dog_name, owner_name):
-    return cur.execute("SELECT * FROM dogs WHERE dog_name=?", (dog_name,)).fetchone();
+
+    database_dog = cur.execute("SELECT * FROM dogs WHERE dog_name=?", (dog_name,)).fetchone();
+    return DogEntry(Result.NEGATIVE, database_dog);
