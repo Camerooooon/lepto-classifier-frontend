@@ -336,7 +336,6 @@
         padding: 0; 
         margin: 0; 
         box-sizing: border-box;
-        max-height: 2050px;
     }
     html {
         font-size: 15px;
