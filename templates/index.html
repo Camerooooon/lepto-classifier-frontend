@@ -6,6 +6,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="index.css">
 	<title>Home page</title>
+	<style>
+		#blink {
+			font-size: 40px;
+			font-weight: bold;
+			color: #002855;
+			transition: 1.4s;
+		}
+	</style>
 </head>
 
 <!-- this will contain all the content inside the container box, this portion is manual entry -->
@@ -14,23 +22,42 @@
     <div class="container">
 		<div class="header">
 				<ul>
+					<!-- this will be connected to the home page -->
 					<li class="ucd"><a href="home">UC DAVIS</a></li>
-					<li><a href="lepto">Lepto-classifier</a></li>
+					<li><a href="index">Input</a></li>
+					<li><a onclick="alertFunction()" href="index">Lepto-classifier</a></li>
+					<script>
+						function alertFunction() {
+						 alert("Sorry the page is currently under construction, Stay tuned for the update!");
+						}
+					</script>
+					<!-- change this to input -->
  					<li><a href="result">Result</a></li>
  					<li><a href="help">Help</a></li>
  					<li><a href="contact">Contact</a></li>
 				</ul>
 			<div class="bar"></div>
+			<div class="disclaimer">
+				<p id="blink">Faster access to data, Lepto-classifier parser coming soon!</p>
+				<script type="text/javascript">
+					var blink = document.getElementById('blink');
+					setInterval(function() {
+						blink.style.opacity = (blink.style.opacity == 0 ? 1 : 0);
+					}, 1500);
+				</script>
+				<!-- <a href="lepto"><button>Lepto</button></a> -->
+			</div>
 		</div>
 
-		<div class="disclaimer">
-			<p class="hidden">If you want faster access to the data, please use our Lepto-classifier</p>
-			<a href="lepto"><button>Lepto</button></a>
-		</div>
-		
-		<div class="body">
+		<div class="central">
 		<form action="/submit_data" method="POST">
 			<div class="col1">
+				<label for="Dog Name">Dog Name</label>
+				<input name="dog Name" type="text">
+				<br><br>
+				<label for="Owner Name">Owner Name</label>
+				<input name="Owner Name" type="number" placeholder="Last First">
+				<br><br>
 				<label for="Weight">Weight</label>
 				<input name="Weight" type="number" placeholder="kg" step=".01">
 				<br><br>
@@ -46,8 +73,50 @@
 				</fieldset>
 				<br>
 				<label for="MAT">MAT</label>
+				<select name="MAT" id="MAT">
+					<option value="na">None</option>
+					<option value="0">0</option>
+					<option value="100">100</option>
+					<option value="200">200</option>
+					<option value="300">300</option>
+					<option value="400">400</option>
+					<option value="500">500</option>
+				</select>
+				<!--
 				<input type="number" name="MAT" placeholder="0, 100, 200, 400, ..." step="100">
+				-->				<br><br>
+				<label for="Hct">Hct</label>
+				<input type="number" name="Hct" placeholder="%" step=".01">
 				<br><br>
+				<label for="Hgb">Hgb</label>
+				<input type="number" name="Hgb" placeholder="g/dL" step=".01">
+				<br><br>
+				<label for="MCV">MCV</label>
+				<input type="number" name="MCV" placeholder="fL" step=".01">
+				<br><br>
+				<label for="WBC">WBC</label>
+				<input type="number" name="WBC" placeholder="/mcL" step=".01">
+				<br><br>
+				<label for="Bands">Bands</label>
+				<input type="number" name="Bands" placeholder="/mcL" step=".01">
+				<br><br>
+				<label for="Neut">Neut</label>
+				<input type="number" name="Neut" placeholder="/mcL" step=".01">
+				<br><br>
+				<label for="Lymph">Lymph</label>
+				<input type="number" name="Lymph" placeholder="/mcL" step=".01">
+				<br><br>
+				<label for="Mono">Mono</label>
+				<input type="number" name="Mono" placeholder="/mcL" step=".01">
+				<br><br>
+				<label for="Eosin">Eosin</label>
+				<input type="number" name="Eosin" placeholder="/mcL" step=".01">
+				<br><br>
+				<label for="Plt">Plt</label>
+				<input type="number" name="Plt" placeholder="/mcL" step=".01">
+				<br><br>
+			</div>
+			<div class="col2">
 				<label for="anion gap">Anion Gap</label>
 				<input type="number" name="Anion Gap" placeholder="mmol/L" step=".01">
 				<br><br>
@@ -87,8 +156,6 @@
 				<label for="Globulin">Globulin</label>
 				<input type="number" name="Globulin" placeholder="g/dL" step=".01">
 				<br><br>
-			</div>
-			<div class="col2">
 				<label for="ALT">ALT</label>
 				<input type="number" name="ALT" placeholder="IU/L" step=".01">
 				<br><br>
@@ -107,80 +174,84 @@
 				<label for="Bilirubin">Bilirubin</label>
 				<input type="text" name="Bilirubin" placeholder="mg/dL" step=".01">
 				<br><br>
+			</div>
+			<div class="col3">
 				<label for="Urine Specific Gravity">Urine Specific Gravity</label>
 				<input type="text" name="Urine Specific Gravity" placeholder="number to 3 sig digits" step=".01">
 				<br><br>
 				<label>Urine Protein</label><br>
-				<input type="number" name="Urine Protein" step="1">
-				<!-- <input type="checkbox" name="up" value="0">
-				<label for="0"> 0</label><span class="tab"></span>
-				<input type="checkbox" name="up" value="1">
-				<label for="1"> 1</label><span class="tab"></span>
-				<input type="checkbox" name="up" value="2">
-				<label for="2"> 2</label><span class="tab"></span>
-				<input type="checkbox" name="up" value="3">
-				<label for="3"> 3</label><span class="tab"></span>
-				<input type="checkbox" name="up" value="4">
-				<label for="4"> 4</label>
-				-->
-				<br><br>
-				<label>Urine Glucose</label><br>
-				<input type="number" name="Urine Glucose" step="1">
-				<!--
-				<input type="checkbox" name="up" value="0">
-				<label for="0"> 0</label><span class="tab"></span>
-				<input type="checkbox" name="up" value="1">
-				<label for="1"> 1</label><span class="tab"></span>
-				<input type="checkbox" name="up" value="2">
-				<label for="2"> 2</label><span class="tab"></span>
-				<input type="checkbox" name="up" value="3">
-				<label for="3"> 3</label><span class="tab"></span>
-				<input type="checkbox" name="up" value="4">
-				<label for="4"> 4</label>
-				-->
-				<br><br>
-				<label for="Hct">Hct</label>
-				<input type="number" name="Hct" placeholder="%" step=".01">
-				<br><br>
-				<label for="Hgb">Hgb</label>
-				<input type="number" name="Hgb" placeholder="g/dL" step=".01">
-				<br><br>
-				<label for="MCV">MCV</label>
-				<input type="number" name="MCV" placeholder="fL" step=".01">
-				<br><br>
-				<label for="WBC">WBC</label>
-				<input type="number" name="WBC" placeholder="/mcL" step=".01">
-				<br><br>
-				<label for="Bands">Bands</label>
-				<input type="number" name="Bands" placeholder="/mcL" step=".01">
-				<br><br>
-				<label for="Neut">Neut</label>
-				<input type="number" name="Neut" placeholder="/mcL" step=".01">
-				<br><br>
-				<label for="Lymph">Lymph</label>
-				<input type="number" name="Lymph" placeholder="/mcL" step=".01">
-				<br><br>
-				<label for="Mono">Mono</label>
-				<input type="number" name="Mono" placeholder="/mcL" step=".01">
-				<br><br>
-				<label for="Eosin">Eosin</label>
-				<input type="number" name="Eosin" placeholder="/mcL" step=".01">
-				<br><br>
-				<label for="Plt">Plt</label>
-				<input type="number" name="Plt" placeholder="/mcL" step=".01">
-				<br><br>
-				<input class="sbtn" type="submit" value="Submit">
-			</div>
+				<!-- <input type="number" name="Urine Protein" step="1"> -->
+				<div class="shrink">
+					<fieldset>
+					<div>
+						<input type="checkbox" name="Urine Protein" value="0">
+						<label for="0"> Negative or 0 mg/dL </label><span class="tab"></span>
+					</div>
+					<div>
+						<input type="checkbox" name="Urine Protein" value="1">
+						<label for="1"> 1+ or 1 - 25 mg/dL</label><span class="tab"></span>
+					</div>
+					<div>
+						<input type="checkbox" name="Urine Protein" value="2">
+						<label for="2"> 2+ or 26-50 mg/dL </label><span class="tab"></span>
+					</div>
+					<div>
+						<input type="checkbox" name="Urine Protein" value="3">
+						<label for="3"> 3+ or 51 - 150 mg/dL</label><span class="tab"></span>
+					</div>
+					<div>
+						<input type="checkbox" name="Urine Protein" value="4">
+						<label for="4"> 4+ or > 151 mg/dL</label>
+					</div>
+					</fieldset>
+				</div>
+				<br><br>  
 
+				<label>Urine Glucose</label><br>
+				<div class="shrink">
+				<!-- <input type="number" name="Urine Glucose" step="1"> --> 
+				<fieldset>
+					<div>
+						<input type="radio" name="Urine Glucose" value="0">
+						<label for="0"> Negative or 0 mg/dL </label><span class="tab"></span>
+					</div>
+					<div>
+						<input type="radio" name="Urine Glucose" value="1">
+						<label for="1"> 1+ or 1 - 50 mg/dL </label><span class="tab"></span>
+					</div>
+					<div>
+						<input type="radio" name="Urine Glucose" value="2">
+						<label for="2"> 2+ or 51 - 250 mg/dL </label><span class="tab"></span>
+					</div>
+					<div>
+						<input type="radio" name="Urine Glucose" value="3">
+						<label for="3"> 3+ or 251 - 500 mg/dL </label><span class="tab"></span>
+					</div>
+					<div>
+						<input type="radio" name="Urine Glucose" value="4">
+						<label for="4"> 4+ or > 501 mg/dL </label>
+					</div>
+				</fieldset>
+				</div>
+				
+			</div>
 			</form>
 		</div>
-		<!-- thi swill be the disclaimer text part -->
-		<div class="box">
-			<p>By submitting you agree that the data that is being submited may be collected and used to improve the machine learning model.
-			In order to improve the service, you may be contacted via contact page.</p>
-			<p class="important"><span style="background-color: #FFBF00;">Please ensure that all data is inputed correctly before submitting!</span></p>
+<!--
+		<a href="result"><input class="sbtn" type="submit" value="Find Your Result Here!"></a>
+-->
+	
+		<div class="note">	
+			<p class="info">Please read this!</p>
+			<div class="line"></div> 
+			<div class="box">
+				<p>By submitting you agree that the data that is being submited may be collected and used to improve the machine learning model.
+				In order to improve the service, you may be contacted via contact page.</p>
+				<p class="important"><span style="background-color: #FFBF00; border-radius: 6px; transition: .3s infinite;">Please ensure that all data is inputed correctly before submitting!</span></p>
+			</div>
 		</div>
-		
+
+		<a style="margin-bottom: 20px;" href="result"><input class="sbtn" type="submit" value="Find Your Result Here!"></a>
 
 		<div class="footer">
 			<div class="vm_img">

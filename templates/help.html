@@ -8,12 +8,19 @@
 	<link rel="stylesheet" href="help.css">
 	<title>Home page</title>
 </head>
+
 <body>
     <div class="container">
 		<div class="header">
 				<ul>
 					<li class="ucd"><a href="home">UC DAVIS</a></li>
-					<li><a href="lepto">Lepto-classifier</a></li>
+					<li><a href="index">Input</a></li>	
+					<li><a onclick="alertFunction()" href="home">Lepto-classifier</a></li>
+					<script>
+						function alertFunction() {
+						 alert("Sorry the page is currently under construction, Stay tuned for the update!");
+						}
+					</script>
  					<li><a href="result">Result</a></li>
  					<li><a href="help">Help</a></li>
  					<li><a href="contact">Contact</a></li>
@@ -21,37 +28,36 @@
 			<div class="bar"></div>
 		</div>
 
-		<div class="top">
-			<p>Please describe the issue, we are happy to help!</p>
-		</div>
-		<div class="entry">
-			<form action="/submit_data" method="POST">
-				<label for="fname">Enter First Name</label>
-				<input type="text" name="fname">
-				<br><br>
-				<label for="lname">Enter Last Name</label>
-				<input type="text" name="lname">
-				<br><br>
-				<label for="email">Enter Email</label>
-				<input type="text" name="email">
-				<br><br>
-				<label for="issue">Describe the Issue</label>
-				<input class="expanded" type="text" name="issue">
-				<input class="style" type="submit" value="Submit">
-			</form>
-
+		<div class="helper">
+			<!-- Left contact page --> 
+			<div class="left_func">
+				<p class="header_help">Please describe the issue, we are happy to help!</p>
+				<div class="entry">
+					<form action="/submit_data" method="POST" class="form-horizontal">
+							<input type="text" name="lname" placeholder="Name" value="" required >
+							<input type="text" name="email" placeholder="Email">
+							<input class="expanded" type="text" name="issue" placeholder="Describe the issue">
+							<input class="style" type="submit" value="Submit">
+					</form>
+				</div>
+			</div>
+			<div class="right_func">
+				<div class="picture">
+					<img class="dog" src="dog.png" alt="Image not available" />	
+				<!-- image on the right side -->
+				</div>
+			</div>
 		</div>
 
 		<div class="footer">
-			<div class="vm_img">
-				<img src="vet_pic.png"/>
-			</div>
-			<div class="content">
-				<div class="title">UC DAVIS</div>	
-				<hr>
-				<div class="vet_txt">VETERINARY MEDICINE</div>
-				<p class="right">Copyright © 2022 UC DAVIS VETERINARY MEDICINE. All rights resereved</p>
+			<div class="closure">
+				<div class="content">
+					<div class="title">UC DAVIS</div>	
+					<hr>
+					<div class="vet_txt">VETERINARY MEDICINE</div>
+					<p class="right">Copyright © 2022 UC DAVIS VETERINARY MEDICINE. All rights resereved</p>
+				</div>
 			</div>
 		</div>
-
+	</div>
 </body>

@@ -13,16 +13,15 @@
     }
     .box { 
         height: 3rem; 
-        position: absolute;
         display: block;
     }
     #contact .container {
-        min-height: 100vh;
+        min-height: 0;
         width: 80%;
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-top: 10rem;
+        margin-top: 2rem;
         margin-left: 10%;
     }
     #contact .contact {
@@ -37,7 +36,6 @@
         padding: 20px;
         text-align: center;
         border-radius: 10px;
-        padding: 40px;
         margin: 30px;
         justify-content: center;
         align-items: center;
@@ -50,7 +48,7 @@
     #contact .icon {
         width: 70px;
         margin: 0; 
-        margin-bottom: 10px;
+        margin-bottom: 2px;
         align-items: center;
         display: flex;
         justify-content: center;
@@ -72,66 +70,105 @@
         font-size: 2rem;
         font-weight: 500; 
         margin-bottom: 10px;
-        margin-top: 10px;
         text-transform: uppercase;
         letter-spacing: .2rem;
         text-align: center;
-    }
-    .footer { 
-        /* fix this brute force */
-        top: 80rem;
     }
     img .ft_img {
         margin-left: 7rem;
     }
     img {
         margin-left: 0;
+        margin-bottom: 1rem;
     }
 }
 
 @media only screen and (max-device-width: 1281px) and (min-device-width: 768px) {
-    .footer { 
-        /* fix this brute force */
-        width: 100%;
-        height: 18rem;
-        position: relative;
-        background-color: #002855;
+    h1 { 
+        font-size: 3rem;
+        color: #002855;
+    }
+    h3 {
+        font-size: 1rem;
+        z-index: 1;
+        color: #002855;
+    }
+    .box { 
+        height: 3rem; 
+        display: block;
+    }
+    #contact .container {
+        min-height: 0;
+        width: 80%;
         display: flex;
-        flex-direction: row;
-        margin-top: 10%;
-        position: absolute;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2rem;
+        margin-left: 10%;
+    }
+    #contact .contact {
+        flex-direction: column;
+    }
+    #contact .contact-items {
+        margin-left: 1rem;
+        margin-bottom: 2rem;
     }
     #contact .contact-item {
-        width: 80%;
+        width: 100%;
         padding: 20px;
         text-align: center;
         border-radius: 10px;
-        padding: 40px;
-        margin: 30px;
+        margin: 0px;
+        margin-bottom: 30px;
         justify-content: center;
         align-items: center;
         box-shadow: 0px 0px 18px 0 #0000002c;
         transition: .3s ease box-shadow;
         display: flex;
         flex-direction: column;
+        border: 3px solid #002855;
     }
-    #contact .container {
-        min-height: 100vh;
-        width: 60%;
-        display: flex;
+    #contact .icon {
+        width: 100px;
+        margin: 0; 
+        margin-bottom: 2px;
         align-items: center;
-        margin-top: 10rem;
-        margin-left: -5%;
+        display: flex;
+        justify-content: center;
     }
-    h3 {
-        font-size: .8rem;
-        color: #002855;
-        z-index: 1;
+    #contact .contact-info h1 {
+        font-size: 1.7rem;
+        font-weight: 500;
+        margin-bottom: 5px;
+    }
+    #contact .contact-info h2 {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        font-weight: 500;
+        padding: 10px;
+    }
+    #contact .contact-item:hover{
+        box-shadow: 0px 0px 5px 0 #0000002c;
+    }
+    #contact { 
+        font-size: 2rem;
+        font-weight: 500; 
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        letter-spacing: .2rem;
+        text-align: center;
+    }
+    img .ft_img {
+        margin-left: 7rem;
+    }
+    img {
+        margin-left: 0;
+        margin-bottom: 1rem;
     }
 }
 
+/*desktop*/
 @media only screen and (min-device-width: 1281px) {
-
     h1 { 
         font-size: 4rem;
         color: #002855;
@@ -142,12 +179,10 @@
         display: block;
     }
     #contact .container {
-        min-height: 100vh;
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-top: 15rem;
     }
     #contact .contact {
         flex-direction: column;
@@ -156,7 +191,6 @@
     #contact .contact-items {
         width: 800px;
         margin-left: 8rem;
-        margin-bottom: 5rem;
         z-index: -1;
     }
     #contact .contact-item {
@@ -201,21 +235,10 @@
     #contact { 
         font-size: 4rem;
         font-weight: 500; 
-        margin-bottom: 10px;
-        margin-top: 10px;
+        margin-bottom: 50px;
         text-transform: uppercase;
         letter-spacing: .2rem;
         text-align: center;
-    }
-    .footer { 
-        /* fix this brute force */
-        top: 6rem;
-        width: 100%;
-        height: 18rem;
-        position: relative;
-        background-color: #002855;
-        display: flex;
-        flex-direction: row;
     }
     img .ft_img {
         margin-left: 7rem;

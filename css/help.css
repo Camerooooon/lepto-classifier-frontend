@@ -2,69 +2,71 @@
 
 
 @media only screen and (max-device-width: 768px) and (min-device-width: 360px) {
-    .top { 
+    .bar {
+        background-color: #74a12e;
+    }
+    .header ul {
+        background-color: white;
+    }
+    .header ul a {
+        color: #74a12e;
+    }
+    .header .ucd a {
+        color: #74a12e;
+    }
+    .footer {
+        background-color: #74a12e;
+    }
+    .closure {
         width: 100%;
-        height: 200px;
-        margin-top: -27rem;
-        padding-left: 20px;
+        display: flex;
+        justify-content: center;
         align-items: center;
     }
-    .container {
-        min-height: 100vh;
+    .content {
+        width: 90%;
+        margin-bottom: 30px;
         display: flex;
-        align-items: center;
         justify-content: center;
-        flex-direction: row;
-        margin: 0;
-        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    .vet_txt { 
+        padding-right: 0px;
+        margin-left: 0px;
+        font-size: 1.8rem;
+    }
+    .helper {
+        display: flex;
+        flex-direction: column-reverse;
+        border: 7px solid #74a12e;
+        justify-content: center;
+        align-items: center;
+        border-radius: 6px;
+        width: 80%;
+        height: auto;
+        margin-bottom: 30px;
+        margin-top: 30px;
     }
     .entry {
-        height: 50rem;
-        width: 80%;
+        width: 90%;
         display: flex;
-        position: absolute;
-        margin-top: 19rem;
-        padding-top: 30px;
-    }
-    p { 
-        font-size: 1.2rem;
-        width: 100%;
-        font-weight: 900;
-        display: flex;
-        flex-direction: row;
-        margin-top: 10px;
-        padding-right: 10px;
-    }
-    form {
+        justify-content: center;
         align-items: center;
+    }
+    .left_func {
         width: 100%;
+        height: auto;
         display: flex;
         flex-direction: column;
-        font-size: 1.2rem;
+        align-items: center;
+        padding: 5px;
     }
-    input { 
-        background-color: lightgray;
-        display: inline block;
-        width: 100%;
-        border-radius: 8px;
-        height: 2rem;
-        z-index: 1;
-        text-align: left;
-        font-size: 1.2rem;
-        padding: 0.4em;
+    .right_func {
+        margin-left: 30px;
     }
-    input.style {
-        margin-top: 2rem; 
-        background-color: #002855;
-		color: white; 
-        font-size: .8rem; 
-        width: 5rem; 
-        height:2rem; 
-        padding-left: 1.3rem; 
-        padding-bottom: .2rem; 
-        padding-top: .2rem;
-		border-radius: 8px; 
-        margin-left: 82%;
+    form {
+        padding: 20px; 
     }
     label {
         width: 100%;
@@ -76,16 +78,149 @@
         padding-bottom:200px;
         font-size: 1.2rem;
     }
-    .footer { 
-        /* fix this brute force */
-        margin-top: -160%;
-        height: 13rem;
-        width: auto;
-        position: absolute;
-        background-color: #002855;
+    p.right {
+        color: white;
+        padding-top: 0.6rem;
+        font-size: .4rem;
+        padding-bottom: 1rem;
     }
-    hr { 
-        width: 13rem;
+    .picture {
+        width: 80%;
+        border: 6px;
+        height: 65%;
+        padding-top: 25px;
+    }
+    img.dog {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+    }
+    p.header_help { 
+        font-size: 1.2rem;
+        font-weight: 900;
+        margin-top: 1rem;
+        width: 90%;
+        color: #40610b;
+    }
+    form {
+        align-items: center;
+        width: 100%;
+        display: flex;
+        padding-bottom: 10px;
+        flex-direction: column;
+        font-size: 2rem;
+    }
+    input { 
+        border: 4px solid #74a12e;
+        background-color: white;
+        color: black;
+        display: inline block;
+        width: 100%;
+        border-radius: 8px;
+        height: 3rem;
+        z-index: 1;
+        text-align: left;
+        font-size: 1rem;
+        padding: 0.4em;
+        margin-bottom: 1rem;
+        letter-spacing: 1px;
+    }
+    input.expanded {
+        height: 250px;
+        letter-spacing: 1px;
+        color: black;
+    }
+    input.style {
+        margin-top: 1rem; 
+        background-color: #40610b;
+		color: white; 
+        font-size: 1rem; 
+        width: 12rem; 
+        height: 2rem; 
+        padding-left: 3.3rem; 
+        padding-top: .1rem;
+		border-radius: 8px; 
+    }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1280px) {
+    .bar {
+        background-color: #74a12e;
+    }
+    .header ul {
+        background-color: white;
+    }
+    .header ul a {
+        color: #74a12e;
+    }
+    .header .ucd a {
+        color: #74a12e;
+    }
+    .footer {
+        background-color: #74a12e;
+        height: 14rem;
+    }
+    .closure {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        border: 3px solid white;
+        align-items: center;
+    }
+    .content {
+        width: 90%;
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .vet_txt { 
+        padding-right: 0px;
+        margin-left: 0px;
+        font-size: 1.8rem;
+    }
+    .helper {
+        display: flex;
+        flex-direction: column-reverse;
+        border: 7px solid #74a12e;
+        justify-content: center;
+        align-items: center;
+        border-radius: 6px;
+        width: 80%;
+        height: auto;
+        margin-bottom: 50px;
+        margin-top: 30px;
+    }
+    .entry {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .left_func {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 5px;
+    }
+    .right_func {
+        margin-left: 0px;
+    }
+    form {
+        padding: 30px; 
+    }
+    label {
+        width: 100%;
+        font-size: 1.2rem;
+        padding-bottom: .4em;
+    }
+    .expanded { 
+        height: 16rem; 
+        padding-bottom:200px;
+        font-size: 1.2rem;
     }
     p.right {
         color: white;
@@ -93,82 +228,166 @@
         font-size: .5rem;
         padding-bottom: 1rem;
     }
-}
-
-@media only screen and (min-device-width: 768px) and (max-device-width: 1280px) {
-    .top { 
-        width: 100%;
-        padding-top: 20px;
-        margin-top: -70%;
-        padding-left: 27px;
-        align-items: center;
-        position: absolute;
-    }
-    .entry {
-        height: 50rem;
+    .picture {
         width: 80%;
-        display: flex;
-        position: absolute;
-        margin-top: 15%;
+        border: 6px;
+        height: 65%;
+        padding-top: 25px;
     }
-    .footer { 
-        /* fix this brute force */
+    img.dog {
         width: 100%;
-        height: 18rem;
-        position: relative;
-        background-color: #002855;
-        display: flex;
-        flex-direction: row;
-        margin-top: -85%;
-        position: absolute;
+        height: 100%;
+        border-radius: 10px;
     }
-    .content {
-        margin-top: 3.5rem;
-        margin-left: 1rem;
+    p.header_help { 
+        font-size: 2rem;
+        width: 80%;
+        font-weight: 900;
+        margin-top: 1rem;
+        color: #40610b;
+    }
+    form {
+        align-items: center;
+        width: 100%;
+        display: flex;
+        padding-bottom: 30px;
+        flex-direction: column;
+    }
+    input { 
+        border: 4px solid #74a12e;
+        background-color: white;
+        color: black;
+        display: inline block;
+        width: 100%;
+        border-radius: 8px;
+        height: 3rem;
+        z-index: 1;
+        text-align: left;
+        font-size: 1.6rem;
+        font-weight: 900;
+        padding: 0.4em;
+        margin-bottom: 1rem;
+        letter-spacing: 1px;
+    }
+    input.expanded {
+        height: 250px;
+        letter-spacing: 1px;
+        font-size: 1.6rem;
+        font-weight: 900;
+        color: black;
+    }
+    input.style {
+        margin-top: 1rem; 
+        background-color: #40610b;
+		color: white; 
+        font-size: 1.3rem; 
+        width: 12rem; 
+        height: 2rem; 
+        padding-left: 3.3rem; 
+        padding-top: .1rem;
+		border-radius: 8px; 
     }
     hr {
-        display: block;
-        background-color: #FFBF00;
-        position: absolute;
-        width: 31rem;
-        height: 2px;
-    }
-    .title { 
-        font-size: 2.5rem;
-        font-weight: 900;
-        color: #FFBF00;
-        padding: 5px;
+        width: 33rem;
     }
     .vet_txt { 
+        padding-right: 0px;
+        margin-left: 0px;
         font-size: 2.5rem;
-        font-weight: 900;
-        color: white;
-        padding: 5px;
-    }
-    p.right {
-        color: white;
-        font-size: .6rem;
-        padding-top: 1rem;
     }
 }
 
+/*desktop*/
 @media only screen and (min-device-width: 1281px) {
-    .top { 
-        width: 80%;
-        height: 15rem;
-        margin-top: -13rem;
+    .helper {
+        display: flex;
+        flex-direction: row;
+        border: 7px solid #74a12e;
+        border-radius: 6px;
+        width: 70%;
+        height: auto;
+    }
+    .bar {
+        background-color: #74a12e;
+    }
+    .header ul {
+        background-color: white;
+    }
+    .header ul a {
+        color: #74a12e;
+    }
+    .header .ucd a {
+        color: #74a12e;
+    }
+    .footer {
+        background-color: #74a12e;
+    }
+    .closure {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .content {
+        margin: 0px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .title {
+        margin-left: 0px;
+        margin-top: 30px;
+        color: white;
+    /*    color: #002855;*/
+        font-size: 4.5rem;
+    }
+    .vet_txt { 
+        padding-right: 0px;
+        margin-left: 0px;
+        color: white;
+        font-size: 4rem;
+    }
+    .right {
+        font-size: .9rem;
+        margin-left: 0px;
+        margin-top: 50px;
+    }
+    hr {
+        margin-left: 0px;
+        width: 70%;
+    }
+    p {
+        font-size: 1.5rem;
+        font-weight: 900;
+    }
+    .left_func {
+        width: 60%;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .right_func {
+        width: 40%;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+    }
+    form {
+        padding: 20px; 
     }
     .entry {
-        height: 50rem;
-        width: 80%;
-        display: flex;
-        position: absolute;
-        margin-top: 21rem;
+        width: 75%;
+        margin-right: 30px;
+        margin-top: 10px;
     }
-    p { 
+    p.header_help { 
         font-size: 2rem;
         font-weight: 900;
         margin-top: 2rem;
+        color: #40610b;
+        margin-left: 30px;
     }
     form {
         align-items: center;
@@ -177,53 +396,49 @@
         flex-direction: column;
         font-size: 2rem;
     }
+    .picture {
+        width: 70%;
+        border: 6px;
+        height: 95%;
+        padding-top: 25px;
+    }
+    img.dog {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+    }
     input { 
-        background-color: lightgray;
+        border: 4px solid #74a12e;
+        background-color: white;
+        color: black;
         display: inline block;
         width: 100%;
         border-radius: 8px;
-        height: 2rem;
+        height: 2.2rem;
         z-index: 1;
         text-align: left;
         font-size: 1.2rem;
         padding: 0.4em;
+        margin-bottom: 1rem;
+        letter-spacing: 1px;
     }
-    label {
-        width: 100%;
-        font-size: 1.6rem;
-        padding-bottom: .4em;
-    }
-    .expanded { 
-        height: 16rem; 
-        padding-bottom:200px;
-        font-size: 1.2rem;
-    }
-    .footer { 
-        /* fix this brute force */
-        top: 53rem;
-        width: 100%;
-        height: 18rem;
-        position: relative;
-        background-color: #002855;
-        display: flex;
-        flex-direction: row;
-    }
-    p.right {
-        color: white;
-        padding-top: 1rem;
-        font-size: 1rem;
+    input.expanded {
+        height: 150px;
+        letter-spacing: 1px;
+        color: black;
     }
     input.style {
-        margin-top: 4rem; 
-        background-color: #002855;
+        margin-top: 2rem; 
+        background-color: #40610b;
 		color: white; 
         font-size: 1.2rem; 
-        width: 6rem; 
-        height:2rem; 
-        padding-left: 1rem; 
-        padding-bottom: .2rem; 
-        padding-top: .2rem;
+        width: 12rem; 
+        height: 2rem; 
+        padding-left: 3.3rem; 
+        padding-top: .1rem;
 		border-radius: 8px; 
-        margin-left: 95%;
+    }
+    .footer {
+        margin-top: 130px;
     }
 }

@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="index.css">
+	<link rel="stylesheet" href="index.css"> 
 	<link rel="stylesheet" href="result.css">
 	<title>Home page</title>
 </head>
@@ -15,33 +15,37 @@
     <div class="container">
 		<div class="header">
 				<ul>
-					<li class="ucd"><a href="home">UC DAVIS</a></li>					
-					<li><a href="lepto">Lepto-classifier</a></li>
+					<li class="ucd"><a href="home">UC DAVIS</a></li>	
+					<li><a href="index">Input</a></li>				
+					<li><a onclick="alertFunction()" href="result">Lepto-classifier</a></li>
+					<script>
+						function alertFunction() {
+						 alert("Sorry the page is currently under construction, Stay tuned for the update!");
+						}
+					</script>
  					<li><a href="result">Result</a></li>
  					<li><a href="help">Help</a></li>
  					<li><a href="contact">Contact</a></li>
 				</ul>
 			<div class="bar"></div>
-		</div>
-
-		<div class="top">
-			<p class="important">Here is your result!</p>
+			<div class="top">
+				<p class="important">Result!</p>
+				<div class="line"></div>
+			</div>
 		</div>
 
 		<div class="box"></div>
 
-		<div class="bottom">
-			<p class="write">Click below to download the pdf</p>
+		<div class="bottom"> 
+			<p class="write">If you would like to download the results, please click on the button below!</p>
 			<!-- need a router to the pdf where the result will be stored -->
 			<!-- download the result pdf --> 
 			<a href="./file/result" download="result.pdf" class="effect">Results</a>
-			<p class="b_type">If you believe the <span style="background-color: #FFBF00;">results are invalid</span>, please make an inquery under help.</p>
+			<p class="b_type">If you need help interpreting the results make an inquiry under help </p>
 		</div>
 
-		<div class="footer">
-			<div class="vm_img">
-				<img src="vet_pic.png"/>
-			</div>
+		<div class="poll"></div>
+		<div class="closure">
 			<div class="content">
 				<div class="title">UC DAVIS</div>	
 				<hr>
@@ -49,7 +53,16 @@
 				<p class="right">Copyright © 2022 UC DAVIS VETERINARY MEDICINE. All rights resereved</p>
 			</div>
 		</div>
-
+		<!-- 
+		<div class="footer">
+			<div class="content">
+				<div class="title">UC DAVIS</div>	
+				<hr>
+				<div class="vet_txt">VETERINARY MEDICINE</div>
+				<p class="right">Copyright © 2022 UC DAVIS VETERINARY MEDICINE. All rights resereved</p>
+			</div>
+		</div>
+	-->
 
 	</div>
 
