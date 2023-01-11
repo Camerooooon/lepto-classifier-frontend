@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
+    <meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="index.css">
@@ -62,7 +62,17 @@
 				<input name="Weight" type="number" placeholder="kg" step=".01">
 				<br><br>
 				<label for="Breed Group">Breed Group</label>
-				<input type="text" name="Breed Group" accept="Toy, Herding, Hound, Mix, Non-Sporting, Sporting, Terrier, Working, Foundation Stock Service">
+				<select name="Breed Group">
+					<option value="Toy">Toy</option>
+					<option value="Herding">Herding</option>
+					<option value="Hound">Hound</option>
+					<option value="Mix">Mix</option>
+					<option value="Non-Sporting">Non-Sporting</option>
+					<option value="Terrier">Terrier</option>
+					<option value="Working">Working</option>
+					<option value="Foundation Stock Service">Foundation Stock Service</option>
+				</select>
+				
 				<br><br>
 				<label>Sex</label><br>
 				<fieldset>
@@ -232,8 +242,7 @@
 						<label for="4"> 4+ or > 501 mg/dL </label>
 					</div>
 				</fieldset>
-				</div>
-				
+        </div>
 			</div>
 			</form>
 		</div>
