@@ -8,9 +8,13 @@ import pandas as pd
 app = Flask(__name__)
 
 @app.route("/")
-def index():
-    # Return the index.html file
-    return render_template('index.html')
+def main():
+    # Return the intro.html file
+    return render_template('main.html')
+
+@app.route("/main.css")
+def style_i():
+     return send_file('css/main.css', mimetype='text/css')
 
 @app.route("/index.css")
 def css():
@@ -41,8 +45,22 @@ def style_r():
 def vet_pic():
      return send_file('templates/vet_pic.png', mimetype='image/png')
 
+@app.route("/doggo.mp4")
+def dog_vid():
+     return send_file('templates/doggo.mp4', mimetype='video/mp4')
+
+@app.route("/dog.png")
+def dog_pic():
+     return send_file('templates/dog.png', mimetype='image/png')
+
+#intro is the home page 
 @app.route('/home')
 def home():
+    # Return the index.html file
+    return render_template('main.html')
+
+@app.route('/index')
+def index():
     # Return the index.html file
     return render_template('index.html')
 
@@ -57,7 +75,8 @@ def help():
 
 @app.route('/lepto')
 def lepto():
-     return render_template('lepto.html')
+     print("it is under construction")
+     return render_template('index.html')
 
 @app.route('/contact')
 def contact():

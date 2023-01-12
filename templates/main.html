@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+	  </script>
+	  <script type="text/javascript"
+		src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+	  </script>
+	<link rel="stylesheet" href="main.css">
+	<style>
+		#blink {
+			font-size: 40px;
+			font-weight: bold;
+			color: #002855;
+			transition: 1.4s;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- this will be under the whole container -->
+	<div class="container">
+	<!-- <div class="snow"></div> -->
+			<div class="header">
+					<ul>
+						<li class="ucd"><a href="home">UC DAVIS</a></li>
+						<li><a href="index">Input</a></li>
+						<li><a onclick="alertFunction()" href="home">Lepto-classifier</a></li>
+						<script>
+							function alertFunction() {
+							alert("Sorry the page is currently under construction, Stay tuned for the update!");
+							}
+						</script>
+						<li><a href="result">Result</a></li>
+						<li><a href="help">Help</a></li>
+						<li><a href="contact">Contact</a></li>
+					</ul>
+			</div>
+
+		<div class="intro">
+			<h1>Welcome to LEAP for dogs, the leptospirosis AI prediction tool.</h1>
+			<h3>Leptospirosis is life threatening disease caused by a bacterial infection.  In 
+				dogs, this disease can result in severe kidney and liver damage.  With early 
+				treatment, prognosis for even the most severely affected dogs can be good\(_{(1)}\). 
+				This tool utilizes machine learning to look for patterns in health data to 
+				predict a diagnosis of leptospirosis in dogs. </h3>
+			<h3>When this tool was tested in dogs in Northern California, it correctly 
+				identified all dogs with leptospirosis and 90% of dogs without leptospirosis\(_{(2)}\). 
+				We invite you to help us test this tool in a wider population of dogs 
+				suspected of having leptospirosis.  </h3>
+				<!-- going to change the numbering -->
+			<div class="inst">
+				<h3 class="htu">How to use: </h3>
+				<p>
+					1. Enter health data for any dog that is sick and suspected of having 
+					leptospirosis. This will include breed, weight, complete blood count, 
+					serum chemistry panel, and urinalysis information.  If leptospirosis 
+					antibody titers are available (microscopic agglutination test), you can 
+					enter that information as well. (Warning: If some of the input data are missing 
+					the result MAY vary).
+				</p>
+				<p>
+					2. That information will be utilized to make AI prediction on the final 
+					diagnosis of leptospirosis.  If an antibody titer result is supplied, two 
+					predictions will be made, one with that information and one without 
+					that information.
+				</p>
+				<p>
+					3. A follow up email will be sent to you in 1 week to gather more health 
+					information including results of leptospirosis testing (PCR or antibody 
+					testing).</p>
+					<p style="margin-top:50px; padding-bottom: 0;">References:</p>
+					<p style="padding-bottom: 0;font-size: .8rem;">
+						1. Sykes, Jane E., et al. "2010 ACVIM small animal consensus statement 
+						on leptospirosis: diagnosis, epidemiology, treatment, and prevention." 
+						Journal of Veterinary Internal Medicine 25.1 (2011): 1-13.
+					</p>
+					<p style="padding-bottom: 0; font-size: .8rem;">
+						2. Reagan, Krystle L., et al. "Use of machine-learning algorithms to aid in 
+						the early detection of leptospirosis in dogs." Journal of Veterinary 
+						Diagnostic Investigation (2022): 10406387221096781.
+					</p>
+			</div>
+    	</div>
+		
+		<video class="vid-styl" controls>
+			<source src="doggo.mp4" type="video/mp4">
+		</video>
+		
+		<div class="footer">
+			<div class="vm_img">
+				<img src="vet_pic.png"/>
+			</div>
+			<div class="content">
+				<div class="title">UC DAVIS</div>	
+				<hr>
+				<div class="vet_txt">VETERINARY MEDICINE</div>
+				<p class="right">Copyright © 2022 UC DAVIS VETERINARY MEDICINE. All rights resereved</p>
+				</div>
+			</div>
+		</div>
+</body>
+
