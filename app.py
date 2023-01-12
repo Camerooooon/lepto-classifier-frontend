@@ -9,6 +9,8 @@ import pandas as pd
 con = db.con_database();
 cur = con.cursor();
 
+db.init_database(cur);
+
 app = Flask(__name__)
 
 @app.route("/")
@@ -93,8 +95,15 @@ def submit_data():
     df = pd.DataFrame(request_data.to_dict(flat=False), index=[0])
     df = df.apply(pd.to_numeric, errors='ignore')
     lepto_classifier = LeptoClassifier()
+
     try:
-        prediction = lepto_classifier.predict_raw(df, use_mat=True);
+        if request_data["MAT"] == "-1":
+            df["MAT"] = 0;
+            prediction = lepto_classifier.predict_raw(df, use_mat=False);
+            print("Using no MAT prediction");
+        else:
+            prediction = lepto_classifier.predict_raw(df, use_mat=True);
+            print("Using MAT prediction");
         print("Prediction = " + str(prediction[0]));
     except (ValueError, KeyError) as err:
         return Response('{"status": "error", "message": "'+ str(err) + '"}', status=400)
