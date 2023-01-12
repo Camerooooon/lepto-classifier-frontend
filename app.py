@@ -107,10 +107,15 @@ def submit_data():
             print("Using MAT prediction");
         print("Prediction = " + str(prediction[0]));
     except (ValueError, KeyError) as err:
-        return Response('{"status": "error", "message": "'+ str(err) + '"}', status=400)
+        return Response('Internal Error (This is probably our fault, please contact us!): '+ str(err), status=400)
+    except (IndexError):
+        return Response('Could not generate a result, please insure all fields are filled!', status=400)
+
 
     result: Result = prediction[0]
 
+    if (result == Result.INVALID):
+        return Response('Your result was -1 (invalid). The LeptoClassifier could not construct a result from the data provided. Please make sure that all the data is entered correctly and resubmit. If you are still having trouble please contact us.', status=400)
 
     temp_link = ''.join(random.choices(string.ascii_letters, k=45))
 
