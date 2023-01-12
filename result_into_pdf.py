@@ -17,7 +17,7 @@ def gen_pdf(data, result: Result, temp_link: str):
     pdf.set_text_color(0, 40, 85) 
     pdf.ln(.15)
     pdf.set_author("Dr.Reagan")
-    pdf.cell(100, 10, txt = "Here is the result of the Lepto-Classifier: ",ln = 1, align = 'C')
+    pdf.cell(100, 10, txt = "Here is the result of the LeptoClassifier: ",ln = 1, align = 'C')
     
     pdf.set_font("Times", 'BI', size = 30)
     pdf.cell(200, 100, txt = "result: " + str(result), ln = 1, align='C')
@@ -30,7 +30,7 @@ def gen_pdf(data, result: Result, temp_link: str):
     # emails 
     pdf.cell(200, 0, txt = "If you have any question or would like to make an inquery please visit our website: ", ln = 2, align = 'C')
     pdf.set_text_color(179, 163, 105) 
-    pdf.cell(200, 100, txt = "(Copyright Â© 2022 UC DAVIS VETERINARY MEDICINE. All rights resereved)", ln = 2, align = 'C')
+    pdf.cell(200, 100, txt = "(Copyright © 2022 UC DAVIS VETERINARY MEDICINE. All rights resereved)", ln = 2, align = 'C')
     
     # save the pdf with name .pdf
     print("Process completed")
