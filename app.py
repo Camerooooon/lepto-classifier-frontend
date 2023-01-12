@@ -5,6 +5,8 @@ from flask.wrappers import Response
 import database as db
 from leptoclassifier.lepto_classifier import LeptoClassifier
 import pandas as pd
+import random
+import string
 
 con = db.con_database();
 cur = con.cursor();
@@ -91,7 +93,6 @@ def contact():
 @app.route("/submit_data", methods=['POST'])
 def submit_data():
     request_data = request.form
-    print(request_data);
     df = pd.DataFrame(request_data.to_dict(flat=False), index=[0])
     df = df.apply(pd.to_numeric, errors='ignore')
     lepto_classifier = LeptoClassifier()
@@ -107,14 +108,24 @@ def submit_data():
         print("Prediction = " + str(prediction[0]));
     except (ValueError, KeyError) as err:
         return Response('{"status": "error", "message": "'+ str(err) + '"}', status=400)
+
     result: Result = prediction[0]
 
-    dog = db.DogEntry(result, request_data);
+
+    temp_link = ''.join(random.choices(string.ascii_letters, k=45))
+
+    dog = db.DogEntry(result, temp_link, request_data);
     
     if (result != -1):
         print("Valid");
         db.put_dog_entry(con, cur, dog);
 
-    response = make_response(gen_pdf(df, result))
-    response.headers.set("Content-Type", "application/pdf")
-    return response;
+    #response = make_response(gen_pdf(df, result))
+    #response.headers.set("Content-Type", "application/pdf")
+    gen_pdf(df,result, temp_link);
+    return "Ok";
+
+@app.route("/resultcontent/<file_name>")
+def get_pdf(file_name):
+    return send_file(f"./generated_pdfs/{file_name}",mimetype='application/pdf')
+

@@ -2,7 +2,7 @@ from fpdf import FPDF
 from result import Result
 
 #this is to test 
-def gen_pdf(data, result: Result):
+def gen_pdf(data, result: Result, temp_link: str):
     #this will convert json into txt, thus we use txt file to convert it into pdf format
     pdf = FPDF('P', 'mm', (100, 150))
     
@@ -40,7 +40,8 @@ def gen_pdf(data, result: Result):
     #pdf image fix/position needs to be fixed
     #TODO: add image to repo pdf.image('vm2.png', 110, 250, 100)
     #pdf.image('vm.png', 100, 150, 100)
-    return pdf.output(dest = "S").encode('latin-1')
+    pdf.output("./generated_pdfs/" + temp_link + ".pdf")
+    #return pdf.output(dest = "S").encode('latin-1')
     
     #will change the formatting of the fpdf
     
