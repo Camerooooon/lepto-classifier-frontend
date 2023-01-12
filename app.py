@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, send_file, make_response
+from flask import Flask, render_template, request, send_file, redirect, url_for
 from result import Result
 from result_into_pdf import gen_pdf
 from flask.wrappers import Response
@@ -123,7 +123,7 @@ def submit_data():
     #response = make_response(gen_pdf(df, result))
     #response.headers.set("Content-Type", "application/pdf")
     gen_pdf(df,result, temp_link);
-    return "Ok";
+    return redirect('/result?temp_link=' + temp_link);
 
 @app.route("/resultcontent/<file_name>")
 def get_pdf(file_name):

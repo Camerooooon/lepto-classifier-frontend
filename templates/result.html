@@ -40,7 +40,14 @@
 			<p class="write">If you would like to download the results, please click on the button below!</p>
 			<!-- need a router to the pdf where the result will be stored -->
 			<!-- download the result pdf --> 
-			<a href="./file/result" download="result.pdf" class="effect">Results</a>
+			<a id="download_btn" href="#" download="result.pdf" class="effect">Results</a>
+            <script>
+                const queryString = window.location.search;
+                const urlParams = new URLSearchParams(queryString);
+                const temp_link = urlParams.get('temp_link');
+                console.log(temp_link);
+                document.getElementById("download_btn").href="./resultcontent/" + temp_link + ".pdf";
+            </script>
 			<p class="b_type">If you need help interpreting the results make an inquiry under help </p>
 		</div>
 
