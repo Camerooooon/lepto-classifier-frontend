@@ -34,15 +34,24 @@
 			</div>
 		</div>
 
-		<div class="box"></div>
 
 		<div class="bottom"> 
-			<p class="write">If you would like to download the results, please click on the button below!</p>
+			<p class="write">You results are now available to download. Please understand that this link is not permanent will expire eventually. If you send the link to anyone else they will also be able to download the result.</p>
 			<!-- need a router to the pdf where the result will be stored -->
 			<!-- download the result pdf --> 
-			<a href="./file/result" download="result.pdf" class="effect">Results</a>
-			<p class="b_type">If you need help interpreting the results make an inquiry under help </p>
+			<a id="download_btn" href="#" download="result.pdf" class="effect">Download</a>
 		</div>
+
+        <div class="box" style="padding: 0; width: 50%;"><iframe id="download_preview" src="" style="flex-grow: 1; border: none; margin: 0; padding: 0; height: 300px;"></iframe></div>
+        <script>
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+            const temp_link = urlParams.get('temp_link');
+            console.log(temp_link);
+            document.getElementById("download_btn").href="./resultcontent/" + temp_link + ".pdf";
+            document.getElementById("download_preview").src="./resultcontent/" + temp_link + ".pdf";
+        </script>
+    </iframe></div>
 
 		<div class="poll"></div>
 		<div class="closure">
