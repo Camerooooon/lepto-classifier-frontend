@@ -134,3 +134,14 @@ def submit_data():
 def get_pdf(file_name):
     return send_file(f"./generated_pdfs/{file_name}",mimetype='application/pdf')
 
+@app.route("/submit_contact", methods=['POST'])
+def submit_contact():
+    request_data = request.form;
+    print(request_data);
+
+    if request_data["name"] == None or request_data["email"] == None or request_data["issue"] == None:
+        return 'Missing form value'
+
+    db.put_contact_message(con, cur, request_data["name"], request_data["email"], request_data["issue"])
+
+    return 'Thank you for your message, we will try to get back to you as soon as we can! <strong>You will be redirected to the home page in 5 seconds.</strong><script>setTimeout(callBack_func, 5000); function callBack_func() { document.location.href = "/"; }</script>';
