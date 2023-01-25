@@ -348,7 +348,6 @@
     }
     .box { 
         display: flex;
-        height: 250px; 
         width: 70%;
         background-color: white;
         margin-top:50px;
