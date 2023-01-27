@@ -194,6 +194,7 @@
         border: 2px solid #002855;
         border-radius: 6px;
         width: 100%;
+        padding: 0.5em;
     }
     input.sbtn { 
         background-color: #002855;
@@ -589,10 +590,11 @@
         width: 80%;
         margin-right: 40px;
         padding-left: 40px;
+        margin-bottom: 110px;
     }
     div.col3{ 
         width: 100%;
-        margin-bottom: 488px;
+        margin-bottom: 390px;
     }
     div.shrink label{
         font-size: 0.8rem;
