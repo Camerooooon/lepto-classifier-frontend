@@ -34,6 +34,12 @@ def gen_pdf(data, result: Result, temp_link: str):
     pdf.set_y(-40)
     pdf.cell(200, 10, border = 1, txt = "(Copyright © 2022 UC DAVIS VETERINARY MEDICINE. All rights resereved)", ln =1, align = 'C')
     pdf.set_text_color(179, 163, 105) 
+
+    i = 1;
+    for data_point in data:
+        pdf.cell(100, 10, border = 1, txt= str(data_point), align = 'C')
+        pdf.cell(100, 10, border = 1, txt= str(data[data_point][0]), ln= 1, align = 'C')
+        i += 1
     
     # save the pdf with name .pdf
     print("Process completed")
