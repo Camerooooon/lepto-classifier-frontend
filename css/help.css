@@ -164,7 +164,6 @@
         width: 100%;
         display: flex;
         justify-content: center;
-        border: 3px solid white;
         align-items: center;
     }
     .content {
