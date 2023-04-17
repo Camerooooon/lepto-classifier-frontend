@@ -32,7 +32,7 @@
 						}
 					</script>
 					<!-- change this to input -->
- 					<li><a href="result">Result</a></li>
+					<!-- <li><a href="result">result</a></li> -->
  					<li><a href="help">Help</a></li>
  					<li><a href="contact">Contact</a></li>
 				</ul>
@@ -49,37 +49,537 @@
 			</div>
 		</div>
 
+		<!-- put restrictions -->
 		<div class="central">
 		<form action="/submit_data" method="POST">
 			<div class="col1">
-				<label for="dog name">Dog Name</label>
-				<input name="dog name" type="text">
+				<label for="Dog Name">Dog Name</label>
+				<input name="Dog Name" type="text">
 				<br><br>
-				<label for="owner name">Owner Name</label>
-				<input name="owner name" type="text">
+				<label for="Owner Name">Owner Name</label>
+				<input name="Owner Name" type="text">
 				<br><br>
 				<label for="Zipcode">Zipcode</label>
-				<input name="zip code" type="number" placeholder="6-digits">
+				<input name="Zipcode" type="text" inputmode="numeric" pattern="\d*" placeholder="6-digits" min="0" max="100">
 				<br><br>
-				<label for="Name of Vet">Name of Vet</label>
-				<input name="vet name" type="text" placeholder="Last First">
+				<label for="Vet Name">Name of Vet</label>
+				<input name="Vet Name" type="text" placeholder="Last First">
 				<br><br>
-				<label for="email address">Email Address</label>
-				<input name="email address" type="text">
+				<label for="Email Address">Email Address</label>
+				<input name="Email Address" type="text">
 				<br><br>
 				<label for="Weight">Weight</label>
-				<input name="Weight" type="number" placeholder="kg" step=".01">
+				<input name="Weight" type="number" placeholder="kg" step=".01" min="0" max="100">
 				<br><br>
 				<label for="Breed Group">Breed Group</label>
 				<select name="Breed Group">
-					<option value="Toy">Toy</option>
-					<option value="Herding">Herding</option>
-					<option value="Hound">Hound</option>
-					<option value="Mix">Mix</option>
-					<option value="Non-Sporting">Non-Sporting</option>
-					<option value="Terrier">Terrier</option>
-					<option value="Working">Working</option>
-					<option value="Foundation Stock Service">Foundation Stock Service</option>
+					<option value="N/A">None</option>
+					<option value="AFFENPINSCHER">AFFENPINSCHER</option>
+					<option value="AFGHAN HOUND">AFGHAN HOUND</option>
+					<option value="AFGHAN/X">AFGHAN/X</option>
+					<option value="AFRICIAN WILD DOG">AFRICIAN WILD DOG</option>
+					<option value="AIREDALE TERRIER">AIREDALE TERRIER</option>
+					<option value="AIREDALE/MIX">AIREDALE/MIX</option>
+					<option value="AKBASH COBAN KOPEGI">AKBASH COBAN KOPEGI</option>
+					<option value="AKITA">AKITA</option>
+					<option value="AKITA/X">AKITA/X</option>
+					<option value="ALASKAN HUSKY">ALASKAN HUSKY</option>
+					<option value="ALASKAN MALAMUTE">ALASKAN MALAMUTE</option>
+					<option value="ALASKAN MALAMUTE/MIX">ALASKAN MALAMUTE/MIX</option>
+					<option value="ALASKAN MALAMUTE/X">ALASKAN MALAMUTE/X</option>
+					<option value="AMER COCKER SPAN/X">AMER COCKER SPAN/X</option>
+					<option value="AMER ESK SPITZ">AMER ESK SPITZ</option>
+					<option value="AMER ESK SPITZ/X">AMER ESK SPITZ/X</option>
+					<option value="AMER POINTER">AMER POINTER</option>
+					<option value="AMERICAN BULL">AMERICAN BULL</option>
+					<option value="AMERICAN COCKER SPANIEL/X">AMERICAN COCvKER SPANIEL/X</option>
+					<option value="AMERICAN ESKIMO DOG">AMERICAN ESKIMO DOG</option>
+					<option value="AMERICAN ESKIMO SPITZ/X">AMERICAN ESKIMO SPITZ/X</option>
+					<option value="AMERICAN FOXHOUND">AMERICAN FOXHOUND</option>
+					<option value="AMERICAN INDIAN">AMERICAN INDIAN</option>
+					<option value="AMERICAN PIT BULL TERRIER">AMERICAN PIT BULL TERRIER</option>
+					<option value="AMERICAN PIT BULL TERRIER/X">AMERICAN PIT BULL TERRIER/X</option>
+					<option value="AMERICAN STAFFORDSHIRE TERRIER">AMERICAN STAFFORDSHIRE TERRIER</option>
+					<option value="AMERICAN WATER SPANIEL">AMERICAN WATER SPANIEL</option>
+					<option value="ANATOLIAN SHEPHERD DOG">ANATOLIAN SHEPHERD DOG</option>
+					<option value="APPHENPINSCHER">APPHENPINSCHER</option>
+					<option value="ARGENTINE DOGO">ARGENTINE DOGO</option>
+					<option value="AUSSIE/X">AUSSIE/X</option>
+					<option value="AUST CATTLE DOG">AUST CATTLE DOG</option>
+					<option value="AUST CATTLE DOG/X">AMERICAN COCKER SPANIEL/X</option>
+					<option value="AUST HEELER/X">AUST HEELER/X</option>
+					<option value="AUST SHEP/X">AUST SHEP/X</option>
+					<option value="AUST SHEPARD">AUST SHEPARD</option>
+					<option value="AUST SHEPARD/X">AUST SHEPARD/X</option>
+					<option value="AUST SHEPHERD">AUST SHEPHERD</option>
+					<option value="AUST SILKY TERRIER">AUST SILKY TERRIER</option>
+					<option value="AUSTRALIAN CATTLE DOG">AUSTRALIAN CATTLE DOG</option>
+					<option value="AUSTRALIAN CATTLE DOG/X">AUSTRALIAN CATTLE DOG/X</option>
+					<option value="AUSTRALIAN KELPIE">AUSTRALIAN KELPIE</option>
+					<option value="AUSTRALIAN SHEPARD">AUSTRALIAN SHEPARD</option>
+					<option value="AUSTRALIAN SHEPHERD">AUSTRALIAN SHEPHERD</option>
+					<option value="AUSTRALIAN SHEPHERD/X">AUSTRALIAN SHEPHERD/X</option>
+					<option value="AUSTRALIAN SHEPHERD/X">AUSTRALIAN SHEPHERD/X</option>
+					<option value="AUSTRALIAN TERRIER">AUSTRALIAN TERRIER</option>
+					<option value="BASENJI">BASENJI</option>
+					<option value="BASENJI/X">BASENJI/X</option>
+					<option value="BASSET HOUND">BASSET HOUND</option>
+					<option value="BASSET HOUND/MIX">BASSET HOUND/MIX</option>
+					<option value="BEAGLE">BEAGLE</option>
+					<option value="BEAGLE/BOXER">BEAGLE/BOXER</option>
+					<option value="BEAGLE/X">BEAGLE/X</option>
+					<option value="BEARDED COLLIE">BEARDED COLLIE</option>
+					<option value="BEARDED COLLIE/X">BEARDED COLLIE/X</option>
+					<option value="BEAUCERON">BEAUCERON</option>
+					<option value="BEDINGTON TERRIER">BEDINGTON TERRIER</option>
+					<option value="BEDLINGTON TERRIER">BEDLINGTON TERRIER</option>
+					<option value="BELGIAN MALINOIS">BELGIAN MALINOIS</option>
+					<option value="BELGIAN SHEEPDOG">BELGIAN SHEEPDOG</option>
+					<option value="BELGIAN SHEEPDOG/X">BELGIAN SHEEPDOG/X</option>
+					<option value="BELGIAN TERVUREN">BELGIAN TERVUREN</option>
+					<option value="BERGAMASCO">BERGAMASCO</option>
+					<option value="BERGER PICARD">BERGER PICARD</option>
+					<option value="BERNESE MOUNTAIN DOG">BERNESE MOUNTAIN DOG</option>
+					<option value="BERNESE MTN DOG/X">BERNESE MTN DOG/X</option>
+					<option value="BERNESE/X">BERNESE/X</option>
+					<option value="BICHON FRISE">BICHON FRISE</option>
+					<option value="BICHON/X">BICHON/X</option>
+					<option value="BLACK AND TAN COONHOUND">BLACK AND TAN COONHOUND</option>
+					<option value="BLACK RUSSIAN TERRIER">BLACK RUSSIAN TERRIER</option>
+					<option value="BLOOD HOUND">BLOOD HOUND</option>
+					<option value="BLOODHND">BLOODHND</option>
+					<option value="BLOODHOUND">BLOODHOUND</option>
+					<option value="BLOODHOUND/X">BLOODHOUND/X</option>
+					<option value="BLU TIC COONHOUND">BLU TIC COONHOUND</option>
+					<option value="BLUE TICK HOUND">BLUE TICK HOUND</option>
+					<option value="BLUE TICK HOUND/X">BLUE TICK HOUND/X</option>
+					<option value="BOLOGNESE">BOLOGNESE</option>
+					<option value="BORDER COLLIE">BORDER COLLIE</option>
+					<option value="BORDER COLLIE/X">BORDER COLLIE/X</option>
+					<option value="BORDER TERRIER">BORDER TERRIER</option>
+					<option value="BORZOI">BORZOI</option>
+					<option value="BORZOI/X">BORZOI/X</option>
+					<option value="BOSTON TERRIER">BOSTON TERRIER</option>
+					<option value="BOSTON TERRIER/X">BOSTON TERRIER/X</option>
+					<option value="BOUVIER DES FLANDRES">BOUVIER DES FLANDRES</option>
+					<option value="BOUVIER DES FLANDRES/X">BOUVIER DES FLANDRES/X</option>
+					<option value="BOXER">BOXER</option>
+					<option value="BOXER/MIX">BOXER/MIX</option>
+					<option value="BOYKIN SPANIEL">BOYKIN SPANIEL</option>
+					<option value="BRIARD">BRIARD</option>
+					<option value="BRIARD/X">BRIARD/X</option>
+					<option value="BRIT SPAN/X">BRIT SPAN/X</option>
+					<option value="BRIT SPANIEL">BRIT SPANIEL</option>
+					<option value="BRITTANY SPANIEL">BRITTANY SPANIEL</option>
+					<option value="BRITTANY/X">BRITTANY/X</option>
+					<option value="BRITTANY/X">BRITTANY/X</option>
+					<option value="BRUSSELS GRIFFON">BRUSSELS GRIFFON</option>
+					<option value="BRUSSELS GRIFFON/MIX">BRUSSELS GRIFFON/MIX</option>
+					<option value="BULL MASTIFF">BULL MASTIFF</option>
+					<option value="BULL MASTIFF/X">BULL MASTIFF/X</option>
+					<option value="BULL TERRIER">BULL TERRIER</option>
+					<option value="BULL TERRIER, ENGLISH">"BULL TERRIER, ENGLISH"</option>
+					<option value="BULL TERRIER/MIX">BULL TERRIER/MIX</option>
+					<option value="BULL TERRIER/X">BULL TERRIER/X</option>
+					<option value="BULLDOG">BULLDOG</option>
+					<option value="BULLDOG, AMERICAN">BULL MASTIFF/X</option>
+					<option value="BULLDOG, ENGLISH">BULL TERRIER</option>
+					<option value="BULLDOG, FRENCH">"BULL TERRIER, ENGLISH"</option>
+					<option value="BULLDOG/X">BULL TERRIER/MIX</option>
+					<option value="CAIRN TERR/X">CAIRN TERR/X</option>
+					<option value="CAIRN TERRIER/X">CAIRN TERRIER/X</option>
+					<option value="CANAAN">CANAAN</option>
+					<option value="CANAAN DOG">CANAAN DOG</option>
+					<option value="CANE CORSO">CANE CORSO</option>
+					<option value="CATAHOULA HOG DOG">CATAHOULA HOG DOG</option>
+					<option value="CATAHOULA LEOPARD DOG">CATAHOULA LEOPARD DOG</option>
+					<option value="CATAHOULA LEOPARD/X">CATAHOULA LEOPARD/X</option>
+					<option value="CATALAN SHEEPDOG">"CATALAN SHEEPDOG"</option>
+					<option value="CAVALIER KING CHARLES SPANIEL">CAVALIER KING CHARLES SPANIEL</option>
+					<option value="CENTRAL ASIAN SHEPHERD">CENTRAL ASIAN SHEPHERD</option>
+					<option value="CESKY TERRIER">CESKY TERRIER</option>
+					<option value="CHESAPEAKE BAY RETRIEVER">CHESAPEAKE BAY RETRIEVER</option>
+					<option value="CHESAPEAKE BAY RETRIEVER/X">CHESAPEAKE BAY RETRIEVER/X</option>
+					<option value="CHIHUAHUA, LONG HAIRED">"CHIHUAHUA, LONG HAIRED"</option>
+					<option value="CHIHUAHUA">CHIHUAHUA</option>
+					<option value="CHIHUAHUA/MIX">CHIHUAHUA/MIX</option>
+					<option value="CHIHUAHUA/X">CHIHUAHUA/X</option>
+					<option value="CHINESE CRESTED">CHINESE CRESTED</option>
+					<option value="CHINESE CRESTED/MIX">CHINESE CRESTED/MIX</option>
+					<option value="CHINESE PUG/MIX">CHINESE PUG/MIX</option>
+					<option value="CHINOOK">CHINOOK</option>
+					<option value="CHOW CHOW">CHOW CHOW</option>
+					<option value="CHOW/X">CHOW/X</option>
+					<option value="CLUMBER SPANIEL">CLUMBER SPANIEL</option>
+					<option value="COCKAPOO">COCKAPOO</option>
+					<option value="COCKAPOO/X">COCKAPOO/X</option>
+					<option value="COCKER SPANIEL, AMERICAN">"COCKER SPANIEL, AMERICAN"</option>
+					<option value="COCKER SPANIEL, ENGLISH">"COCKER SPANIEL, ENGLISH"</option>
+					<option value="COCKER/X">COCKER/X</option>
+					<option value="COLLIE (ROUGH)">COLLIE (ROUGH)</option>
+					<option value="COLLIE X">COLLIE X</option>
+					<option value="COLLIE, ROUGH">"COLLIE, ROUGH"</option>
+					<option value="COLLIE, SMOOTH">"COLLIE, SMOOTH"</option>
+					<option value="COLLIE/X">COLLIE/X</option>
+					<option value="COON HOUND">COON HOUND</option>
+					<option value="COON HOUND">COON HOUND</option>
+					<option value="COONHOUND">COONHOUND</option>
+					<option value="COONHOUND/X">COONHOUND/X</option>
+					<option value="CORGI/X">CORGI/X</option>
+					<option value="CORGIE/MIX">CORGIE/MIX</option>
+					<option value="COTON DE TULEAR">COTON DE TULEAR</option>
+					<option value="CURLY COATED RETRIEVER">CURLY COATED RETRIEVER</option>
+					<option value="DACHS">DACHS</option>
+					<option value="DACHSHUND">DACHSHUND</option>
+					<option value="DACHSHUND, LONG HAIRED">"DACHSHUND, LONG HAIRED"</option>
+					<option value="DACHSHUND, MINI, LONG HAIRED">"DACHSHUND, MINI, LONG HAIRED"</option>
+					<option value="DACHSHUND, MINIATURE">"DACHSHUND, MINIATURE"</option>
+					<option value="DACHSHUND, WIREHAIRED">"DACHSHUND, WIREHAIRED"</option>
+					<option value="DACHSHUND/TERRIER">DACHSHUND/TERRIER</option>
+					<option value="DACHSHUND/X">DACHSHUND/X</option>
+					<option value="DACHSUND/X">DACHSUND/X</option>
+					<option value="DALMATIAN">DALMATIAN</option>
+					<option value="DALMATIAN">DALMATIAN</option>
+					<option value="DALMATIAN/X">DALMATIAN/X</option>
+					<option value="DANDIE DINMONT TERRIER">DANDIE DINMONT TERRIER</option>
+					<option value="DANDIE DINMONT/X">DANDIE DINMONT/X</option>
+					<option value="DINGO">DINGO</option>
+					<option value="DINGO/X">DINGO/X</option>
+					<option value="DOBERMAN PINSCHER">DOBERMAN PINSCHER</option>
+					<option value="DOBERMAN PINSCHER/MIX">DOBERMAN PINSCHER/MIX</option>
+					<option value="DOBERMAN PINSCHER/MIX">DOBERMAN PINSCHER/MIX</option>
+					<option value="DOBIE/X">DOBIE/X</option>
+					<option value="DOGO">DOGO</option>
+					<option value="DOGUE DE BORDEAUX">DOGUE DE BORDEAUX</option>
+					<option value="DRAHTHAAR">DRAHTHAAR</option>
+					<option value="DRATHAAR">DRATHAAR</option>
+					<option value="ELKHOUND/X">ELKHOUND/X</option>
+					<option value="ENG">ENG</option>
+					<option value="ENG BULL TER">ENG BULL TER</option>
+					<option value="ENG POINTER">ENG POINTER</option>
+					<option value="ENG POINTER/X">ENG POINTER/X</option>
+					<option value="ENG SPR SPAN">ENG SPR SPAN</option>
+					<option value="ENG SPR SPAN/X">ENG SPR SPAN/X</option>
+					<option value="ENG TICK HND">ENG TICK HND</option>
+					<option value="ENGLISH BULLDOG/X">ENGLISH BULLDOG/X</option>
+					<option value="ENGLISH COONHOUND">ENGLISH COONHOUND</option>
+					<option value="ENGLISH FOXHOUND">ENGLISH FOXHOUND</option>
+					<option value="ENGLISH POINTER">ENGLISH POINTER</option>
+					<option value="ENGLISH SETTER">ENGLISH SETTER</option>
+					<option value="ENGLISH SETTER/X">ENGLISH SETTER/X</option>
+					<option value="ENGLISH SHEPHERD">ENGLISH SHEPHERD</option>
+					<option value="ENGLISH SPRINGER SPANIEL/X">ENGLISH SPRINGER SPANIEL/X</option>
+					<option value="ENGLISH TERRIER">ENGLISH TERRIER</option>
+					<option value="ENGLISH TOY SPANIEL">ENGLISH TOY SPANIEL</option>
+					<option value="ENTLEBUCHER MOUNTAIN DOG">ENTLEBUCHER MOUNTAIN DOG</option>
+					<option value="ERROR">ERROR</option>
+					<option value="ESKIMO">ESKIMO</option>
+					<option value="ESKIMO/X">ESKIMO/X</option>
+					<option value="FIELD SPANIEL">FIELD SPANIEL</option>
+					<option value="FILA">FILA</option>
+					<option value="FINNISH LAPPHUND">FINNISH LAPPHUND</option>
+					<option value="FINNISH SPITZ">FINNISH SPITZ</option>
+					<option value="FLAT COATED RETRIEVER">FLAT COATED RETRIEVER</option>
+					<option value="FOUSEK">FOUSEK</option>
+					<option value="FOX TERR/X">FOX TERR/X</option>
+					<option value="FOX TERRIER">FOX TERRIER</option>
+					<option value="FOX TERRIER, SMOOTH">"FOX TERRIER, SMOOTH"</option>
+					<option value="FOX TERRIER, TOY">"FOX TERRIER, TOY"</option>
+					<option value="FOX TERRIER, WIREHAIRED">"FOX TERRIER, WIREHAIRED"</option>
+					<option value="FOX TERRIER/X">FOX TERRIER/X</option>
+					<option value="GER SHEP/X">GER SHEP/X</option>
+					<option value="GER SHORT HAIRED POINTER">GER SHORT HAIRED POINTER</option>
+					<option value="GERMAN SHEPHERD DOG">GERMAN SHEPHERD DOG</option>
+					<option value="GERMAN SHEPHERD, LONG HAIRED">"GERMAN SHEPHERD, LONG HAIRED"</option>
+					<option value="GERMAN SHEPHERD/X">GERMAN SHEPHERD/X</option>
+					<option value="GERMAN SHORTHAIR POINTER">GERMAN SHORTHAIR POINTER</option>
+					<option value="GERMAN SHORTHAIRED POINTER">GERMAN SHORTHAIRED POINTER</option>
+					<option value="GERMAN SHORTHAIRED POINTER/MIX">GERMAN SHORTHAIRED POINTER/MIX</option>
+					<option value="GERMAN WIREHAIRED POINTER">GERMAN WIREHAIRED POINTER</option>
+					<option value="GERMAN WIREHAIRED TERRIER">GERMAN WIREHAIRED TERRIER</option>
+					<option value="GIANT SCHNAUZER/X">GIANT SCHNAUZER/X</option>
+					<option value="GOLDEN RETRIEVER">GOLDEN RETRIEVER</option>
+					<option value="GOLDEN RETRIEVER">GOLDEN RETRIEVER</option>
+					<option value="GOLDEN RETRIEVER/X">GOLDEN RETRIEVER/X</option>
+					<option value="GORDON SETTER">GORDON SETTER</option>
+					<option value="GORDON SETTER/X">GORDON SETTER/X</option>
+					<option value="GRAND BASSET GRIFFON VENDEEN">GRAND BASSET GRIFFON VENDEEN</option>
+					<option value="GREAT DANE">GREAT DANE</option>
+					<option value="GREAT DANE/X">GREAT DANE/X</option>
+					<option value="GREAT PYRENEES">GREAT PYRENEES</option>
+					<option value="GREAT PYRENEES/X">GREAT PYRENEES/X</option>
+					<option value="GREYHOUND">GREYHOUND</option>
+					<option value="GREYHOUND/X">GREYHOUND/X</option>
+					<option value="GROSSER MUNSTERLANDER">GROSSER MUNSTERLANDER</option>
+					<option value="HARRIER">HARRIER</option>
+					<option value="HAVANESE">HAVANESE</option>
+					<option value="HEIDEWACHTEL">HEIDEWACHTEL</option>
+					<option value="HERD">HERD</option>
+					<option value="HOUND">HOUND</option>
+					<option value="HOUND/SHEP/X">HOUND/SHEP/X</option>
+					<option value="HOUND/X">HOUND/X</option>
+					<option value="HOVAWART">HOVAWART</option>
+					<option value="HUNGARIAN SHEEPDOG">HUNGARIAN SHEEPDOG</option>
+					<option value="HUSKY/SHEP">HUSKY/SHEP</option>
+					<option value="IBIZAN HOUND">IBIZAN HOUND</option>
+					<option value="ICELANDIC SHEEPDOG">ICELANDIC SHEEPDOG</option>
+					<option value="IRISH SETTER">IRISH SETTER</option>
+					<option value="IRISH SETTER/X">IRISH SETTER/X</option>
+					<option value="IRISH STAFFORD BULL TERRIER">IRISH STAFFORD BULL TERRIER</option>
+					<option value="IRISH TERRIER">IRISH TERRIER</option>
+					<option value="IRISH TERRIER/X">IRISH TERRIER/X</option>
+					<option value="IRISH WATER SPANIEL">IRISH WATER SPANIEL</option>
+					<option value="IRISH WOLF HOUND/X">IRISH WOLF HOUND/X</option>
+					<option value="IRISH WOLFHOUND">IRISH WOLFHOUND</option>
+					<option value="IRISH WOLFHOUND/X">IRISH WOLFHOUND/X</option>
+					<option value="ITALIAN GREYHOUND">ITALIAN GREYHOUND</option>
+					<option value="JACK RUSSEL TER/X">JACK RUSSEL TER/X</option>
+					<option value="JACK RUSSELL TER/X">JACK RUSSELL TER/X</option>
+					<option value="JACK RUSSELL TERRIER">JACK RUSSELL TERRIER</option>
+					<option value="JAP BOB TAI">JAP BOB TAI</option>
+					<option value="JAPANESE CHIN">JAPANESE CHIN</option>
+					<option value="JAPANESE SPANIEL">JAPANESE SPANIEL</option>
+					<option value="JINDO">JINDO</option>
+					<option value="KAI LEO">KAI LEO</option>
+					<option value="KARELIAN BEAR DOG">KARELIAN BEAR DOG</option>
+					<option value="KARELIAN BEAR DOG">KARELIAN BEAR DOG</option>
+					<option value="KEESHOND">KEESHOND</option>
+					<option value="KEESHOND/SHEP/X">KEESHOND/SHEP/X</option>
+					<option value="KEESHOND/X">KEESHOND/X</option>
+					<option value="KEESHOND/X">KEESHOND/X</option>
+					<option value="KELPIE">KELPIE</option>
+					<option value="KELPIE/X">KELPIE/X</option>
+					<option value="KERRY BLUE TERRIER">KERRY BLUE TERRIER</option>
+					<option value="KOMONDOR">KOMONDOR</option>
+					<option value="KOMONDOR/X">KOMONDOR/X</option>
+					<option value="KOREAN JINDO DOG">KOREAN JINDO DOG</option>
+					<option value="KUVASZ">KUVASZ</option>
+					<option value="KYI LEO">KYI LEO</option>
+					<option value="LAB/SHEP">LAB/SHEP</option>
+					<option value="LABRADOR RETRIEVER">LABRADOR RETRIEVER</option>
+					<option value="LABRADOR RETRIEVER/X">LABRADOR RETRIEVER/X</option>
+					<option value="LABRADOR/MIX">LABRADOR/MIX</option>
+					<option value="LABRADOR/MIX">LABRADOR/MIX</option>
+					<option value="LABRADOR/X">LABRADOR/X</option>
+					<option value="LAGOTTO ROMAGNOLO">LAGOTTO ROMAGNOLO</option>
+					<option value="LAKELAND TERRIER">LAKELAND TERRIER</option>
+					<option value="LEONBERGER">LEONBERGER</option>
+					<option value="LEONBEWERGER">LEONBEWERGER</option>
+					<option value="LEONBURGER">LEONBURGER</option>
+					<option value="LG MUNSTERLANDER">LG MUNSTERLANDER</option>
+					<option value="LHASA APSO">LHASA APSO</option>
+					<option value="LHASA APSO/X">LHASA APSO/X</option>
+					<option value="LLEWELLIN SETTER">LLEWELLIN SETTER</option>
+					<option value="LONG H MIN DACH">LONG H MIN DACH</option>
+					<option value="LONG H MIN DACHS">LONG H MIN DACHS</option>
+					<option value="LONG HAIR STAN DACH">LONG HAIR STAN DACH</option>
+					<option value="LONG HAIRED ROTTWEILER">LONG HAIRED ROTTWEILER</option>
+					<option value="LONG HAIRED ST BERNARD">LONG HAIRED ST BERNARD</option>
+					<option value="LOWCHEN">LOWCHEN</option>
+					<option value="LURCHER">LURCHER</option>
+					<option value="MALTESE">MALTESE</option>
+					<option value="MALTESE/X">MALTESE/X</option>
+					<option value="MANCHESTER TERRIER">MANCHESTER TERRIER</option>
+					<option value="MANCHESTER TERRIER/X">MANCHESTER TERRIER/X</option>
+					<option value="MAREMMA">MAREMMA</option>
+					<option value="MASTIFF">MASTIFF</option>
+					<option value="MASTIFF/X">MASTIFF/X</option>
+					<option value="MCNAB">MCNAB</option>
+					<option value="MCNAB/X">MCNAB/X</option>
+					<option value="MID-ASIAN OVTCHARKA">MID-ASIAN OVTCHARKA</option>
+					<option value="MIN DACHS">MIN DACHS</option>
+					<option value="MIN DOBERMAN/X">MIN DOBERMAN/X</option>
+					<option value="MIN PINSCHER/X">MIN PINSCHER/X</option>
+					<option value="MINATURE DOBIE">MINATURE DOBIE</option>
+					<option value="MINIATURE DACHSHUND">MINIATURE DACHSHUND</option>
+					<option value="MINIATURE PINSCHER">MINIATURE PINSCHER</option>
+					<option value="MINIATURE POMERANIAN">MINIATURE POMERANIAN</option>
+					<option value="MINIATURE POODLE/X">MINIATURE POODLE/X</option>
+					<option value="MIX">MIX</option>
+					<option value="MIXED">MIXED</option>
+					<option value="MIXED BREED">MIXED BREED</option>
+					<option value="MUDI">MUDI</option>
+					<option value="NEAPOLITAN MASTIFF">NEAPOLITAN MASTIFF</option>
+					<option value="NEWFOUNDLAND">NEWFOUNDLAND</option>
+					<option value="NORFOLK TERRIER">NORFOLK TERRIER</option>
+					<option value="NORWEGIAN ELKHOUND">NORWEGIAN ELKHOUND</option>
+					<option value="NORWEGIAN ELKHOUND/X">NORWEGIAN ELKHOUND/X</option>
+					<option value="NORWICH TERRIER">NORWICH TERRIER</option>
+					<option value="NORWICH TERRIER/X">NORWICH TERRIER/X</option>
+					<option value="NOVA SCOTIA DUCK TOLLING RET">NOVA SCOTIA DUCK TOLLING RET</option>
+					<option value="OLD ENGLISH MASTIFF">OLD ENGLISH MASTIFF</option>
+					<option value="OLD ENGLISH SHEEPDOG">OLD ENGLISH SHEEPDOG</option>
+					<option value="OLD ENGLISH SHEEPDOG/X">OLD ENGLISH SHEEPDOG/X</option>
+					<option value="OTTER HOUND">OTTER HOUND</option>
+					<option value="PAPILLON">PAPILLON</option>
+					<option value="PAPILLON/X">PAPILLON/X</option>
+					<option value="PATTERDALE TERRIER">PATTERDALE TERRIER</option>
+					<option value="PEKAPOO">PEKAPOO</option>
+					<option value="PEKE">PEKE</option>
+					<option value="PEKE/POODLE">PEKE/POODLE</option>
+					<option value="PEKE/X">PEKE/X</option>
+					<option value="PEKINGESE">PEKINGESE</option>
+					<option value="PEKINGESE/MIX">PEKINGESE/MIX</option>
+					<option value="PEKINGESE/X">PEKINGESE/X</option>
+					<option value="PETIT BASSET GRIFFON VENDEEN">PETIT BASSET GRIFFON VENDEEN</option>
+					<option value="PHARAOH HOUND">PHARAOH HOUND</option>
+					<option value="PIT BULL TERRIER">PIT BULL TERRIER</option>
+					<option value="PIT BULL/X">PIT BULL/X</option>
+					<option value="PLOTT HOUND">PLOTT HOUND</option>
+					<option value="PLOTT HOUND/X">PLOTT HOUND/X</option>
+					<option value="POINTER">POINTER</option>
+					<option value="POINTER/X">POINTER/X</option>
+					<option value="POLISH SHEEPDOG">POLISH SHEEPDOG</option>
+					<option value="POMERANIAN">POMERANIAN</option>
+					<option value="POMERANIAN/MIX">POMERANIAN/MIX</option>
+					<option value="POODLE">POODLE</option>
+					<option value="POODLE, FRENCH">"POODLE, FRENCH"</option>
+					<option value="POODLE, MINIATURE">"POODLE, MINIATURE"</option>
+					<option value="POODLE, STANDARD">"POODLE, STANDARD"</option>
+					<option value="POODLE, TEACUP">"POODLE, TEACUP"</option>
+					<option value="POODLE, TOY">"POODLE, TOY"</option>
+					<option value="POODLE/X">POODLE/X</option>
+					<option value="PORTUGUESE WATER DOG">PORTUGUESE WATER DOG</option>
+					<option value="PORTUGUESE WATER SPANIEL">PORTUGUESE WATER SPANIEL</option>
+					<option value="POSA">POSA</option>
+					<option value="PUDELPOINTER">PUDELPOINTER</option>
+					<option value="PUG">PUG</option>
+					<option value="PUG CHINESE">PUG CHINESE</option>
+					<option value="PULI">PULI</option>
+					<option value="PULI/X">PULI/X</option>
+					<option value="PUMI">PUMI</option>
+					<option value="PYRENESE/X">PYRENESE/X</option>
+					<option value="QUEENS/X">QUEENS/X</option>
+					<option value="QUEENSLAND HEELER">QUEENSLAND HEELER</option>
+					<option value="QUEENSLAND HEELER/X">QUEENSLAND HEELER/X</option>
+					<option value="QUEENSLAND/X">QUEENSLAND/X</option>
+					<option value="RAT TERRIER">RAT TERRIER</option>
+					<option value="RAT TERRIER/X">RAT TERRIER/X</option>
+					<option value="RED BONE HOUND">RED BONE HOUND</option>
+					<option value="RED BONE HOUND/X">RED BONE HOUND/X</option>
+					<option value="RED BONED HOUND/X">RED BONED HOUND/X</option>
+					<option value="RED TICK HOUND">RED TICK HOUND</option>
+					<option value="REPLACE">REPLACE</option>
+					<option value="RET/RIDGEBACK/X">RET/RIDGEBACK/X</option>
+					<option value="RETRIEVER/X">RETRIEVER/X</option>
+					<option value="RHOD RIDGEBACK/X">RHOD RIDGEBACK/X</option>
+					<option value="RHODESIAN RIDGEBACK">RHODESIAN RIDGEBACK</option>
+					<option value="RHODESIAN RIDGEBACK/X">RHODESIAN RIDGEBACK/X</option>
+					<option value="ROTT/CHOW">ROTT/CHOW</option>
+					<option value="ROTTWEILER">ROTTWEILER</option>
+					<option value="ROTTWEILER/X">ROTTWEILER/X</option>
+					<option value="ROUGH COLLIE">ROUGH COLLIE</option>
+					<option value="SAINT BERNARD">SAINT BERNARD</option>
+					<option value="SAINT BERNARD/MIX">SAINT BERNARD/MIX</option>
+					<option value="SALUKI">SALUKI</option>
+					<option value="SALUKI/X">SALUKI/X</option>
+					<option value="SAMOYED">SAMOYED</option>
+					<option value="SAMOYED/X">SAMOYED/X</option>
+					<option value="SARPLANINAC">SARPLANINAC</option>
+					<option value="SCHIPPERKE">SCHIPPERKE</option>
+					<option value="SCHIPPERKE/X">SCHIPPERKE/X</option>
+					<option value="SCHNAUZER">SCHNAUZER</option>
+					<option value="SCHNAUZER, GIANT">"SCHNAUZER, GIANT"</option>
+					<option value="SCHNAUZER, MINIATURE">"SCHNAUZER, MINIATURE"</option>
+					<option value="SCHNAUZER, STANDARD">"SCHNAUZER, STANDARD"</option>
+					<option value="SCHNAUZER/X">SCHNAUZER/X</option>
+					<option value="SCOT TER/X">SCOT TER/X</option>
+					<option value="SCOTTISH DEERHOUND">SCOTTISH DEERHOUND</option>
+					<option value="SCOTTISH TERRIER">SCOTTISH TERRIER</option>
+					<option value="SCOTTISH TERRIER/X (SCOT TER/X)">SCOTTISH TERRIER/X (SCOT TER/X)</option>
+					<option value="SEALYHAM TERRIER">SEALYHAM TERRIER</option>
+					<option value="SETTER/X">SETTER/X</option>
+					<option value="SHAR PEI">SHAR PEI</option>
+					<option value="SHAR PEI/X">SHAR PEI/X</option>
+					<option value="SHEBA INU">SHEBA INU</option>
+					<option value="SHEEPDOG/X">SHEEPDOG/X</option>
+					<option value="SHELTIE/BORDER COLLIE X">SHELTIE/BORDER COLLIE X</option>
+					<option value="SHEP/CHOW">SHEP/CHOW</option>
+					<option value="SHEP/CHOW/X">SHEP/CHOW/X</option>
+					<option value="SHEP/KEESHOND/X">SHEP/KEESHOND/X</option>
+					<option value="SHEP/X">SHEP/X</option>
+					<option value="SHEPARD/LAB/X">SHEPARD/LAB/X</option>
+					<option value="SHEPHERD">SHEPHERD</option>
+					<option value="SHETLAND SHEEPDOG">SHETLAND SHEEPDOG</option>
+					<option value="SHETLAND SHEEPDOG/MIX">SHETLAND SHEEPDOG/MIX</option>
+					<option value="SHIBA INU">SHIBA INU</option>
+					<option value="SHIH TZU">SHIH TZU</option>
+					<option value="SHIH TZU/X">SHIH TZU/X</option>
+					<option value="SIB HUSKY/X">SIB HUSKY/X</option>
+					<option value="SIBERIAN HUSKY">SIBERIAN HUSKY</option>
+					<option value="SIBERIAN HUSKY WOLFHUSKY/X">SIBERIAN HUSKY WOLFHUSKY/X</option>
+					<option value="SIBERIAN HUSKY/MIX">SIBERIAN HUSKY/MIX</option>
+					<option value="SIBERIAN HUSKY/X">SIBERIAN HUSKY/X</option>
+					<option value="SILKY TER/X">SILKY TER/X</option>
+					<option value="SILKY TERRIER">SILKY TERRIER</option>
+					<option value="SKYE TERRIER">SKYE TERRIER</option>
+					<option value="SLOUGHI">SLOUGHI</option>
+					<option value="SMOOTH COAT COLLIE">SMOOTH COAT COLLIE</option>
+					<option value="SOFT COATED WHEATEN TERRIER">SOFT COATED WHEATEN TERRIER</option>
+					<option value="SPAN">SPAN</option>
+					<option value="SPANIEL">SPANIEL</option>
+					<option value="SPANIEL/X">SPANIEL/X</option>
+					<option value="SPANISH POINTER">SPANISH POINTER</option>
+					<option value="SPANISH WATER DOG">SPANISH WATER DOG</option>
+					<option value="SPINONE ITALIANO DOG">SPINONE ITALIANO DOG</option>
+					<option value="SPITZ/POODLE">SPITZ/POODLE</option>
+					<option value="SPITZ/X">SPITZ/X</option>
+					<option value="SPRINGER SPANIEL, ENGLISH">"SPRINGER SPANIEL, ENGLISH"</option>
+					<option value="SPRINGER SPANIEL, WELSH">"SPRINGER SPANIEL, WELSH"</option>
+					<option value="SPRINGER/X">SPRINGER/X</option>
+					<option value="STAFF TERR/X">STAFF TERR/X</option>
+					<option value="STAFFORDSHIRE TERRIER">STAFFORDSHIRE TERRIER</option>
+					<option value="STAFFORDSHIRE TERRIER/X">STAFFORDSHIRE TERRIER/X</option>
+					<option value="SUSSEX SPANIEL">SUSSEX SPANIEL</option>
+					<option value="SWEDISH VALHUND">SWEDISH VALHUND</option>
+					<option value="SWISS MOUNTAIN DOG">SWISS MOUNTAIN DOG</option>
+					<option value="TAIWANESE DOG">TAIWANESE DOG</option>
+					<option value="TERR/X">TERR/X</option>
+					<option value="TERRIER">TERRIER</option>
+					<option value="TERRIER X">TERRIER X</option>
+					<option value="TERRIER/X">TERRIER/X</option>
+					<option value="TESTING AGAIN">TESTING AGAIN</option>
+					<option value="TIBETAN MASTIFF">TIBETAN MASTIFF</option>
+					<option value="TIBETAN SPANIEL">TIBETAN SPANIEL</option>
+					<option value="TIBETAN TERRIER">TIBETAN TERRIER</option>
+					<option value="TIBETAN TERRIER/X">TIBETAN TERRIER/X</option>
+					<option value="TOLLER RETRIEVER">TOLLER RETRIEVER</option>
+					<option value="TOLLING DOG">TOLLING DOG</option>
+					<option value="TORNJAK">TORNJAK</option>
+					<option value="TOSA">TOSA</option>
+					<option value="TOY MANCHESTER TERRIER">TOY MANCHESTER TERRIER</option>
+					<option value="TOY POODLE/X">TOY POODLE/X</option>
+					<option value="TOY TERRIER">TOY TERRIER</option>
+					<option value="UNKNOWN">UNKNOWN</option>
+					<option value="VIZSLA">VIZSLA</option>
+					<option value="VIZSLA/X">VIZSLA/X</option>
+					<option value="WALKER HOUND">WALKER HOUND</option>
+					<option value="WEIMARANER">WEIMARANER</option>
+					<option value="WEIMARANER/MIX">WEIMARANER/MIX</option>
+					<option value="WELSH CORGI">WELSH CORGI</option>
+					<option value="WELSH CORGI, CARDIGAN">"WELSH CORGI, CARDIGAN"</option>
+					<option value="WELSH CORGI, PEMBROKE">"WELSH CORGI, PEMBROKE"</option>
+					<option value="WELSH TERRIER">WELSH TERRIER</option>
+					<option value="WEST HIGHLAND TERRIER/X">WEST HIGHLAND TERRIER/X</option>
+					<option value="WEST HIGHLAND WHITE TERRIER">WEST HIGHLAND WHITE TERRIER</option>
+					<option value="WHEATEN TERRIER">WHEATEN TERRIER</option>
+					<option value="WHEATEN TERRIER/X">WHEATEN TERRIER/X</option>
+					<option value="WHIPPET">WHIPPET</option>
+					<option value="WHIPPET/X">WHIPPET/X</option>
+					<option value="WILD ISLAND DOG">WILD ISLAND DOG</option>
+					<option value="WIRE H. FOX TERR/X">WIRE H. FOX TERR/X</option>
+					<option value="WIRE HAIRED DACHS">WIRE HAIRED DACHS</option>
+					<option value="WIRE HAIRED MIN DACH">WIRE HAIRED MIN DACH</option>
+					<option value="WIREHAIRED FOX TERRIER/X">WIREHAIRED FOX TERRIER/X</option>
+					<option value="WIREHAIRED POINTING GRIFFON">WIREHAIRED POINTING GRIFFON</option>
+					<option value="WOLF">WOLF</option>
+					<option value="WOLF/X">WOLF/X</option>
+					<option value="WOLFHOUND/X">WOLFHOUND/X</option>
+					<option value="XOLOITZCUINTLI">XOLOITZCUINTLI</option>
+					<option value="YOLO DOG">YOLO DOG</option>
+					<option value="YORKSHIRE TERRIER">YORKSHIRE TERRIER</option>
+					<option value="YORKSHIRE TERRIER/MIX">YORKSHIRE TERRIER/MIX</option>
+					<option value="YORKSHIRE TERRIER/X">YORKSHIRE TERRIER/X</option>
 				</select>
 				
 				<br><br>
@@ -106,98 +606,98 @@
 				<input type="number" name="MAT" placeholder="0, 100, 200, 400, ..." step="100">
 				-->				<br><br>
 				<label for="Hct">Hct</label>
-				<input type="number" name="Hct" placeholder="%" step=".01">
+				<input type="number" name="Hct" placeholder="%" step=".01" min="0" max="100">
 				<br><br>
 				<label for="Hgb">Hgb</label>
-				<input type="number" name="Hgb" placeholder="g/dL" step=".01">
+				<input type="number" name="Hgb" placeholder="g/dL" step=".01" min="0" max="100">
 				<br><br>
 				<label for="MCV">MCV</label>
-				<input type="number" name="MCV" placeholder="fL" step=".01">
+				<input type="number" name="MCV" placeholder="fL" step=".01" min="0" max="100">
 				<br><br>
 				<label for="WBC">WBC</label>
-				<input type="number" name="WBC" placeholder="/mcL" step=".01">
+				<input type="number" name="WBC" placeholder="/mcL" step=".01" min="0" max="100">
 				<br><br>
 				<label for="Bands">Bands</label>
-				<input type="number" name="Bands" placeholder="/mcL" step=".01">
+				<input type="number" name="Bands" placeholder="/mcL" step=".01" min="0" max="100">
 				<br><br>
 				<label for="Neut">Neut</label>
-				<input type="number" name="Neut" placeholder="/mcL" step=".01">
+				<input type="number" name="Neut" placeholder="/mcL" step=".01" min="0" max="100">
 				<br><br>
 				<label for="Lymph">Lymph</label>
-				<input type="number" name="Lymph" placeholder="/mcL" step=".01">
+				<input type="number" name="Lymph" placeholder="/mcL" step=".01" min="0" max="100">
 				<br><br>
 			</div>
 			<div class="col2">
 				<label for="Mono">Mono</label>
-				<input type="number" name="Mono" placeholder="/mcL" step=".01">
+				<input type="number" name="Mono" placeholder="/mcL" step=".01" min="0" max="100">
 				<br><br>
 				<label for="Eosin">Eosin</label>
-				<input type="number" name="Eosin" placeholder="/mcL" step=".01">
+				<input type="number" name="Eosin" placeholder="/mcL" step=".01" min="0" max="100">
 				<br><br>
 				<label for="Plt">Plt</label>
-				<input type="number" name="Plt" placeholder="/mcL" step=".01">
+				<input type="number" name="Plt" placeholder="/mcL" step=".01" min="0" max="100">
 				<br><br>
 				<label for="anion gap">Anion Gap</label>
-				<input type="number" name="Anion Gap" placeholder="mmol/L" step=".01">
+				<input type="number" name="Anion Gap" placeholder="mmol/L" step=".01" min="0" max="100">
 				<br><br>
 				<label for="sodium">Sodium</label>
-				<input type="number" name="Sodium" placeholder="mmol/L" step=".01">
+				<input type="number" name="Sodium" placeholder="mmol/L" step=".01" min="0" max="100">
 				<br><br>
 				<label for="Potassium">Potassium</label>
-				<input type="number" name="Potassium" placeholder="mmol/L" step=".01">
+				<input type="number" name="Potassium" placeholder="mmol/L" step=".01" min="0" max="100">
 				<br><br>
 				<label for="Chloride">Chloride</label>
-				<input type="number" name="Chloride" placeholder="mmol/L" step=".01">
+				<input type="number" name="Chloride" placeholder="mmol/L" step=".01" min="0" max="100">
 				<br><br>
 				<label for="Bicarb">Bicarb</label>
-				<input type="number" name="Bicarb" placeholder="mmol/L" step=".01">
+				<input type="number" name="Bicarb" placeholder="mmol/L" step=".01" min="0" max="100">
 				<br><br>
 				<label for="Phosphorous">Phosphorous</label>
-				<input type="number" name="Phosphorus" placeholder="mg/dL" step=".01">
+				<input type="number" name="Phosphorus" placeholder="mg/dL" step=".01" min="0" max="100">
 				<br><br>
 				<label for="Calcium">Calcium</label>
-				<input type="number" name="Calcium" placeholder="mg/dL" step=".01">
+				<input type="number" name="Calcium" placeholder="mg/dL" step=".01" min="0" max="100">
 				<br><br>
 				<label for="BUN">BUN</label>
-				<input type="number" name="BUN" placeholder="mg/dL" step=".01">
+				<input type="number" name="BUN" placeholder="mg/dL" step=".01" min="0" max="100">
 				<br><br>
 				<label for="Creatinine">Creatinine</label>
-				<input type="number" name="Creatinine" placeholder="mg/dL" step=".01">
+				<input type="number" name="Creatinine" placeholder="mg/dL" step=".01" min="0" max="100">
 				<br><br>
 				<label for="Glucose">Glucose</label>
-				<input type="number" name="Glucose" placeholder="mg/dL" step=".01">
+				<input type="number" name="Glucose" placeholder="mg/dL" step=".01" min="0" max="100">
 				<br><br>
 				<label for="Total Protein">Total Protein</label>
-				<input type="number" name="Total Protein" placeholder="g/dL" step=".01">
+				<input type="number" name="Total Protein" placeholder="g/dL" step=".01" min="0" max="100">
 				<br><br>
 				<label for="Albumin">Albumin</label>
-				<input type="number" name="Albumin" placeholder="g/dL" step=".01">
+				<input type="number" name="Albumin" placeholder="g/dL" step=".01" min="0" max="100">
 				<br><br>
 				<label for="Globulin">Globulin</label>
-				<input type="number" name="Globulin" placeholder="g/dL" step=".01">
+				<input type="number" name="Globulin" placeholder="g/dL" step=".01" min="0" max="100">
 				<br><br>
 				<label for="ALT">ALT</label>
-				<input type="number" name="ALT" placeholder="IU/L" step=".01">
+				<input type="number" name="ALT" placeholder="IU/L" step=".01" min="0" max="100">
 				<br><br>
 				<label for="AST">AST</label>
-				<input name="AST" type="number" placeholder="IU/L" step=".01">
+				<input name="AST" type="number" placeholder="IU/L" step=".01" min="0" max="100">
 				<br><br>
 			</div>
 			<div class="col3">
 				<label for="Urine Specific Gravity">Urine Specific Gravity</label>
+				<input type="text" inputmode="numeric" pattern="\d*" name="Urine Specific Gravity" placeholder="number to 3 sig digits" step=".001" onchange="setThreeDecimal" min="0" max="100">
+				<br><br>
 				<label for="ALP">ALP</label>
-				<input type="text" name="ALP" placeholder="IU/L" step=".01">
+				<input type="number" name="ALP" placeholder="IU/L" step=".01" min="0" max="100">
 				<br><br>
 				<label for="GGT">GGT</label>
-				<input type="text" name="GGT" placeholder="IU/L" step=".01">
+				<input type="number" name="GGT" placeholder="IU/L" step=".01" min="0" max="100">
 				<br><br>
 				<label for="Cholesterol">Cholesterol</label>
-				<input type="text" name="Cholesterol" placeholder="mg/dL" step=".01">
+				<input type="number" name="Cholesterol" placeholder="mg/dL" step=".01" min="0" max="100">
 				<br><br>
 				<label for="Bilirubin">Bilirubin</label>
-				<input type="text" name="Bilirubin" placeholder="mg/dL" step=".01">
-				<br><br>
-				<input type="text" name="Urine Specific Gravity" placeholder="number to 3 sig digits" step=".01">
+				<input type="number" name="Bilirubin" placeholder="mg/dL" step=".01" min="0" max="100">
 				<br><br>
 				<label>Urine Protein</label><br>
 				<!-- <input type="number" name="Urine Protein" step="1"> -->
