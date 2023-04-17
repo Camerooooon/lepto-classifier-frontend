@@ -13,53 +13,12 @@ cur = con.cursor();
 
 db.init_database(cur);
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='static', static_url_path='')
 
 @app.route("/")
 def main():
     # Return the intro.html file
     return render_template('main.html')
-
-@app.route("/main.css")
-def style_i():
-     return send_file('css/main.css', mimetype='text/css')
-
-@app.route("/index.css")
-def css():
-     return send_file('css/index.css', mimetype='text/css')
-
-@app.route("/index.js")
-def js():
-     return send_file('js/index.js', mimetype='text/javascript')
-
-@app.route("/lepto.css")
-def style():
-     return send_file('css/lepto.css', mimetype='text/css')
-
-@app.route("/contact.css")
-def style_c():
-     return send_file('css/contact.css', mimetype='text/css')
-
-@app.route("/help.css")
-def style_h():
-     return send_file('css/help.css', mimetype='text/css')
-
-@app.route("/result.css")
-def style_r():
-     return send_file('css/result.css', mimetype='text/css')
-
-#make router for the png/pictures, this uses send_file technique 
-@app.route("/vet_pic.png")
-def vet_pic():
-     return send_file('templates/vet_pic.png', mimetype='image/png')
-
-@app.route("/doggo.mp4")
-def dog_vid():
-     return send_file('templates/doggo.mp4', mimetype='video/mp4')
-
-@app.route("/dog.png")
-def dog_pic():
-     return send_file('templates/dog.png', mimetype='image/png')
 
 #intro is the home page 
 @app.route('/home')
