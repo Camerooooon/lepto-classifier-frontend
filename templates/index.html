@@ -25,7 +25,7 @@
 					<!-- this will be connected to the home page -->
 					<li class="ucd"><a href="home">UC DAVIS</a></li>
 					<li><a href="index">Input</a></li>
-					<li><a onclick="alertFunction()" href="index">Lepto-classifier</a></li>
+					<li><a onclick="alertFunction()" href="index">Auto-Input</a></li>
 					<script>
 						function alertFunction() {
 						 alert("Sorry the page is currently under construction, Stay tuned for the update!");
@@ -690,9 +690,6 @@
 				<br><br>
 			</div>
 			<div class="col3">
-				<label for="Urine Specific Gravity">Urine Specific Gravity</label>
-				<input type="text" inputmode="numeric" pattern="\d*" name="Urine Specific Gravity" placeholder="number to 3 sig digits" step=".001" onchange="setThreeDecimal" min="0" max="100">
-				<br><br>
 				<label for="ALP">ALP</label>
 				<input type="number" name="ALP" placeholder="IU/L" step=".01" min="0" max="100">
 				<br><br>
@@ -704,6 +701,9 @@
 				<br><br>
 				<label for="Bilirubin">Bilirubin</label>
 				<input type="number" name="Bilirubin" placeholder="mg/dL" step=".01" min="0" max="100">
+				<br><br>
+        <label for="Urine Specific Gravity">Urine Specific Gravity</label>
+				<input type="text" inputmode="numeric" pattern="\d*" name="Urine Specific Gravity" placeholder="number to 3 sig digits" step=".001" onchange="setThreeDecimal" min="0" max="100">
 				<br><br>
 				<label>Urine Protein</label><br>
 				<!-- <input type="number" name="Urine Protein" step="1"> -->
@@ -786,8 +786,8 @@
 				<div class="title">UC DAVIS</div>	
 				<hr>
 				<div class="vet_txt">VETERINARY MEDICINE</div>
-				<p class="right">Copyright © 2022 UC DAVIS VETERINARY MEDICINE. All rights resereved</p>
-			</div>
+        <p class="right">Copyright © 2022 UC DAVIS VETERINARY MEDICINE. All rights resereved
+          <br> Git repo: https://github.com/Camerooooon/lepto-classifier-frontend</p>			</div>
 		</div>
 
 
