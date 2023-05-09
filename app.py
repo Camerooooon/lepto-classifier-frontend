@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, send_file, redirect, url_for
-from result import Result
+from result import Result, from_prediction
 from result_into_pdf import gen_pdf
 from flask.wrappers import Response
 import database as db
@@ -71,7 +71,8 @@ def submit_data():
         return Response('Could not generate a result, please insure all fields are filled!', status=400)
 
 
-    result: Result = prediction[0]
+    print(prediction[0])
+    result: Result = from_prediction(prediction[0])
 
     if (result == Result.INVALID):
         return Response('Your result was -1 (invalid). The LeptoClassifier could not construct a result from the data provided. Please make sure that all the data is entered correctly and resubmit. If you are still having trouble please contact us.', status=400)
