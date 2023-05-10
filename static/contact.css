@@ -11,6 +11,11 @@
         z-index: 1;
         color: #002855;
     }
+    h2 {
+        font-size: .4rem;
+        z-index: 1;
+        color: #002855;
+    };
     .box { 
         height: 3rem; 
         display: block;
@@ -59,7 +64,7 @@
         margin-bottom: 5px;
     }
     #contact .contact-info h2 {
-        font-size: .8rem;
+        font-size: .6rem;
         line-height: 1.5rem;
         font-weight: 500;
     }
