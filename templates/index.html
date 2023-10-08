@@ -197,8 +197,9 @@
 				<label for="Bilirubin">Bilirubin</label>
 				<input type="text" name="Bilirubin" placeholder="mg/dL" step=".01">
 				<br><br>
-				<input type="text" name="Urine Specific Gravity" placeholder="number to 3 sig digits" step=".01">
-				<br><br>
+				<label for="Urine Specific Gravity">Urine Specific Gravity</label>
+				<input type="text" pattern="^\d*(\.\d{0,3})?$" name="Urine Specific Gravity" placeholder="number to 3 sig digits" step=".01">
+        <br><br>
 				<label>Urine Protein</label><br>
 				<!-- <input type="number" name="Urine Protein" step="1"> -->
 				<div class="shrink">
@@ -221,7 +222,7 @@
 					</div>
 					<div>
 						<input type="radio" name="Urine Protein" value="4">
-						<label for="4"> 4+ or > 151 mg/dL</label>
+						<label for="4"> 4+ or 151 mg/dL</label>
 					</div>
 					</fieldset>
 				</div>
@@ -249,7 +250,7 @@
 					</div>
 					<div>
 						<input type="radio" name="Urine Glucose" value="4">
-						<label for="4"> 4+ or > 501 mg/dL </label>
+						<label for="4"> 4+ or 501 mg/dL </label>
 					</div>
 				</fieldset>
         </div>
