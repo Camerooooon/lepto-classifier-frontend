@@ -54,25 +54,25 @@
 		<form action="/submit_data" method="POST">
 			<div class="col1">
 				<label for="Dog Name">Dog Name</label>
-				<input name="Dog Name" type="text">
+				<input name="Dog Name" type="text" required="">
 				<br><br>
 				<label for="Owner Name">Owner Name</label>
-				<input name="Owner Name" type="text">
+				<input name="Owner Name" type="text" required="">
 				<br><br>
 				<label for="Zipcode">Zipcode</label>
-				<input name="Zipcode" type="text" inputmode="numeric" pattern="\d*" placeholder="6-digits" min="0">
+				<input name="Zipcode" type="text" inputmode="numeric" pattern="\d*" placeholder="6-digits" min="0" required="">
 				<br><br>
 				<label for="Vet Name">Name of Vet</label>
-				<input name="Vet Name" type="text" placeholder="Last First">
+				<input name="Vet Name" type="text" placeholder="Last First" required="">
 				<br><br>
 				<label for="Vet Email Address">Email Address</label>
-				<input name="Email Address" type="text">
+				<input name="Email Address" type="text" required="">
 				<br><br>
 				<label for="Weight">Weight</label>
-				<input name="Weight" type="number" placeholder="kg" step=".01" min="0">
+				<input name="Weight" type="number" placeholder="kg" step=".01" min="0" required="">
 				<br><br>
 				<label for="Breed Group">Breed</label>
-				<select name="Breed Group">
+				<select name="Breed Group" required="">
                     <option value="Toy">AFFENPINSCHER</option>
                     <option value="Hound">AFGHAN HOUND</option>
                     <option value="Hound">AFGHAN/X</option>
@@ -478,7 +478,7 @@
                     <option value="Working">SAMOYED</option>
                     <option value="Working">SAMOYED/X</option>
                     <option value="Other">SARPLANINAC</option>
-                    <option value="Non-Sporting">SCHIPPERKE</option>
+                    <option value="Non-Spnumberorting">SCHIPPERKE</option>
                     <option value="Non-Sporting">SCHIPPERKE/X</option>
                     <option value="Working">SCHNAUZER</option>
                     <option value="Working">SCHNAUZER, GIANT</option>
@@ -590,7 +590,7 @@
 				
 				<br><br>
 				<label>Sex</label><br>
-				<fieldset>
+				<fieldset required="">
 					<input type="radio" name="Sex" value="0">
 					<label for="male"> Male</label><br>
 					<input type="radio" name="Sex" value="1">
@@ -598,7 +598,7 @@
 				</fieldset>
 				<br>
 				<label for="MAT">MAT</label>
-				<select name="MAT" id="MAT">
+				<select name="MAT" id="MAT" required="">
 					<option value="-1">I do not have MAT</option>
 					<option value="0">0</option>
 					<option value="100">100</option>
@@ -612,103 +612,103 @@
 				<input type="number" name="MAT" placeholder="0, 100, 200, 400, ..." step="100">
 				-->				<br><br>
 				<label for="Hct">Hct</label>
-				<input type="number" name="Hct" placeholder="%" step=".01" min="0">
+				<input type="number" name="Hct" placeholder="%" step=".01" min="0" required="">
 				<br><br>
 				<label for="Hgb">Hgb</label>
-				<input type="number" name="Hgb" placeholder="g/dL" step=".01" min="0">
+				<input type="number" name="Hgb" placeholder="g/dL" step=".01" min="0" required="">
 				<br><br>
 				<label for="MCV">MCV</label>
-				<input type="number" name="MCV" placeholder="fL" step=".01" min="0">
+				<input type="number" name="MCV" placeholder="fL" step=".01" min="0" required="">
 				<br><br>
 				<label for="WBC">WBC</label>
-				<input type="number" name="WBC" placeholder="/mcL" step=".01" min="0">
+				<input type="number" name="WBC" placeholder="/mcL" step=".01" min="0"required="">
 				<br><br>
 				<label for="Bands">Bands</label>
-				<input type="number" name="Bands" placeholder="/mcL" step=".01" min="0">
+				<input type="number" name="Bands" placeholder="/mcL" step=".01" min="0" required="">
 				<br><br>
 				<label for="Neut">Neut</label>
-				<input type="number" name="Neut" placeholder="/mcL" step=".01" min="0">
+				<input type="number" name="Neut" placeholder="/mcL" step=".01" min="0" required="">
 				<br><br>
 				<label for="Lymph">Lymph</label>
-				<input type="number" name="Lymph" placeholder="/mcL" step=".01" min="0">
+				<input type="number" name="Lymph" placeholder="/mcL" step=".01" min="0" required="">
 				<br><br>
 			</div>
 			<div class="col2">
 				<label for="Mono">Mono</label>
-				<input type="number" name="Mono" placeholder="/mcL" step=".01" min="0">
+				<input type="number" name="Mono" placeholder="/mcL" step=".01" min="0" required="">
 				<br><br>
 				<label for="Eosin">Eosin</label>
-				<input type="number" name="Eosin" placeholder="/mcL" step=".01" min="0">
+				<input type="number" name="Eosin" placeholder="/mcL" step=".01" min="0" required="">
 				<br><br>
 				<label for="Plt">Plt</label>
-				<input type="number" name="Plt" placeholder="/mcL" step=".01" min="0">
+				<input type="number" name="Plt" placeholder="/mcL" step=".01" min="0" required="">
 				<br><br>
 				<label for="anion gap">Anion Gap</label>
-				<input type="number" name="Anion Gap" placeholder="mmol/L" step=".01" min="0">
+				<input type="number" name="Anion Gap" placeholder="mmol/L" step=".01" min="0" required="">
 				<br><br>
 				<label for="sodium">Sodium</label>
-				<input type="number" name="Sodium" placeholder="mmol/L" step=".01" min="0">
+				<input type="number" name="Sodium" placeholder="mmol/L" step=".01" min="0" required="">
 				<br><br>
 				<label for="Potassium">Potassium</label>
-				<input type="number" name="Potassium" placeholder="mmol/L" step=".01" min="0">
+				<input type="number" name="Potassium" placeholder="mmol/L" step=".01" min="0" required="">
 				<br><br>
 				<label for="Chloride">Chloride</label>
-				<input type="number" name="Chloride" placeholder="mmol/L" step=".01" min="0">
+				<input type="number" name="Chloride" placeholder="mmol/L" step=".01" min="0" required="">
 				<br><br>
 				<label for="Bicarb">Bicarb</label>
-				<input type="number" name="Bicarb" placeholder="mmol/L" step=".01" min="0">
+				<input type="number" name="Bicarb" placeholder="mmol/L" step=".01" min="0" required="">
 				<br><br>
 				<label for="Phosphorous">Phosphorous</label>
-				<input type="number" name="Phosphorus" placeholder="mg/dL" step=".01" min="0">
+				<input type="number" name="Phosphorus" placeholder="mg/dL" step=".01" min="0" required="">
 				<br><br>
 				<label for="Calcium">Calcium</label>
-				<input type="number" name="Calcium" placeholder="mg/dL" step=".01" min="0">
+				<input type="number" name="Calcium" placeholder="mg/dL" step=".01" min="0" required="">
 				<br><br>
 				<label for="BUN">BUN</label>
-				<input type="number" name="BUN" placeholder="mg/dL" step=".01" min="0">
+				<input type="number" name="BUN" placeholder="mg/dL" step=".01" min="0" required="">
 				<br><br>
 				<label for="Creatinine">Creatinine</label>
-				<input type="number" name="Creatinine" placeholder="mg/dL" step=".01" min="0">
+				<input type="number" name="Creatinine" placeholder="mg/dL" step=".01" min="0" required="">
 				<br><br>
 				<label for="Glucose">Glucose</label>
-				<input type="number" name="Glucose" placeholder="mg/dL" step=".01" min="0">
+				<input type="number" name="Glucose" placeholder="mg/dL" step=".01" min="0" required="">
 				<br><br>
 				<label for="Total Protein">Total Protein</label>
-				<input type="number" name="Total Protein" placeholder="g/dL" step=".01" min="0">
+				<input type="number" name="Total Protein" placeholder="g/dL" step=".01" min="0" required="">
 				<br><br>
 				<label for="Albumin">Albumin</label>
-				<input type="number" name="Albumin" placeholder="g/dL" step=".01" min="0">
+				<input type="number" name="Albumin" placeholder="g/dL" step=".01" min="0" required="">
 				<br><br>
 				<label for="Globulin">Globulin</label>
-				<input type="number" name="Globulin" placeholder="g/dL" step=".01" min="0">
+				<input type="number" name="Globulin" placeholder="g/dL" step=".01" min="0" required="">
 				<br><br>
 				<label for="ALT">ALT</label>
-				<input type="number" name="ALT" placeholder="IU/L" step=".01" min="0">
+				<input type="number" name="ALT" placeholder="IU/L" step=".01" min="0" required="">
 				<br><br>
 				<label for="AST">AST</label>
-				<input name="AST" type="number" placeholder="IU/L" step=".01" min="0">
+				<input name="AST" type="number" placeholder="IU/L" step=".01" min="0" required="">
 				<br><br>
 			</div>
 			<div class="col3">
 				<label for="Urine Specific Gravity">Urine Specific Gravity</label>
-				<input type="text" inputmode="numeric" pattern="\d*" name="Urine Specific Gravity" placeholder="number to 3 sig digits" step=".001" onchange="setThreeDecimal" min="0">
+				<input type="text" inputmode="numeric" pattern="\d*" name="Urine Specific Gravity" placeholder="number to 3 sig digits" step=".001" onchange="setThreeDecimal" min="0" required="">
 				<br><br>
 				<label for="ALP">ALP</label>
-				<input type="number" name="ALP" placeholder="IU/L" step=".01" min="0">
+				<input type="number" name="ALP" placeholder="IU/L" step=".01" min="0" required="">
 				<br><br>
 				<label for="GGT">GGT</label>
-				<input type="number" name="GGT" placeholder="IU/L" step=".01" min="0">
+				<input type="number" name="GGT" placeholder="IU/L" step=".01" min="0" required="">
 				<br><br>
 				<label for="Cholesterol">Cholesterol</label>
-				<input type="number" name="Cholesterol" placeholder="mg/dL" step=".01" min="0">
+				<input type="number" name="Cholesterol" placeholder="mg/dL" step=".01" min="0" required="">
 				<br><br>
 				<label for="Bilirubin">Bilirubin</label>
-				<input type="number" name="Bilirubin" placeholder="mg/dL" step=".01" min="0">
+				<input type="number" name="Bilirubin" placeholder="mg/dL" step=".01" min="0" required="">
 				<br><br>
 				<label>Urine Protein</label><br>
 				<!-- <input type="number" name="Urine Protein" step="1"> -->
 				<div class="shrink">
-					<fieldset>
+					<fieldset required="">
 					<div>
 						<input type="radio" name="Urine Protein" value="0">
 						<label for="0"> Negative or 0 mg/dL </label><span class="tab"></span>
@@ -736,7 +736,7 @@
 				<label>Urine Glucose</label><br>
 				<div class="shrink">
 				<!-- <input type="number" name="Urine Glucose" step="1"> --> 
-				<fieldset>
+				<fieldset required="">
 					<div>
 						<input type="radio" name="Urine Glucose" value="0">
 						<label for="0"> Negative or 0 mg/dL </label><span class="tab"></span>
