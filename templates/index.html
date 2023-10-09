@@ -37,7 +37,7 @@
  					<li><a href="contact">Contact</a></li>
 				</ul>
 			<div class="bar"></div>
-			<div class="disclaimer">
+			<!-- <div class="disclaimer">
 				<p id="blink">Faster access to data, Lepto-classifier parser coming soon!</p>
 				<script type="text/javascript">
 					var blink = document.getElementById('blink');
@@ -45,8 +45,8 @@
 						blink.style.opacity = (blink.style.opacity == 0 ? 1 : 0);
 					}, 1500);
 				</script>
-				<!-- <a href="lepto"><button>Lepto</button></a> -->
-			</div>
+				 <a href="lepto"><button>Lepto</button></a> --> 
+			<!-- </div> --> 
 		</div>
 
 		<!-- put restrictions -->
@@ -56,16 +56,16 @@
 				<label for="Dog Name">Dog Name</label>
 				<input name="Dog Name" type="text">
 				<br><br>
-				<label for="Owner Name">Owner Name</label>
+				<label for="Owner Name">Owner's Last Name</label>
 				<input name="Owner Name" type="text">
 				<br><br>
-				<label for="Zipcode">Zipcode</label>
-				<input name="Zipcode" type="text" inputmode="numeric" pattern="\d*" placeholder="6-digits" min="0">
+				<label for="Zipcode">Dog's Zipcode</label>
+				<input name="Zipcode" type="number" placeholder="6-digits">
 				<br><br>
-				<label for="Vet Name">Name of Vet</label>
+				<label for="Vet Name">Name of Veterinarian</label>
 				<input name="Vet Name" type="text" placeholder="Last First">
 				<br><br>
-				<label for="Vet Email Address">Email Address</label>
+				<label for="Email Address">Email Address of Veterinarian</label>
 				<input name="Email Address" type="text">
 				<br><br>
 				<label for="Weight">Weight</label>
@@ -597,25 +597,25 @@
 					<label for="female"> Female</label><br>
 				</fieldset>
 				<br>
-				<label for="MAT">MAT</label>
+				<label for="MAT">Microscopic Agglutination Test</label>
 				<select name="MAT" id="MAT">
 					<option value="-1">I do not have MAT</option>
-					<option value="0">0</option>
-					<option value="100">100</option>
-					<option value="200">200</option>
-					<option value="400">400</option>
-					<option value="800">800</option>
-					<option value="1600">1600</option>
-					<option value="3200">3200</option>
+					<option value="0">Negative</option>
+					<option value="100">1:100</option>
+					<option value="200">1:200</option>
+					<option value="400">1:400</option>
+					<option value="800">1:800</option>
+					<option value="1600">1:1600</option>
+					<option value="3200">1:3200</option>
 				</select>
 				<!--
 				<input type="number" name="MAT" placeholder="0, 100, 200, 400, ..." step="100">
 				-->				<br><br>
-				<label for="Hct">Hct</label>
-				<input type="number" name="Hct" placeholder="%" step=".01" min="0">
+				<label for="Hct">Hematoerit</label>
+				<input type="number" name="Hct" placeholder="%" step=".01">
 				<br><br>
-				<label for="Hgb">Hgb</label>
-				<input type="number" name="Hgb" placeholder="g/dL" step=".01" min="0">
+				<label for="Hgb">Hemoglobin</label>
+				<input type="number" name="Hgb" placeholder="g/dL" step=".01">
 				<br><br>
 				<label for="MCV">MCV</label>
 				<input type="number" name="MCV" placeholder="fL" step=".01" min="0">
@@ -626,22 +626,22 @@
 				<label for="Bands">Bands</label>
 				<input type="number" name="Bands" placeholder="/mcL" step=".01" min="0">
 				<br><br>
-				<label for="Neut">Neut</label>
-				<input type="number" name="Neut" placeholder="/mcL" step=".01" min="0">
+				<label for="Neut">Neutophils</label>
+				<input type="number" name="Neut" placeholder="/mcL" step=".01">
 				<br><br>
-				<label for="Lymph">Lymph</label>
-				<input type="number" name="Lymph" placeholder="/mcL" step=".01" min="0">
+				<label for="Lymph">Lymphocytosis</label>
+				<input type="number" name="Lymph" placeholder="/mcL" step=".01">
 				<br><br>
 			</div>
 			<div class="col2">
-				<label for="Mono">Mono</label>
-				<input type="number" name="Mono" placeholder="/mcL" step=".01" min="0">
+				<label for="Mono">Monocytes</label>
+				<input type="number" name="Mono" placeholder="/mcL" step=".01">
 				<br><br>
-				<label for="Eosin">Eosin</label>
-				<input type="number" name="Eosin" placeholder="/mcL" step=".01" min="0">
+				<label for="Eosin">Eosinophils</label>
+				<input type="number" name="Eosin" placeholder="/mcL" step=".01">
 				<br><br>
-				<label for="Plt">Plt</label>
-				<input type="number" name="Plt" placeholder="/mcL" step=".01" min="0">
+				<label for="Plt">Platelet Count</label>
+				<input type="number" name="Plt" placeholder="/mcL" step=".01" pattern="^\d{1,3}(,\d{3})*$" required>
 				<br><br>
 				<label for="anion gap">Anion Gap</label>
 				<input type="number" name="Anion Gap" placeholder="mmol/L" step=".01" min="0">
@@ -690,9 +690,6 @@
 				<br><br>
 			</div>
 			<div class="col3">
-				<label for="Urine Specific Gravity">Urine Specific Gravity</label>
-				<input type="text" inputmode="numeric" pattern="\d*" name="Urine Specific Gravity" placeholder="number to 3 sig digits" step=".001" onchange="setThreeDecimal" min="0">
-				<br><br>
 				<label for="ALP">ALP</label>
 				<input type="number" name="ALP" placeholder="IU/L" step=".01" min="0">
 				<br><br>
@@ -703,8 +700,11 @@
 				<input type="number" name="Cholesterol" placeholder="mg/dL" step=".01" min="0">
 				<br><br>
 				<label for="Bilirubin">Bilirubin</label>
-				<input type="number" name="Bilirubin" placeholder="mg/dL" step=".01" min="0">
+				<input type="number" name="Bilirubin" placeholder="mg/dL" step=".01">
 				<br><br>
+				<label for="Urine Specific Gravity">Urine Specific Gravity</label>
+				<input type="text" pattern="^\d*(\.\d{0,3})?$" name="Urine Specific Gravity" placeholder="number to 3 sig digits" step=".01">
+        <br><br>
 				<label>Urine Protein</label><br>
 				<!-- <input type="number" name="Urine Protein" step="1"> -->
 				<div class="shrink">
@@ -727,7 +727,7 @@
 					</div>
 					<div>
 						<input type="radio" name="Urine Protein" value="4">
-						<label for="4"> 4+ or > 151 mg/dL</label>
+						<label for="4"> 4+ or 151 mg/dL</label>
 					</div>
 					</fieldset>
 				</div>
@@ -755,7 +755,7 @@
 					</div>
 					<div>
 						<input type="radio" name="Urine Glucose" value="4">
-						<label for="4"> 4+ or > 501 mg/dL </label>
+						<label for="4"> 4+ or 501 mg/dL </label>
 					</div>
 				</fieldset>
         </div>
