@@ -473,7 +473,7 @@
     }
     .header { 
         width: 100%;
-        height: 260px;
+        /* height: 260px; */
         margin: 0;
         display: flex;
         flex-direction: column;
@@ -505,6 +505,7 @@
         width: 100%;
         height: 20px;
         transition: .3s ease transform;
+        margin-bottom: 20px;
     }
     .tab {
         display: inline-block;
@@ -580,7 +581,7 @@
     div.col1{ 
         width: 80%;
         height: auto;
-        margin-bottom: 77px;
+        margin-bottom: 80px;
         align-items: center;
         padding-left: 80px;
         margin-right: 40px;
@@ -637,7 +638,6 @@
         justify-content: center;
         background-color: lightgray;
         margin-bottom: 50px;
-        margin-top: 10px;
     }
     p.info {
         font-size: 2.5rem;
