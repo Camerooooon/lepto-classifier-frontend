@@ -67,6 +67,7 @@
         background-color: lightgray;
         border: 2px solid #002855;
         border-radius: 6px;
+        padding-left: .5em;
     }
     #blink {
         display: none;
@@ -83,6 +84,7 @@
         color: #002855;
         font-weight: 700;
         font-size: 1.5rem;
+        
     }
     input { 
         background-color: lightgray;
@@ -90,6 +92,7 @@
         border-radius: 2px;
         font-size: 1rem;
         color: #002855;
+        padding-left: .5em;
     }
     p {
         color: #002855;
@@ -490,8 +493,8 @@
         z-index: 1;
     }
     .header ul a{
-        font-size: 1.5rem; 
-        letter-spacing: .2rem;
+        font-size: 1.7rem; 
+        letter-spacing: .5rem;
         text-decoration: none;
         color: white; 
         text-transform: uppercase;
@@ -499,7 +502,6 @@
         display: block;
         font-weight: 900;
     }
-    /* add some hover affect to show the details */
     .bar {
         background-color: #FFBF00;
         width: 100%;
@@ -573,15 +575,23 @@
         font-size: 1rem;
         margin-left: 10px;
     }
-    select,option {
-        background-color: lightgray;
+    select, option {
         border: 2px solid #002855;
         border-radius: 6px;
+        font-weight: 700;
+        padding-left: 0.5em;
+        background-color: lightgray;
+        color: #002855;
+        z-index: -1;
     }
     div.col1{ 
         width: 80%;
         height: auto;
+<<<<<<< HEAD:css/index.css
         margin-bottom: 80px;
+=======
+        margin-bottom: 120px;
+>>>>>>> master:static/index.css
         align-items: center;
         padding-left: 80px;
         margin-right: 40px;
