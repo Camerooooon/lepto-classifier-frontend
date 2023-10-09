@@ -20,6 +20,9 @@ def init_database(cur):
                 id INTEGER PRIMARY KEY AUTOINCREMENT, 
                 dog_name TEXT,
                 owner_name TEXT,
+                zip_code INT,
+                vet_name TEXT,
+                email_address TEXT,
                 temp_link TEXT,
                 weight FLOAT(3),
                 breed_group TEXT,
@@ -59,7 +62,7 @@ def init_database(cur):
     cur.execute('''CREATE TABLE IF NOT EXISTS contact ( id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, email TEXT, message TEXT )''');
 
 def put_dog_entry(con, cur, dog_entry: DogEntry):
-    cur.execute("INSERT INTO dogs(dog_name, owner_name, temp_link, weight, breed_group, sex, mat, anion_gap, sodium, potassium, chloride, bicarb, phosphorus, calcium, bun, creatine, glucose, protein, albumin, globulin, alt, ast, alp, ggt, cholesterol, bilirubin, urine_specific_gravity, hct, hgb, mcv, wbc, bands, neut, lymph, mono, eosin, plt) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", (dog_entry.data["dog name"], dog_entry.data["owner name"], dog_entry.temp_link, dog_entry.data["Weight"], dog_entry.data["Breed Group"], dog_entry.data["Sex"], dog_entry.data["MAT"], dog_entry.data["Anion Gap"], dog_entry.data["Sodium"], dog_entry.data["Potassium"], dog_entry.data["Chloride"], dog_entry.data["Bicarb"], dog_entry.data["Phosphorus"], dog_entry.data["Calcium"], dog_entry.data["BUN"], dog_entry.data["Creatinine"], dog_entry.data["Glucose"], dog_entry.data["Total Protein"], dog_entry.data["Albumin"], dog_entry.data["Globulin"], dog_entry.data["ALT"], dog_entry.data["AST"], dog_entry.data["ALP"], dog_entry.data["GGT"], dog_entry.data["Cholesterol"], dog_entry.data["Bilirubin"], dog_entry.data["Urine Specific Gravity"], dog_entry.data["Urine Protein"], dog_entry.data["Urine Glucose"], dog_entry.data["Hct"], dog_entry.data["Hgb"], dog_entry.data["MCV"], dog_entry.data["WBC"], dog_entry.data["Bands"], dog_entry.data["Neut"], dog_entry.data["Eosin"], dog_entry.data["Plt"]));
+    cur.execute("INSERT INTO dogs(dog_name, owner_name, zip_code, vet_name, email_address, temp_link, weight, breed_group, sex, mat, anion_gap, sodium, potassium, chloride, bicarb, phosphorus, calcium, bun, creatine, glucose, protein, albumin, globulin, alt, ast, alp, ggt, cholesterol, bilirubin, urine_specific_gravity, hct, hgb, mcv, wbc, bands, neut, lymph, mono, eosin, plt) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", (dog_entry.data["Dog Name"], dog_entry.data["Owner Name"], dog_entry.data["Zipcode"], dog_entry.data["Vet Name"], dog_entry.data["Email Address"], dog_entry.temp_link, dog_entry.data["Weight"], dog_entry.data["Breed Group"], dog_entry.data["Sex"], dog_entry.data["MAT"], dog_entry.data["Anion Gap"], dog_entry.data["Sodium"], dog_entry.data["Potassium"], dog_entry.data["Chloride"], dog_entry.data["Bicarb"], dog_entry.data["Phosphorus"], dog_entry.data["Calcium"], dog_entry.data["BUN"], dog_entry.data["Creatinine"], dog_entry.data["Glucose"], dog_entry.data["Total Protein"], dog_entry.data["Albumin"], dog_entry.data["Globulin"], dog_entry.data["ALT"], dog_entry.data["AST"], dog_entry.data["ALP"], dog_entry.data["GGT"], dog_entry.data["Cholesterol"], dog_entry.data["Bilirubin"], dog_entry.data["Urine Specific Gravity"], dog_entry.data["Urine Protein"], dog_entry.data["Urine Glucose"], dog_entry.data["Hct"], dog_entry.data["Hgb"], dog_entry.data["MCV"], dog_entry.data["WBC"], dog_entry.data["Bands"], dog_entry.data["Neut"], dog_entry.data["Eosin"], dog_entry.data["Plt"]));
     con.commit();
 
 def get_dog_by_names(con, cur, dog_name, owner_name):

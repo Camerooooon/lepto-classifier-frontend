@@ -47,7 +47,7 @@
         z-index: 1;
         padding: 20px;
         border-radius: 19px;
-        margin-top: 50px;
+        margin-top: 20px;
         background-color:rgba(255,255,255,.7);
    }
     a.effect { 
@@ -131,6 +131,28 @@
         margin-left: 0px;
         font-size: 1.8rem;
     }
+    .view {
+        width: 80%;
+        border-radius: 6px;
+        border: 3px solid #002855;
+        background-color: lightblue;
+        justify-content: center;
+        flex-direction: column;
+        display: flex;
+        margin-top: 2rem;
+    }
+    a.effect { 
+        background-color: #002855;
+		color: white; 
+        font-size: .9rem; 
+        width: 6rem; 
+        height:2rem; 
+        margin-top: 1rem;
+        border-radius: 8px; 
+        padding-left: .8rem; 
+        padding-top: .2rem; 
+        padding-bottom: .2rem;
+    }
 }
 @media only screen and (max-device-width: 1281px) and (min-device-width: 768px) {
     .header ul{ 
@@ -190,8 +212,8 @@
         background-color: #002855;
 		color: white; 
         font-size: 1.2rem; 
-        width: 6rem; 
-        height:2rem; 
+        width: 8rem; 
+        height:4rem; 
         margin-top: 1rem;
         border-radius: 8px; 
         padding-left: .8rem; 
@@ -271,19 +293,31 @@
         margin-left: 0px;
         font-size: 2.5rem;
     }
+    .view {
+        width: 80%;
+        height: auto;
+        border-radius: 6px;
+        border: 3px solid #002855;
+        background-color: lightblue;
+        justify-content: center;
+        flex-direction: column;
+        display: flex;
+        margin-top: 2rem;
+    }
 }
 /*desktop*/ 
 @media only screen and (min-device-width: 1281px) {
     a.effect { 
         background-color: #002855;
 		color: white; 
-        font-size: 1.2rem; 
-        width: 6rem; 
-        height:2rem; 
+        font-size: 1.8rem; 
+        width: auto; 
+        height: 3rem; 
         border-radius: 8px; 
-        padding-left: .8rem; 
-        padding-top: .2rem; 
-        padding-bottom: .2rem;
+        padding-left: .5rem; 
+        padding-right: .5rem;
+        padding-top: .3rem; 
+        padding-bottom: .5rem;
     }
     p.b_type {
         padding-top: 5rem; 
@@ -317,9 +351,9 @@
         animation: gradient 9s ease infinite;
     }
     p.write  {
-        padding-top: 1rem;
-        padding-bottom:.5rem; 
-        font-size: 2rem;
+        padding-top: 1.2rem;
+        padding-bottom: 1.2rem; 
+        font-size: 2.3rem;
     }
     p { 
         font-weight: 900;
@@ -356,14 +390,14 @@
     }
     .bottom {
         width: 70%;
-        margin-top: 10px;
+        margin-top: 60px;
         display: flex;
         justify-content: center;
         flex-direction: column;
         align-items: center;
         z-index: 1;
         background-color: white;
-        padding: 20px;
+        padding: 40px;
         margin-bottom: 10px;
         border-radius: 18px;
         background-color:rgba(255,255,255,.7);
@@ -411,5 +445,16 @@
     p {
         font-size: 1.5rem;
         font-weight: 900;
+    }
+    .view {
+        width: 80%;
+        height: auto;
+        border-radius: 6px;
+        border: 3px solid #002855;
+        background-color: lightblue;
+        justify-content: center;
+        flex-direction: column;
+        display: flex;
+        margin-top: 2rem;
     }
 }

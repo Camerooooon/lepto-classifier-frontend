@@ -32,7 +32,7 @@
 						}
 					</script>
 					<!-- change this to input -->
- 					<li><a href="result">Result</a></li>
+					<!-- <li><a href="result">result</a></li> -->
  					<li><a href="help">Help</a></li>
  					<li><a href="contact">Contact</a></li>
 				</ul>
@@ -49,11 +49,12 @@
 			<!-- </div> --> 
 		</div>
 
+		<!-- put restrictions -->
 		<div class="central">
 		<form action="/submit_data" method="POST">
 			<div class="col1">
-				<label for="dog name">Dog Name</label>
-				<input name="dog name" type="text">
+				<label for="Dog Name">Dog Name</label>
+				<input name="Dog Name" type="text">
 				<br><br>
 				<label for="owner name">Owner's Last Name</label>
 				<input name="owner name" type="text">
@@ -68,18 +69,523 @@
 				<input name="email address" type="text">
 				<br><br>
 				<label for="Weight">Weight</label>
-				<input name="Weight" type="number" placeholder="kg" step=".01">
+				<input name="Weight" type="number" placeholder="kg" step=".01" min="0">
 				<br><br>
-				<label for="Breed Group">Breed Group</label>
+				<label for="Breed Group">Breed</label>
 				<select name="Breed Group">
-					<option value="Toy">Toy</option>
-					<option value="Herding">Herding</option>
-					<option value="Hound">Hound</option>
-					<option value="Mix">Mix</option>
-					<option value="Non-Sporting">Non-Sporting</option>
-					<option value="Terrier">Terrier</option>
-					<option value="Working">Working</option>
-					<option value="Foundation Stock Service">Foundation Stock Service</option>
+                    <option value="Toy">AFFENPINSCHER</option>
+                    <option value="Hound">AFGHAN HOUND</option>
+                    <option value="Hound">AFGHAN/X</option>
+                    <option value="Other">AFRICIAN WILD DOG</option>
+                    <option value="Terrier">AIREDALE TERRIER</option>
+                    <option value="Terrier">AIREDALE/MIX</option>
+                    <option value="Other">AKBASH COBAN KOPEGI</option>
+                    <option value="Working">AKITA</option>
+                    <option value="Working">AKITA/X</option>
+                    <option value="Working">ALASKAN HUSKY</option>
+                    <option value="Working">ALASKAN MALAMUTE</option>
+                    <option value="Working">ALASKAN MALAMUTE/MIX</option>
+                    <option value="Working">ALASKAN MALAMUTE/X</option>
+                    <option value="Sporting">AMER COCKER SPAN/X</option>
+                    <option value="Non-Sporting">AMER ESK SPITZ</option>
+                    <option value="Non-Sporting">AMER ESK SPITZ/X</option>
+                    <option value="Sporting">AMER POINTER</option>
+                    <option value="Other">AMERICAN BULL</option>
+                    <option value="Sporting">AMERICAN COCKER SPANIEL/X</option>
+                    <option value="Non-Sporting">AMERICAN ESKIMO DOG</option>
+                    <option value="Non-Sporting">AMERICAN ESKIMO SPITZ/X</option>
+                    <option value="Hound">AMERICAN FOXHOUND</option>
+                    <option value="Other">AMERICAN INDIAN</option>
+                    <option value="Terrier">AMERICAN PIT BULL TERRIER</option>
+                    <option value="Terrier">AMERICAN PIT BULL TERRIER/X</option>
+                    <option value="Terrier">AMERICAN STAFFORDSHIRE TERRIER</option>
+                    <option value="Sporting">AMERICAN WATER SPANIEL</option>
+                    <option value="Working">ANATOLIAN SHEPHERD DOG</option>
+                    <option value="Toy">APPHENPINSCHER</option>
+                    <option value="Miscellaneous">ARGENTINE DOGO</option>
+                    <option value="Herding">AUSSIE/X</option>
+                    <option value="Herding">AUST CATTLE DOG</option>
+                    <option value="Herding">AUST CATTLE DOG/X</option>
+                    <option value="Herding">AUST HEELER/X</option>
+                    <option value="Herding">AUST SHEP/X</option>
+                    <option value="Herding">AUST SHEPARD</option>
+                    <option value="Herding">AUST SHEPARD/X</option>
+                    <option value="Herding">AUST SHEPHERD</option>
+                    <option value="Herding">AUST SILKY TERRIER</option>
+                    <option value="Herding">AUSTRALIAN CATTLE DOG</option>
+                    <option value="Herding">AUSTRALIAN CATTLE DOG/X</option>
+                    <option value="Foundation Stock Service">AUSTRALIAN KELPIE</option>
+                    <option value="Herding">AUSTRALIAN SHEPARD</option>
+                    <option value="Herding">AUSTRALIAN SHEPHERD</option>
+                    <option value="Herding">AUSTRALIAN SHEPHERD/X</option>
+                    <option value="Herding">AUSTRALIAN SHEPHERD/X</option>
+                    <option value="Terrier">AUSTRALIAN TERRIER</option>
+                    <option value="Hound">BASENJI</option>
+                    <option value="Hound">BASENJI/X</option>
+                    <option value="Hound">BASSET HOUND</option>
+                    <option value="Hound">BASSET HOUND/MIX</option>
+                    <option value="Hound">BEAGLE</option>
+                    <option value="Hound">BEAGLE/BOXER</option>
+                    <option value="Hound">BEAGLE/X</option>
+                    <option value="Herding">BEARDED COLLIE</option>
+                    <option value="Herding">BEARDED COLLIE/X</option>
+                    <option value="Herding">BEAUCERON</option>
+                    <option value="Terrier">BEDINGTON TERRIER</option>
+                    <option value="Terrier">BEDLINGTON TERRIER</option>
+                    <option value="Herding">BELGIAN MALINOIS</option>
+                    <option value="Herding">BELGIAN SHEEPDOG</option>
+                    <option value="Herding">BELGIAN SHEEPDOG/X</option>
+                    <option value="Herding">BELGIAN TERVUREN</option>
+                    <option value="Herding">BERGAMASCO</option>
+                    <option value="Herding">BERGER PICARD</option>
+                    <option value="Working">BERNESE MOUNTAIN DOG</option>
+                    <option value="Working">BERNESE MTN DOG/X</option>
+                    <option value="Working">BERNESE/X</option>
+                    <option value="Non-Sporting">BICHON FRISE</option>
+                    <option value="Non-Sporting">BICHON/X</option>
+                    <option value="Hound">BLACK AND TAN COONHOUND</option>
+                    <option value="Working">BLACK RUSSIAN TERRIER</option>
+                    <option value="Hound">BLOOD HOUND</option>
+                    <option value="Hound">BLOODHND</option>
+                    <option value="Hound">BLOODHOUND</option>
+                    <option value="Hound">BLOODHOUND/X</option>
+                    <option value="Hound">BLU TIC COONHOUND</option>
+                    <option value="Hound">BLUE TICK HOUND</option>
+                    <option value="Hound">BLUE TICK HOUND/X</option>
+                    <option value="Foundation Stock Service">BOLOGNESE</option>
+                    <option value="Herding">BORDER COLLIE</option>
+                    <option value="Herding">BORDER COLLIE/X</option>
+                    <option value="Terrier">BORDER TERRIER</option>
+                    <option value="Hound">BORZOI</option>
+                    <option value="Hound">BORZOI/X</option>
+                    <option value="Non-Sporting">BOSTON TERRIER</option>
+                    <option value="Non-Sporting">BOSTON TERRIER/X</option>
+                    <option value="Herding">BOUVIER DES FLANDRES</option>
+                    <option value="Herding">BOUVIER DES FLANDRES/X</option>
+                    <option value="Working">BOXER</option>
+                    <option value="Working">BOXER/MIX</option>
+                    <option value="Sporting">BOYKIN SPANIEL</option>
+                    <option value="Herding">BRIARD</option>
+                    <option value="Herding">BRIARD/X</option>
+                    <option value="Sporting">BRIT SPAN/X</option>
+                    <option value="Sporting">BRIT SPANIEL</option>
+                    <option value="Sporting">BRITTANY SPANIEL</option>
+                    <option value="Sporting">BRITTANY/X</option>
+                    <option value="Sporting">BRITTANY/X</option>
+                    <option value="Toy">BRUSSELS GRIFFON</option>
+                    <option value="Toy">BRUSSELS GRIFFON/MIX</option>
+                    <option value="Working">BULL MASTIFF</option>
+                    <option value="Working">BULL MASTIFF</option>
+                    <option value="Working">BULL MASTIFF/X</option>
+                    <option value="Terrier">BULL TERRIER</option>
+                    <option value="Terrier">BULL TERRIER, ENGLISH</option>
+                    <option value="Terrier">BULL TERRIER/MIX</option>
+                    <option value="Terrier">BULL TERRIER/X</option>
+                    <option value="Non-Sporting">BULLDOG</option>
+                    <option value="Non-Sporting">BULLDOG, AMERICAN</option>
+                    <option value="Non-Sporting">BULLDOG, ENGLISH</option>
+                    <option value="Non-Sporting">BULLDOG, FRENCH</option>
+                    <option value="Non-Sporting">BULLDOG/X</option>
+                    <option value="Terrier">CAIRN TERR/X</option>
+                    <option value="Terrier">CAIRN TERRIER</option>
+                    <option value="Terrier">CAIRN TERRIER/X</option>
+                    <option value="Herding">CANAAN</option>
+                    <option value="Herding">CANAAN DOG</option>
+                    <option value="Working">CANE CORSO</option>
+                    <option value="Other">CATAHOULA HOG DOG</option>
+                    <option value="Foundation Stock Service">CATAHOULA LEOPARD DOG</option>
+                    <option value="Foundation Stock Service">CATAHOULA LEOPARD/X</option>
+                    <option value="Other">CATALAN SHEEPDOG</option>
+                    <option value="Toy">CAVALIER KING CHARLES SPANIEL</option>
+                    <option value="Other">CENTRAL ASIAN SHEPHERD</option>
+                    <option value="Terrier">CESKY TERRIER</option>
+                    <option value="Sporting">CHESAPEAKE BAY RETRIEVER</option>
+                    <option value="Sporting">CHESAPEAKE BAY RETRIEVER/X</option>
+                    <option value="Toy">CHIHUAHUA</option>
+                    <option value="Toy">CHIHUAHUA</option>
+                    <option value="Toy">CHIHUAHUA, LONG HAIRED</option>
+                    <option value="Toy">CHIHUAHUA/MIX</option>
+                    <option value="Toy">CHIHUAHUA/X</option>
+                    <option value="Toy">CHINESE CRESTED</option>
+                    <option value="Toy">CHINESE CRESTED/MIX</option>
+                    <option value="Toy">CHINESE PUG/MIX</option>
+                    <option value="Working">CHINOOK</option>
+                    <option value="Non-Sporting">CHOW CHOW</option>
+                    <option value="Non-Sporting">CHOW/X</option>
+                    <option value="Sporting">CLUMBER SPANIEL</option>
+                    <option value="Other">COCKAPOO</option>
+                    <option value="Other">COCKAPOO/X</option>
+                    <option value="Sporting">COCKER SPANIEL, AMERICAN</option>
+                    <option value="Sporting">COCKER SPANIEL,ENGLISH</option>
+                    <option value="Sporting">COCKER/X</option>
+                    <option value="Herding">COLLIE (ROUGH)</option>
+                    <option value="Herding">COLLIE X</option>
+                    <option value="Herding">COLLIE, ROUGH</option>
+                    <option value="Herding">COLLIE, SMOOTH</option>
+                    <option value="Herding">COLLIE/X</option>
+                    <option value="Hound">COON HOUND</option>
+                    <option value="Hound">COON HOUND</option>
+                    <option value="Hound">COONHOUND</option>
+                    <option value="Hound">COONHOUND/X</option>
+                    <option value="Herding">CORGI/X</option>
+                    <option value="Herding">CORGIE/MIX</option>
+                    <option value="Non-Sporting">COTON DE TULEAR</option>
+                    <option value="Sporting">CURLY COATED RETRIEVER</option>
+                    <option value="Hound">DACHS</option>
+                    <option value="Hound">DACHSHUND</option>
+                    <option value="Hound">DACHSHUND, LONG HAIRED</option>
+                    <option value="Hound">DACHSHUND, MINI, LONG HAIRED</option>
+                    <option value="Hound">DACHSHUND, MINIATURE</option>
+                    <option value="Hound">DACHSHUND, WIREHAIRED</option>
+                    <option value="Hound">DACHSHUND/TERRIER</option>
+                    <option value="Hound">DACHSHUND/X</option>
+                    <option value="Hound">DACHSUND/X</option>
+                    <option value="Non-Sporting">DALMATIAN</option>
+                    <option value="Non-Sporting">DALMATIAN</option>
+                    <option value="Non-Sporting">DALMATIAN/X</option>
+                    <option value="Terrier">DANDIE DINMONT TERRIER</option>
+                    <option value="Terrier">DANDIE DINMONT/X</option>
+                    <option value="Other">DINGO</option>
+                    <option value="Other">DINGO/X</option>
+                    <option value="Working">DOBERMAN PINSCHER</option>
+                    <option value="Working">DOBERMAN PINSCHER/MIX</option>
+                    <option value="Working">DOBERMAN PINSCHER/MIX</option>
+                    <option value="Working">DOBIE/X</option>
+                    <option value="Miscellaneous">DOGO</option>
+                    <option value="Working">DOGUE DE BORDEAUX</option>
+                    <option value="Other">DRAHTHAAR</option>
+                    <option value="Other">DRATHAAR</option>
+                    <option value="Hound">ELKHOUND/X</option>
+                    <option value="Other">ENG</option>
+                    <option value="Terrier">ENG BULL TER</option>
+                    <option value="Sporting">ENG POINTER</option>
+                    <option value="Sporting">ENG POINTER/X</option>
+                    <option value="Sporting">ENG SPR SPAN</option>
+                    <option value="Sporting">ENG SPR SPAN/X</option>
+                    <option value="Hound">ENG TICK HND</option>
+                    <option value="Non-Sporting">ENGLISH BULLDOG/X</option>
+                    <option value="Hound">ENGLISH COONHOUND</option>
+                    <option value="Hound">ENGLISH FOXHOUND</option>
+                    <option value="Sporting">ENGLISH POINTER</option>
+                    <option value="Sporting">ENGLISH SETTER</option>
+                    <option value="Sporting">ENGLISH SETTER/X </option>
+                    <option value="Herding">ENGLISH SHEPHERD</option>
+                    <option value="Sporting">ENGLISH SPRINGER SPANIEL/X</option>
+                    <option value="Terrier">ENGLISH TERRIER</option>
+                    <option value="Other">ENGLISH TOY SPANIEL</option>
+                    <option value="Herding">ENTLEBUCHER MOUNTAIN DOG</option>
+                    <option value="Other">ERROR</option>
+                    <option value="Non-Sporting">ESKIMO</option>
+                    <option value="Non-Sporting">ESKIMO/X</option>
+                    <option value="Sporting">FIELD SPANIEL</option>
+                    <option value="Other">FILA</option>
+                    <option value="Herding">FINNISH LAPPHUND</option>
+                    <option value="Non-Sporting">FINNISH SPITZ</option>
+                    <option value="Sporting">FLAT COATED RETRIEVER</option>
+                    <option value="Other">FOUSEK</option>
+                    <option value="Terrier">FOX TERR/X</option>
+                    <option value="Terrier">FOX TERRIER</option>
+                    <option value="Terrier">FOX TERRIER, SMOOTH</option>
+                    <option value="Terrier">FOX TERRIER, TOY</option>
+                    <option value="Terrier">FOX TERRIER, WIREHAIRED</option>
+                    <option value="Terrier">FOX TERRIER/X</option>
+                    <option value="Herding">GER SHEP/X</option>
+                    <option value="Sporting">GER SHORT HAIRED POINTER</option>
+                    <option value="Herding">GERMAN SHEPHERD DOG</option>
+                    <option value="Herding">GERMAN SHEPHERD, LONG HAIRED</option>
+                    <option value="Herding">GERMAN SHEPHERD/X</option>
+                    <option value="Sporting">GERMAN SHORTHAIR POINTER</option>
+                    <option value="Sporting">GERMAN SHORTHAIRED POINTER</option>
+                    <option value="Sporting">GERMAN SHORTHAIRED POINTER/MIX</option>
+                    <option value="Sporting">GERMAN WIREHAIRED POINTER</option>
+                    <option value="Other">GERMAN WIREHAIRED TERRIER</option>
+                    <option value="Working">GIANT SCHNAUZER/X</option>
+                    <option value="Sporting">GOLDEN RETRIEVER</option>
+                    <option value="Sporting">GOLDEN RETRIEVER </option>
+                    <option value="Sporting">GOLDEN RETRIEVER/X</option>
+                    <option value="Sporting">GORDON SETTER</option>
+                    <option value="Sporting">GORDON SETTER/X</option>
+                    <option value="Other">GRAND BASSET GRIFFON VENDEEN</option>
+                    <option value="Working">GREAT DANE</option>
+                    <option value="Working">GREAT DANE/X</option>
+                    <option value="Working">GREAT PYRENEES</option>
+                    <option value="Working">GREAT PYRENEES/X</option>
+                    <option value="Hound">GREYHOUND</option>
+                    <option value="Hound">GREYHOUND/X</option>
+                    <option value="Other">GROSSER MUNSTERLANDER</option>
+                    <option value="Hound">HARRIER</option>
+                    <option value="Toy">HAVANESE</option>
+                    <option value="Other">HEIDEWACHTEL</option>
+                    <option value="Other">HERD</option>
+                    <option value="Hound">HOUND</option>
+                    <option value="Hound">HOUND/SHEP/X</option>
+                    <option value="Hound">HOUND/X</option>
+                    <option value="Foundation Stock Service">HOVAWART</option>
+                    <option value="Other">HUNGARIAN SHEEPDOG</option>
+                    <option value="Working">HUSKY/SHEP</option>
+                    <option value="Hound">IBIZAN HOUND</option>
+                    <option value="Herding">ICELANDIC SHEEPDOG</option>
+                    <option value="Sporting">IRISH SETTER</option>
+                    <option value="Sporting">IRISH SETTER/X</option>
+                    <option value="Terrier">IRISH STAFFORD BULL TERRIER</option>
+                    <option value="Terrier">IRISH TERRIER</option>
+                    <option value="Terrier">IRISH TERRIER/X</option>
+                    <option value="Sporting">IRISH WATER SPANIEL</option>
+                    <option value="Hound">IRISH WOLF HOUND/X</option>
+                    <option value="Hound">IRISH WOLFHOUND</option>
+                    <option value="Hound">IRISH WOLFHOUND/X</option>
+                    <option value="Hound">ITALIAN GREYHOUND</option>
+                    <option value="Terrier">JACK RUSSEL TER/X</option>
+                    <option value="Terrier">JACK RUSSELL TER/X</option>
+                    <option value="Terrier">JACK RUSSELL TERRIER</option>
+                    <option value="Other">JAP BOB TAIL</option>
+                    <option value="Toy">JAPANESE CHIN</option>
+                    <option value="Other">JAPANESE SPANIEL</option>
+                    <option value="Foundation Stock Service">JINDO</option>
+                    <option value="Other">KAI LEO</option>
+                    <option value="Foundation Stock Service">KARELIAN BEAR DOG</option>
+                    <option value="Foundation Stock Service">KARELIAN BEAR DOG </option>
+                    <option value="Non-Sporting">KEESHOND</option>
+                    <option value="Non-Sporting">KEESHOND/SHEP/X</option>
+                    <option value="Non-Sporting">KEESHOND/X</option>
+                    <option value="Non-Sporting">KEESHOND/X</option>
+                    <option value="Foundation Stock Service">KELPIE</option>
+                    <option value="Foundation Stock Service">KELPIE/X</option>
+                    <option value="Terrier">KERRY BLUE TERRIER</option>
+                    <option value="Working">KOMONDOR</option>
+                    <option value="Working">KOMONDOR/X</option>
+                    <option value="Foundation Stock Service">KOREAN JINDO DOG</option>
+                    <option value="Working">KUVASZ</option>
+                    <option value="Other">KYI LEO</option>
+                    <option value="Sporting">LAB/SHEP</option>
+                    <option value="Sporting">LABRADOR RETRIEVER</option>
+                    <option value="Sporting">LABRADOR RETRIEVER/X</option>
+                    <option value="Sporting">LABRADOR/MIX</option>
+                    <option value="Sporting">LABRADOR/X</option>
+                    <option value="Sporting">LAGOTTO ROMAGNOLO</option>
+                    <option value="Terrier">LAKELAND TERRIER</option>
+                    <option value="Working">LEONBERGER</option>
+                    <option value="Working">LEONBEWERGER</option>
+                    <option value="Working">LEONBURGER</option>
+                    <option value="Other">LG MUNSTERLANDER</option>
+                    <option value="Non-Sporting">LHASA APSO</option>
+                    <option value="Non-Sporting">LHASA APSO/X</option>
+                    <option value="Non-Sporting">LHASA APSO/X</option>
+                    <option value="Non-Sporting">LHASA APSO/X</option>
+                    <option value="Other">LLEWELLIN SETTER</option>
+                    <option value="Hound">LONG H MIN DACH</option>
+                    <option value="Hound">LONG H MIN DACHS</option>
+                    <option value="Hound">LONG HAIR STAN DACH</option>
+                    <option value="Working">LONG HAIRED ROTTWEILER</option>
+                    <option value="Working">LONG HAIRED ST BERNARD</option>
+                    <option value="Non-Sporting">LOWCHEN</option>
+                    <option value="Other">LURCHER</option>
+                    <option value="Toy">MALTESE</option>
+                    <option value="Toy">MALTESE/X</option>
+                    <option value="Terrier">MANCHESTER TERRIER</option>
+                    <option value="Terrier">MANCHESTER TERRIER/X</option>
+                    <option value="Other">MAREMMA</option>
+                    <option value="Working">MASTIFF</option>
+                    <option value="Working">MASTIFF/X</option>
+                    <option value="Other">MCNAB</option>
+                    <option value="Other">MCNAB/X</option>
+                    <option value="Other">MID-ASIAN OVTCHARKA</option>
+                    <option value="Hound">MIN DACHS</option>
+                    <option value="Working">MIN DOBERMAN/X</option>
+                    <option value="Toy">MIN PINSCHER/X</option>
+                    <option value="Other">MINATURE DOBIE</option>
+                    <option value="Hound">MINIATURE DACHSHUND</option>
+                    <option value="Toy">MINIATURE PINSCHER</option>
+                    <option value="Toy">MINIATURE POMERANIAN</option>
+                    <option value="Non-Sporting">MINIATURE POODLE/X</option>
+                    <option value="Other">MIX</option>
+                    <option value="Other">MIXED</option>
+                    <option value="Other">MIXED BREED</option>
+                    <option value="Miscellaneous">MUDI</option>
+                    <option value="Working">NEAPOLITAN MASTIFF</option>
+                    <option value="Working">NEWFOUNDLAND</option>
+                    <option value="Terrier">NORFOLK TERRIER</option>
+                    <option value="Hound">NORWEGIAN ELKHOUND</option>
+                    <option value="Hound">NORWEGIAN ELKHOUND/X</option>
+                    <option value="Terrier">NORWICH TERRIER</option>
+                    <option value="Terrier">NORWICH TERRIER/X</option>
+                    <option value="Sporting">NOVA SCOTIA DUCK TOLLING RET</option>
+                    <option value="Other">OLD ENGLISH MASTIFF</option>
+                    <option value="Herding">OLD ENGLISH SHEEPDOG</option>
+                    <option value="Herding">OLD ENGLISH SHEEPDOG/X</option>
+                    <option value="Herding">OTTER HOUND</option>
+                    <option value="Toy">PAPILLON</option>
+                    <option value="Toy">PAPILLON/X</option>
+                    <option value="Other">PATTERDALE TERRIER</option>
+                    <option value="Other">PEKAPOO</option>
+                    <option value="Toy">PEKE</option>
+                    <option value="Toy">PEKE/POODLE</option>
+                    <option value="Toy">PEKE/X</option>
+                    <option value="Toy">PEKINGESE</option>
+                    <option value="Toy">PEKINGESE/MIX</option>
+                    <option value="Toy">PEKINGESE/X</option>
+                    <option value="Hound">PETIT BASSET GRIFFON VENDEEN</option>
+                    <option value="Hound">PHARAOH HOUND</option>
+                    <option value="Terrier">PIT BULL TERRIER</option>
+                    <option value="Terrier">PIT BULL/X</option>
+                    <option value="Hound">PLOTT HOUND</option>
+                    <option value="Hound">PLOTT HOUND/X</option>
+                    <option value="Sporting">POINTER</option>
+                    <option value="Sporting">POINTER/X</option>
+                    <option value="Herding">POLISH SHEEPDOG</option>
+                    <option value="Toy">POMERANIAN</option>
+                    <option value="Toy">POMERANIAN/MIX</option>
+                    <option value="Non-Sporting">POODLE</option>
+                    <option value="Non-Sporting">POODLE, FRENCH</option>
+                    <option value="Non-Sporting">POODLE, MINIATURE</option>
+                    <option value="Non-Sporting">POODLE, STANDARD</option>
+                    <option value="Non-Sporting">POODLE, TEACUP</option>
+                    <option value="Non-Sporting">POODLE, TOY</option>
+                    <option value="Non-Sporting">POODLE/X</option>
+                    <option value="Working">PORTUGUESE WATER DOG</option>
+                    <option value="Working">PORTUGUESE WATER SPANIEL</option>
+                    <option value="Other">POSA</option>
+                    <option value="Foundation Stock Service">PUDELPOINTER</option>
+                    <option value="Toy">PUG</option>
+                    <option value="Toy">PUG CHINESE</option>
+                    <option value="Herding">PULI</option>
+                    <option value="Herding">PULI/X</option>
+                    <option value="Herding">PUMI</option>
+                    <option value="Working">PYRENESE/X</option>
+                    <option value="Herding">QUEENS/X</option>
+                    <option value="Herding">QUEENSLAND HEELER</option>
+                    <option value="Herding">QUEENSLAND HEELER/X</option>
+                    <option value="Herding">QUEENSLAND/X</option>
+                    <option value="Terrier">RAT TERRIER</option>
+                    <option value="Terrier">RAT TERRIER/X</option>
+                    <option value="Hound">RED BONE HOUND</option>
+                    <option value="Hound">RED BONED HOUND/X</option>
+                    <option value="Hound">RED TICK HOUND</option>
+                    <option value="Other">REPLACE</option>
+                    <option value="Sporting">RET/RIDGEBACK/X</option>
+                    <option value="Sporting">RETRIEVER/X</option>
+                    <option value="Hound">RHOD RIDGEBACK/X</option>
+                    <option value="Hound">RHODESIAN RIDGEBACK</option>
+                    <option value="Hound">RHODESIAN RIDGEBACK/X</option>
+                    <option value="Working">ROTT/CHOW</option>
+                    <option value="Working">ROTTWEILER</option>
+                    <option value="Working">ROTTWEILER/X</option>
+                    <option value="Herding">ROUGH COLLIE</option>
+                    <option value="Working">SAINT BERNARD</option>
+                    <option value="Working">SAINT BERNARD/MIX</option>
+                    <option value="Hound">SALUKI</option>
+                    <option value="Hound">SALUKI/X</option>
+                    <option value="Working">SAMOYED</option>
+                    <option value="Working">SAMOYED/X</option>
+                    <option value="Other">SARPLANINAC</option>
+                    <option value="Non-Sporting">SCHIPPERKE</option>
+                    <option value="Non-Sporting">SCHIPPERKE/X</option>
+                    <option value="Working">SCHNAUZER</option>
+                    <option value="Working">SCHNAUZER, GIANT</option>
+                    <option value="Terrier">SCHNAUZER, MINIATURE</option>
+                    <option value="Working">SCHNAUZER, STANDARD</option>
+                    <option value="Working">SCHNAUZER/X</option>
+                    <option value="Terrier">SCOT TER/X</option>
+                    <option value="Hound">SCOTTISH DEERHOUND</option>
+                    <option value="Terrier">SCOTTISH TERRIER</option>
+                    <option value="Terrier">SCOTTISH TERRIER/X (SCOT TER/X)</option>
+                    <option value="Terrier">SEALYHAM TERRIER</option>
+                    <option value="Sporting">SETTER/X</option>
+                    <option value="Non-Sporting">SHAR PEI</option>
+                    <option value="Non-Sporting">SHAR PEI/X</option>
+                    <option value="Non-Sporting">SHEBA INU</option>
+                    <option value="Herding">SHEEPDOG/X</option>
+                    <option value="Herding">SHELTIE/BORDER COLLIE X</option>
+                    <option value="Herding">SHEP/CHOW</option>
+                    <option value="Herding">SHEP/CHOW/X</option>
+                    <option value="Herding">SHEP/KEESHOND/X</option>
+                    <option value="Herding">SHEP/X</option>
+                    <option value="Herding">SHEPARD/LAB/X</option>
+                    <option value="Herding">SHEPHERD</option>
+                    <option value="Herding">SHETLAND SHEEPDOG</option>
+                    <option value="Herding">SHETLAND SHEEPDOG/MIX</option>
+                    <option value="Non-Sporting">SHIBA INU</option>
+                    <option value="Toy">SHIH TZU</option>
+                    <option value="Toy">SHIH TZU</option>
+                    <option value="Toy">SHIH TZU</option>
+                    <option value="Toy">SHIH TZU/X</option>
+                    <option value="Working">SIB HUSKY/X</option>
+                    <option value="Working">SIBERIAN HUSKY</option>
+                    <option value="Working">SIBERIAN HUSKY WOLFHUSKY/X]</option>
+                    <option value="Working">SIBERIAN HUSKY/MIX</option>
+                    <option value="Working">SIBERIAN HUSKY/X</option>
+                    <option value="Toy">SILKY TER/X</option>
+                    <option value="Toy">SILKY TERRIER</option>
+                    <option value="Terrier">SKYE TERRIER</option>
+                    <option value="Hound">SLOUGHI</option>
+                    <option value="Herding">SMOOTH COAT COLLIE</option>
+                    <option value="Terrier">SOFT COATED WHEATEN TERRIER</option>
+                    <option value="Sporting">SPAN</option>
+                    <option value="Sporting">SPANIEL</option>
+                    <option value="Sporting">SPANIEL/X</option>
+                    <option value="Other">SPANISH POINTER</option>
+                    <option value="Herding">SPANISH WATER DOG</option>
+                    <option value="Sporting">SPINONE ITALIANO DOG</option>
+                    <option value="Non-Sporting">SPITZ/POODLE</option>
+                    <option value="Non-Sporting">SPITZ/X</option>
+                    <option value="Sporting">SPRINGER SPANIEL, ENGLISH</option>
+                    <option value="Sporting">SPRINGER SPANIEL, WELSH</option>
+                    <option value="Sporting">SPRINGER/X</option>
+                    <option value="Terrier">STAFF TERR/X</option>
+                    <option value="Terrier">STAFFORDSHIRE TERRIER</option>
+                    <option value="Terrier">STAFFORDSHIRE TERRIER/X</option>
+                    <option value="Sporting">SUSSEX SPANIEL</option>
+                    <option value="Herding">SWEDISH VALHUND</option>
+                    <option value="Working">SWISS MOUNTAIN DOG</option>
+                    <option value="Other">TAIWANESE DOG</option>
+                    <option value="Terrier">TERR/X</option>
+                    <option value="Terrier">TERRIER</option>
+                    <option value="Terrier">TERRIER</option>
+                    <option value="Terrier">TERRIER X</option>
+                    <option value="Terrier">TERRIER/X</option>
+                    <option value="Terrier">TERRIER/X</option>
+                    <option value="Other">TESTING AGAIN</option>
+                    <option value="Working">TIBETAN MASTIFF</option>
+                    <option value="Non-Sporting">TIBETAN SPANIEL</option>
+                    <option value="Non-Sporting">TIBETAN TERRIER</option>
+                    <option value="Non-Sporting">TIBETAN TERRIER/X</option>
+                    <option value="Sporting">TOLLER RETRIEVER</option>
+                    <option value="Sporting">TOLLING DOG</option>
+                    <option value="Foundation Stock Service">TORNJAK</option>
+                    <option value="Foundation Stock Service">TOSA</option>
+                    <option value="Toy">TOY MANCHESTER TERRIER</option>
+                    <option value="Toy">TOY POODLE/X</option>
+                    <option value="Toy">TOY TERRIER</option>
+                    <option value="Other">UNKNOWN</option>
+                    <option value="Sporting">VIZSLA</option>
+                    <option value="Sporting">VIZSLA/X</option>
+                    <option value="Hound">WALKER HOUND</option>
+                    <option value="Sporting">WEIMARANER</option>
+                    <option value="Sporting">WEIMARANER/MIX</option>
+                    <option value="Herding">WELSH CORGI</option>
+                    <option value="Herding">WELSH CORGI, CARDIGAN</option>
+                    <option value="Herding">WELSH CORGI, PEMBROKE</option>
+                    <option value="Terrier">WELSH TERRIER</option>
+                    <option value="Terrier">WEST HIGHLAND TERRIER/X</option>
+                    <option value="Terrier">WEST HIGHLAND WHITE TERRIER</option>
+                    <option value="Terrier">WHEATEN TERRIER</option>
+                    <option value="Terrier">WHEATEN TERRIER/X</option>
+                    <option value="Hound">WHIPPET</option>
+                    <option value="Hound">WHIPPET/X</option>
+                    <option value="Other">WILD ISLAND DOG</option>
+                    <option value="Terrier">WIRE H. FOX TERR/X</option>
+                    <option value="Hound">WIRE HAIRED DACHS</option>
+                    <option value="Hound">WIRE HAIRED MIN DACH</option>
+                    <option value="Terrier">WIREHAIRED FOX TERRIER/X</option>
+                    <option value="Sporting">WIREHAIRED POINTING GRIFFON</option>
+                    <option value="Other">WOLF</option>
+                    <option value="Other">WOLF/X</option>
+                    <option value="Hound">WOLFHOUND/X</option>
+                    <option value="Other">XOLOITZCUINTLI</option>
+                    <option value="Other">YOLO DOG</option>
+                    <option value="Toy">YORKSHIRE TERRIER</option>
+                    <option value="Toy">YORKSHIRE TERRIER/MIX</option>
+                    <option value="Toy">YORKSHIRE TERRIER/X</option>
 				</select>
 				
 				<br><br>
@@ -112,13 +618,13 @@
 				<input type="number" name="Hgb" placeholder="g/dL" step=".01">
 				<br><br>
 				<label for="MCV">MCV</label>
-				<input type="number" name="MCV" placeholder="fL" step=".01">
+				<input type="number" name="MCV" placeholder="fL" step=".01" min="0">
 				<br><br>
 				<label for="WBC">WBC</label>
-				<input type="number" name="WBC" placeholder="/mcL" step=".01">
+				<input type="number" name="WBC" placeholder="/mcL" step=".01" min="0">
 				<br><br>
 				<label for="Bands">Bands</label>
-				<input type="number" name="Bands" placeholder="/mcL" step=".01">
+				<input type="number" name="Bands" placeholder="/mcL" step=".01" min="0">
 				<br><br>
 				<label for="Neut">Neutophils</label>
 				<input type="number" name="Neut" placeholder="/mcL" step=".01">
@@ -138,60 +644,60 @@
 				<input type="text" name="Plt" placeholder="/mcL" step=".01" pattern="^\d{1,3}(,\d{3})*$" required>
 				<br><br>
 				<label for="anion gap">Anion Gap</label>
-				<input type="number" name="Anion Gap" placeholder="mmol/L" step=".01">
+				<input type="number" name="Anion Gap" placeholder="mmol/L" step=".01" min="0">
 				<br><br>
 				<label for="sodium">Sodium</label>
-				<input type="number" name="Sodium" placeholder="mmol/L" step=".01">
+				<input type="number" name="Sodium" placeholder="mmol/L" step=".01" min="0">
 				<br><br>
 				<label for="Potassium">Potassium</label>
-				<input type="number" name="Potassium" placeholder="mmol/L" step=".01">
+				<input type="number" name="Potassium" placeholder="mmol/L" step=".01" min="0">
 				<br><br>
 				<label for="Chloride">Chloride</label>
-				<input type="number" name="Chloride" placeholder="mmol/L" step=".01">
+				<input type="number" name="Chloride" placeholder="mmol/L" step=".01" min="0">
 				<br><br>
 				<label for="Bicarb">Bicarb</label>
-				<input type="number" name="Bicarb" placeholder="mmol/L" step=".01">
+				<input type="number" name="Bicarb" placeholder="mmol/L" step=".01" min="0">
 				<br><br>
 				<label for="Phosphorous">Phosphorous</label>
-				<input type="number" name="Phosphorus" placeholder="mg/dL" step=".01">
+				<input type="number" name="Phosphorus" placeholder="mg/dL" step=".01" min="0">
 				<br><br>
 				<label for="Calcium">Calcium</label>
-				<input type="number" name="Calcium" placeholder="mg/dL" step=".01">
+				<input type="number" name="Calcium" placeholder="mg/dL" step=".01" min="0">
 				<br><br>
 				<label for="BUN">BUN</label>
-				<input type="number" name="BUN" placeholder="mg/dL" step=".01">
+				<input type="number" name="BUN" placeholder="mg/dL" step=".01" min="0">
 				<br><br>
 				<label for="Creatinine">Creatinine</label>
-				<input type="number" name="Creatinine" placeholder="mg/dL" step=".01">
+				<input type="number" name="Creatinine" placeholder="mg/dL" step=".01" min="0">
 				<br><br>
 				<label for="Glucose">Glucose</label>
-				<input type="number" name="Glucose" placeholder="mg/dL" step=".01">
+				<input type="number" name="Glucose" placeholder="mg/dL" step=".01" min="0">
 				<br><br>
 				<label for="Total Protein">Total Protein</label>
-				<input type="number" name="Total Protein" placeholder="g/dL" step=".01">
+				<input type="number" name="Total Protein" placeholder="g/dL" step=".01" min="0">
 				<br><br>
 				<label for="Albumin">Albumin</label>
-				<input type="number" name="Albumin" placeholder="g/dL" step=".01">
+				<input type="number" name="Albumin" placeholder="g/dL" step=".01" min="0">
 				<br><br>
 				<label for="Globulin">Globulin</label>
-				<input type="number" name="Globulin" placeholder="g/dL" step=".01">
+				<input type="number" name="Globulin" placeholder="g/dL" step=".01" min="0">
 				<br><br>
 				<label for="ALT">ALT</label>
-				<input type="number" name="ALT" placeholder="IU/L" step=".01">
+				<input type="number" name="ALT" placeholder="IU/L" step=".01" min="0">
 				<br><br>
 				<label for="AST">AST</label>
-				<input name="AST" type="number" placeholder="IU/L" step=".01">
+				<input name="AST" type="number" placeholder="IU/L" step=".01" min="0">
 				<br><br>
 			</div>
 			<div class="col3">
 				<label for="ALP">ALP</label>
-				<input type="text" name="ALP" placeholder="IU/L" step=".01">
+				<input type="number" name="ALP" placeholder="IU/L" step=".01" min="0">
 				<br><br>
 				<label for="GGT">GGT</label>
-				<input type="text" name="GGT" placeholder="IU/L" step=".01">
+				<input type="number" name="GGT" placeholder="IU/L" step=".01" min="0">
 				<br><br>
 				<label for="Cholesterol">Cholesterol</label>
-				<input type="text" name="Cholesterol" placeholder="mg/dL" step=".01">
+				<input type="number" name="Cholesterol" placeholder="mg/dL" step=".01" min="0">
 				<br><br>
 				<label for="Bilirubin">Bilirubin</label>
 				<input type="text" name="Bilirubin" placeholder="mg/dL" step=".01">
@@ -264,7 +770,7 @@
 			<div class="line"></div> 
 			<div class="box">
 				<p>By submitting you agree that the data that is being submited may be collected and used to improve the machine learning model.
-				In order to improve the service, you may be contacted via contact page.</p>
+				In order to improve the service, you may be contacted via email.</p>
 				<p class="important"><span style="background-color: #FFBF00; border-radius: 6px; transition: .3s infinite;">Please ensure that all data is inputed correctly before submitting!</span></p>
 			</div>
 		</div>
