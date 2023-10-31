@@ -243,10 +243,9 @@
         margin: 0;
         width: 100%;
     }
-    /* header */
     .header { 
         width: 100%;
-        height: 200px;
+        height: 170px;
         margin: 0;
         display: flex;
         flex-direction: column;
@@ -255,7 +254,7 @@
         list-style: none;
         background-color: #002855;
         width: 100%;
-        height: 10rem;
+        height: 140px;
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -263,24 +262,20 @@
         z-index: 1;
     }
     .header ul a{
-        font-size: 1.2rem; 
+        font-size: 1.7rem; 
+        letter-spacing: .5rem;
         text-decoration: none;
         color: white; 
         text-transform: uppercase;
-        padding: 11px;
-        display: block;
+        padding: 100px;
         font-weight: 900;
-    }
-    .tab {
-        display: inline-block;
-        margin-left: 25px;
+        width: 100%;
     }
     .header .ucd a{
         color:#FFBF00;
-        font-size: 3rem; 
-        padding-left: 1rem;
-        font-weight: bold;
-    }
+        margin-right: 0; 
+        font-size: 4rem; 
+    } 
     .bar {
         background-color: #FFBF00;
         width: 100%;
@@ -476,7 +471,6 @@
     }
     .header { 
         width: 100%;
-        /* height: 260px; */
         margin: 0;
         display: flex;
         flex-direction: column;
@@ -498,7 +492,7 @@
         text-decoration: none;
         color: white; 
         text-transform: uppercase;
-        padding: 40px;
+        padding: 100px;
         display: block;
         font-weight: 900;
     }
@@ -516,8 +510,9 @@
     .header .ucd a{
         color:#FFBF00;
         margin-right: 0; 
-        font-size: 4.5rem; 
+        font-size: 4rem; 
         font-weight: bold;
+        white-space: nowrap; 
     }
     .disclaimer {
         width: 100%;
@@ -551,7 +546,6 @@
         display: flex;
         padding-top: 0px;
         padding-left: 50px;
-        padding-right: 50px;
         justify-content: center;
         margin-bottom: 5px;
         margin-top: 20px;
@@ -587,11 +581,11 @@
     div.col1{ 
         width: 80%;
         height: auto;
-        margin-bottom: 80px;
         align-items: center;
         padding-left: 80px;
         margin-right: 40px;
         padding-right: 100px;
+        padding-bottom: 86px;
     }
     div.col2{ 
         width: 80%;
@@ -601,7 +595,8 @@
     }
     div.col3{ 
         width: 100%;
-        margin-bottom: 390px;
+        padding-left: 50px;
+        margin-bottom: 433px;
     }
     div.shrink label{
         font-size: 0.8rem;
