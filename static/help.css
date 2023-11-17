@@ -303,8 +303,8 @@
         flex-direction: row;
         border: 7px solid #74a12e;
         border-radius: 6px;
-        width: 70%;
         height: auto;
+        margin-top: 50px;
     }
     .bar {
         background-color: #74a12e;

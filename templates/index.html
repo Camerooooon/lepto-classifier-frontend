@@ -25,12 +25,14 @@
 					<!-- this will be connected to the home page -->
 					<li class="ucd"><a href="home">UC DAVIS</a></li>
 					<li><a href="index">Input</a></li>
+          <!--
 					<li><a onclick="alertFunction()" href="index">Lepto-classifier</a></li>
 					<script>
 						function alertFunction() {
 						 alert("Sorry the page is currently under construction, Stay tuned for the update!");
 						}
 					</script>
+        -->
 					<!-- change this to input -->
 					<!-- <li><a href="result">result</a></li> -->
  					<li><a href="help">Help</a></li>
@@ -611,7 +613,7 @@
 				<!--
 				<input type="number" name="MAT" placeholder="0, 100, 200, 400, ..." step="100">
 				-->				<br><br>
-				<label for="Hct">Hematoerit</label>
+				<label for="Hct">Hematocrit</label>
 				<input type="number" name="Hct" placeholder="%" step=".01">
 				<br><br>
 				<label for="Hgb">Hemoglobin</label>
@@ -629,11 +631,11 @@
 				<label for="Neut">Neutophils</label>
 				<input type="number" name="Neut" placeholder="/mcL" step=".01">
 				<br><br>
-				<label for="Lymph">Lymphocytosis</label>
-				<input type="number" name="Lymph" placeholder="/mcL" step=".01">
-				<br><br>
 			</div>
 			<div class="col2">
+        <label for="Lymph">Lymphocytosis</label>
+				<input type="number" name="Lymph" placeholder="/mcL" step=".01">
+				<br><br>
 				<label for="Mono">Monocytes</label>
 				<input type="number" name="Mono" placeholder="/mcL" step=".01">
 				<br><br>
@@ -641,7 +643,7 @@
 				<input type="number" name="Eosin" placeholder="/mcL" step=".01">
 				<br><br>
 				<label for="Plt">Platelet Count</label>
-				<input type="number" name="Plt" placeholder="/mcL" step=".01" pattern="^\d{1,3}(,\d{3})*$" required>
+				<input type="text" name="Plt" placeholder="/mcL" step=".01" pattern="^\d{1,3}(,\d{3})*$" required>
 				<br><br>
 				<label for="Anion Gap">Anion Gap</label>
 				<input type="number" name="Anion Gap" placeholder="mmol/L" step=".01" min="0">
@@ -700,7 +702,7 @@
 				<input type="number" name="Cholesterol" placeholder="mg/dL" step=".01" min="0">
 				<br><br>
 				<label for="Bilirubin">Bilirubin</label>
-				<input type="number" name="Bilirubin" placeholder="mg/dL" step=".01">
+				<input type="text" name="Bilirubin" placeholder="mg/dL" step=".01">
 				<br><br>
 				<label for="Urine Specific Gravity">Urine Specific Gravity</label>
 				<input type="text" pattern="^\d*(\.\d{0,3})?$" name="Urine Specific Gravity" placeholder="number to 3 sig digits" step=".01">
