@@ -398,9 +398,9 @@
                     <option value="Toy">MINIATURE PINSCHER</option>
                     <option value="Toy">MINIATURE POMERANIAN</option>
                     <option value="Non-Sporting">MINIATURE POODLE/X</option>
-                    <option value="Other">MIX</option>
-                    <option value="Other">MIXED</option>
-                    <option value="Other">MIXED BREED</option>
+                    <option value="Mix">MIX</option>
+                    <option value="Mix">MIXED</option>
+                    <option value="Mix">MIXED BREED</option>
                     <option value="Miscellaneous">MUDI</option>
                     <option value="Working">NEAPOLITAN MASTIFF</option>
                     <option value="Working">NEWFOUNDLAND</option>
@@ -591,9 +591,9 @@
 				<br><br>
 				<label>Sex</label><br>
 				<fieldset>
-					<input type="radio" name="Sex" value="0">
-					<label for="male"> Male</label><br>
 					<input type="radio" name="Sex" value="1">
+					<label for="male"> Male</label><br>
+					<input type="radio" name="Sex" value="0">
 					<label for="female"> Female</label><br>
 				</fieldset>
 				<br>
@@ -643,10 +643,10 @@
 				<label for="Plt">Platelet Count</label>
 				<input type="number" name="Plt" placeholder="/mcL" step=".01" pattern="^\d{1,3}(,\d{3})*$" required>
 				<br><br>
-				<label for="anion gap">Anion Gap</label>
+				<label for="Anion Gap">Anion Gap</label>
 				<input type="number" name="Anion Gap" placeholder="mmol/L" step=".01" min="0">
 				<br><br>
-				<label for="sodium">Sodium</label>
+				<label for="Sodium">Sodium</label>
 				<input type="number" name="Sodium" placeholder="mmol/L" step=".01" min="0">
 				<br><br>
 				<label for="Potassium">Potassium</label>
