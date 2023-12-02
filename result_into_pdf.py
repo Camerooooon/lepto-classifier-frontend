@@ -1,5 +1,6 @@
 from fpdf import FPDF
 from result import Result
+import arrow
 
 
 #this is to test 
@@ -21,7 +22,20 @@ def gen_pdf(data, result: Result, temp_link: str):
     pdf.cell(200, 0, txt = "Here is the result of the Leptospirosis Machine Learning Algorithm: ",ln = 1, align = 'L')
     
     pdf.set_font("Times", 'BI', size = 30)
-    pdf.cell(200, 100, txt = "Result: " + Result.fmt(result), ln = 1, align='C')
+    pdf.ln(50)
+    pdf.cell(200, 10, txt = "Result: " + Result.fmt(result), ln = 1, align='C')
+    pdf.set_font("Times", 'B', size = 10)
+    if result == Result.POSITIVE:
+        pdf.cell(200, 10, txt = "The prediction tool determined that the dog has leptospirosis", ln = 1, align='C')
+    elif result == Result.NEGATIVE:
+        pdf.cell(200, 10, txt = "The prediction tool determined that the dog does not have leptospirosis", ln = 1, align='C')
+    elif result == Result.INVALID:
+        pdf.cell(200, 10, txt = "Your input was missing important data or the algorithm could not predict your specific dog", align='C')
+    else:
+        pdf.cell(200, 10, txt = "Something went wrong with running the algorithm", ln = 1, align='C')
+
+    pdf.ln(50)
+    pdf.cell(200, 10, txt = "This pdf was generated at " + str(arrow.utcnow().to("US/Pacific").format('YYYY-MM-DD HH:mm:ss ZZZ')), ln = 1, align='C')
     pdf.set_font("Times", size = 15)
     # add another cell
     
